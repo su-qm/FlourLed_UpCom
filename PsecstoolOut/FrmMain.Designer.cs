@@ -824,7 +824,7 @@
             this.groupBox10.Size = new System.Drawing.Size(168, 177);
             this.groupBox10.TabIndex = 39;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "绿色通道（0.1us）";
+            this.groupBox10.Text = "绿色通道";
             // 
             // label34
             // 
@@ -850,9 +850,9 @@
             // tbCh4Shuchuyanshi
             // 
             this.tbCh4Shuchuyanshi.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh4Shuchuyanshi.Location = new System.Drawing.Point(83, 3);
+            this.tbCh4Shuchuyanshi.Location = new System.Drawing.Point(67, 3);
             this.tbCh4Shuchuyanshi.Name = "tbCh4Shuchuyanshi";
-            this.tbCh4Shuchuyanshi.Size = new System.Drawing.Size(68, 21);
+            this.tbCh4Shuchuyanshi.Size = new System.Drawing.Size(92, 21);
             this.tbCh4Shuchuyanshi.TabIndex = 2;
             this.tbCh4Shuchuyanshi.Text = "5";
             this.tbCh4Shuchuyanshi.MouseEnter += new System.EventHandler(this.tbCh4Shuchuyanshi_MouseEnter);
@@ -861,7 +861,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(12, 6);
+            this.label40.Location = new System.Drawing.Point(3, 6);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(70, 12);
             this.label40.TabIndex = 1;
@@ -891,9 +891,9 @@
             // tbCh4Faguangshijian
             // 
             this.tbCh4Faguangshijian.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh4Faguangshijian.Location = new System.Drawing.Point(83, 3);
+            this.tbCh4Faguangshijian.Location = new System.Drawing.Point(67, 3);
             this.tbCh4Faguangshijian.Name = "tbCh4Faguangshijian";
-            this.tbCh4Faguangshijian.Size = new System.Drawing.Size(68, 21);
+            this.tbCh4Faguangshijian.Size = new System.Drawing.Size(92, 21);
             this.tbCh4Faguangshijian.TabIndex = 2;
             this.tbCh4Faguangshijian.Text = "5";
             this.tbCh4Faguangshijian.MouseEnter += new System.EventHandler(this.tbCh4Faguangshijian_MouseEnter);
@@ -902,7 +902,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.ForeColor = System.Drawing.Color.Black;
-            this.label39.Location = new System.Drawing.Point(12, 6);
+            this.label39.Location = new System.Drawing.Point(3, 6);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(70, 12);
             this.label39.TabIndex = 1;
@@ -913,17 +913,17 @@
             this.panel26.BackColor = System.Drawing.Color.LightSkyBlue;
             this.panel26.Controls.Add(this.tbCh4Xjchufashichang);
             this.panel26.Controls.Add(this.label36);
-            this.panel26.Location = new System.Drawing.Point(8, 133);
+            this.panel26.Location = new System.Drawing.Point(3, 133);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(154, 27);
+            this.panel26.Size = new System.Drawing.Size(159, 27);
             this.panel26.TabIndex = 17;
             // 
             // tbCh4Xjchufashichang
             // 
             this.tbCh4Xjchufashichang.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh4Xjchufashichang.Location = new System.Drawing.Point(83, 3);
+            this.tbCh4Xjchufashichang.Location = new System.Drawing.Point(62, 3);
             this.tbCh4Xjchufashichang.Name = "tbCh4Xjchufashichang";
-            this.tbCh4Xjchufashichang.Size = new System.Drawing.Size(68, 21);
+            this.tbCh4Xjchufashichang.Size = new System.Drawing.Size(94, 21);
             this.tbCh4Xjchufashichang.TabIndex = 2;
             this.tbCh4Xjchufashichang.Text = "5";
             // 
@@ -931,7 +931,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.Black;
-            this.label36.Location = new System.Drawing.Point(12, 6);
+            this.label36.Location = new System.Drawing.Point(3, 6);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(70, 12);
             this.label36.TabIndex = 1;
@@ -949,7 +949,7 @@
             this.groupBox9.Size = new System.Drawing.Size(168, 177);
             this.groupBox9.TabIndex = 39;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "蓝色通道（0.1us）";
+            this.groupBox9.Text = "蓝色通道";
             // 
             // label27
             // 
@@ -975,9 +975,9 @@
             // tbCh3Shuchuyanshi
             // 
             this.tbCh3Shuchuyanshi.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh3Shuchuyanshi.Location = new System.Drawing.Point(83, 3);
+            this.tbCh3Shuchuyanshi.Location = new System.Drawing.Point(67, 3);
             this.tbCh3Shuchuyanshi.Name = "tbCh3Shuchuyanshi";
-            this.tbCh3Shuchuyanshi.Size = new System.Drawing.Size(68, 21);
+            this.tbCh3Shuchuyanshi.Size = new System.Drawing.Size(92, 21);
             this.tbCh3Shuchuyanshi.TabIndex = 2;
             this.tbCh3Shuchuyanshi.Text = "5";
             this.tbCh3Shuchuyanshi.MouseEnter += new System.EventHandler(this.tbCh3Shuchuyanshi_MouseEnter);
@@ -986,7 +986,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(12, 6);
+            this.label33.Location = new System.Drawing.Point(4, 6);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(70, 12);
             this.label33.TabIndex = 1;
@@ -1016,9 +1016,9 @@
             // tbCh3Faguangshijian
             // 
             this.tbCh3Faguangshijian.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh3Faguangshijian.Location = new System.Drawing.Point(83, 3);
+            this.tbCh3Faguangshijian.Location = new System.Drawing.Point(67, 3);
             this.tbCh3Faguangshijian.Name = "tbCh3Faguangshijian";
-            this.tbCh3Faguangshijian.Size = new System.Drawing.Size(68, 21);
+            this.tbCh3Faguangshijian.Size = new System.Drawing.Size(92, 21);
             this.tbCh3Faguangshijian.TabIndex = 2;
             this.tbCh3Faguangshijian.Text = "5";
             this.tbCh3Faguangshijian.MouseEnter += new System.EventHandler(this.tbCh3Faguangshijian_MouseEnter);
@@ -1027,7 +1027,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(12, 6);
+            this.label32.Location = new System.Drawing.Point(3, 6);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(70, 12);
             this.label32.TabIndex = 1;
@@ -1048,7 +1048,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(12, 6);
+            this.label17.Location = new System.Drawing.Point(3, 9);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(70, 12);
             this.label17.TabIndex = 3;
@@ -1058,9 +1058,9 @@
             // tbCh3Xjchufashichang
             // 
             this.tbCh3Xjchufashichang.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh3Xjchufashichang.Location = new System.Drawing.Point(83, 3);
+            this.tbCh3Xjchufashichang.Location = new System.Drawing.Point(72, 3);
             this.tbCh3Xjchufashichang.Name = "tbCh3Xjchufashichang";
-            this.tbCh3Xjchufashichang.Size = new System.Drawing.Size(68, 21);
+            this.tbCh3Xjchufashichang.Size = new System.Drawing.Size(87, 21);
             this.tbCh3Xjchufashichang.TabIndex = 2;
             this.tbCh3Xjchufashichang.Text = "5";
             // 
@@ -1086,7 +1086,7 @@
             this.groupBox7.Size = new System.Drawing.Size(168, 177);
             this.groupBox7.TabIndex = 38;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "黄色通道（0.1us）";
+            this.groupBox7.Text = "黄色通道";
             // 
             // label20
             // 
@@ -1112,9 +1112,9 @@
             // tbCh2Shuchuyanshi
             // 
             this.tbCh2Shuchuyanshi.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh2Shuchuyanshi.Location = new System.Drawing.Point(83, 3);
+            this.tbCh2Shuchuyanshi.Location = new System.Drawing.Point(66, 3);
             this.tbCh2Shuchuyanshi.Name = "tbCh2Shuchuyanshi";
-            this.tbCh2Shuchuyanshi.Size = new System.Drawing.Size(68, 21);
+            this.tbCh2Shuchuyanshi.Size = new System.Drawing.Size(93, 21);
             this.tbCh2Shuchuyanshi.TabIndex = 2;
             this.tbCh2Shuchuyanshi.Text = "5";
             this.tbCh2Shuchuyanshi.MouseEnter += new System.EventHandler(this.tbCh2Shuchuyanshi_MouseEnter);
@@ -1123,7 +1123,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(12, 6);
+            this.label26.Location = new System.Drawing.Point(4, 6);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(70, 12);
             this.label26.TabIndex = 1;
@@ -1153,9 +1153,9 @@
             // tbCh2Faguangshijian
             // 
             this.tbCh2Faguangshijian.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh2Faguangshijian.Location = new System.Drawing.Point(83, 3);
+            this.tbCh2Faguangshijian.Location = new System.Drawing.Point(66, 3);
             this.tbCh2Faguangshijian.Name = "tbCh2Faguangshijian";
-            this.tbCh2Faguangshijian.Size = new System.Drawing.Size(68, 21);
+            this.tbCh2Faguangshijian.Size = new System.Drawing.Size(93, 21);
             this.tbCh2Faguangshijian.TabIndex = 2;
             this.tbCh2Faguangshijian.Text = "5";
             this.tbCh2Faguangshijian.MouseEnter += new System.EventHandler(this.tbCh2Faguangshijian_MouseEnter);
@@ -1164,7 +1164,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(12, 6);
+            this.label25.Location = new System.Drawing.Point(4, 6);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(70, 12);
             this.label25.TabIndex = 1;
@@ -1183,9 +1183,9 @@
             // tbCh2Xjchufashichang
             // 
             this.tbCh2Xjchufashichang.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh2Xjchufashichang.Location = new System.Drawing.Point(83, 3);
+            this.tbCh2Xjchufashichang.Location = new System.Drawing.Point(66, 3);
             this.tbCh2Xjchufashichang.Name = "tbCh2Xjchufashichang";
-            this.tbCh2Xjchufashichang.Size = new System.Drawing.Size(68, 21);
+            this.tbCh2Xjchufashichang.Size = new System.Drawing.Size(93, 21);
             this.tbCh2Xjchufashichang.TabIndex = 2;
             this.tbCh2Xjchufashichang.Text = "5";
             // 
@@ -1193,7 +1193,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(12, 6);
+            this.label22.Location = new System.Drawing.Point(4, 6);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(70, 12);
             this.label22.TabIndex = 1;
@@ -1211,7 +1211,7 @@
             this.groupBox6.Size = new System.Drawing.Size(168, 177);
             this.groupBox6.TabIndex = 37;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "红色通道（0.1us）";
+            this.groupBox6.Text = "红色通道";
             // 
             // label19
             // 
@@ -1248,9 +1248,9 @@
             // tbCh1Xjchufashichang
             // 
             this.tbCh1Xjchufashichang.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh1Xjchufashichang.Location = new System.Drawing.Point(83, 3);
+            this.tbCh1Xjchufashichang.Location = new System.Drawing.Point(69, 3);
             this.tbCh1Xjchufashichang.Name = "tbCh1Xjchufashichang";
-            this.tbCh1Xjchufashichang.Size = new System.Drawing.Size(68, 21);
+            this.tbCh1Xjchufashichang.Size = new System.Drawing.Size(90, 21);
             this.tbCh1Xjchufashichang.TabIndex = 2;
             this.tbCh1Xjchufashichang.Text = "5";
             // 
@@ -1258,7 +1258,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(12, 6);
+            this.label16.Location = new System.Drawing.Point(1, 9);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(70, 12);
             this.label16.TabIndex = 1;
@@ -1277,9 +1277,9 @@
             // tbCh1Faguangshijian
             // 
             this.tbCh1Faguangshijian.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh1Faguangshijian.Location = new System.Drawing.Point(83, 3);
+            this.tbCh1Faguangshijian.Location = new System.Drawing.Point(69, 3);
             this.tbCh1Faguangshijian.Name = "tbCh1Faguangshijian";
-            this.tbCh1Faguangshijian.Size = new System.Drawing.Size(68, 21);
+            this.tbCh1Faguangshijian.Size = new System.Drawing.Size(90, 21);
             this.tbCh1Faguangshijian.TabIndex = 2;
             this.tbCh1Faguangshijian.Text = "5";
             this.tbCh1Faguangshijian.MouseEnter += new System.EventHandler(this.tbCh1Faguangshijian_MouseEnter);
@@ -1288,7 +1288,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(12, 6);
+            this.label11.Location = new System.Drawing.Point(4, 6);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(70, 12);
             this.label11.TabIndex = 1;
@@ -1308,9 +1308,9 @@
             // tbCh1Shuchuyanshi
             // 
             this.tbCh1Shuchuyanshi.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.tbCh1Shuchuyanshi.Location = new System.Drawing.Point(83, 3);
+            this.tbCh1Shuchuyanshi.Location = new System.Drawing.Point(69, 3);
             this.tbCh1Shuchuyanshi.Name = "tbCh1Shuchuyanshi";
-            this.tbCh1Shuchuyanshi.Size = new System.Drawing.Size(68, 21);
+            this.tbCh1Shuchuyanshi.Size = new System.Drawing.Size(90, 21);
             this.tbCh1Shuchuyanshi.TabIndex = 2;
             this.tbCh1Shuchuyanshi.Text = "5";
             this.tbCh1Shuchuyanshi.MouseEnter += new System.EventHandler(this.tbCh1Shuchuyanshi_MouseEnter);
@@ -1319,7 +1319,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(12, 6);
+            this.label1.Location = new System.Drawing.Point(3, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 12);
             this.label1.TabIndex = 1;

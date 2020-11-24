@@ -404,37 +404,82 @@ namespace PsecstoolOut
             }
         }
 
-        private void UpdatetePARAText(string[] splitStrs)//需要增加
+        private void UpdatetePARAText(string[] splitStrs)
         {
+           
+            switch (int.Parse(splitStrs[0]))
+            {
+                case 0x00: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false; break;
+                case 0x01: ch1_r.Checked = true; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false; break;
+                case 0x02: ch1_r.Checked = false; ch2_r.Checked = true; ch3_r.Checked = false; ch4_r.Checked = false; break;
+                case 0x03: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = true; ch4_r.Checked = false; break;
+                case 0x04: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = true; break;
+                
+            }
+
+            switch (int.Parse(splitStrs[1]))
+            {
+                case 0x00: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false; break;
+                case 0x01: ch1_y.Checked = true; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false; break;
+                case 0x02: ch1_y.Checked = false; ch2_y.Checked = true; ch3_y.Checked = false; ch4_y.Checked = false; break;
+                case 0x03: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = true; ch4_y.Checked = false; break;
+                case 0x04: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = true; break;
+
+            }
+
+            switch (int.Parse(splitStrs[2]))
+            {
+                case 0x00: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false; break;
+                case 0x01: ch1_b.Checked = true; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false; break;
+                case 0x02: ch1_b.Checked = false; ch2_b.Checked = true; ch3_b.Checked = false; ch4_b.Checked = false; break;
+                case 0x03: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = true; ch4_b.Checked = false; break;
+                case 0x04: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = true; break;
+
+            }
+            switch (int.Parse(splitStrs[3]))
+            {
+                case 0x00: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false; break;
+                case 0x01: ch1_g.Checked = true; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false; break;
+                case 0x02: ch1_g.Checked = false; ch2_g.Checked = true; ch3_g.Checked = false; ch4_g.Checked = false; break;
+                case 0x03: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = true; ch4_g.Checked = false; break;
+                case 0x04: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = true; break;
+
+            }
+
+
             tbChufaPinci.Text = splitStrs[4];
-            //this.cmbCh1Dlsx.SelectedIndex = int.Parse(splitStrs[0]);
-            //this.cmbCh2Dlsx.SelectedIndex = int.Parse(splitStrs[1]);
-            //this.cmbCh3Dlsx.SelectedIndex = int.Parse(splitStrs[2]);
-            //this.cmbCh4Dlsx.SelectedIndex = int.Parse(splitStrs[3]);
 
             this.tbCh1Shuchuyanshi.Text = splitStrs[5];
-            this.tbCh1Faguangshijian.Text = splitStrs[6];
-            //this.tbCh1Faguangyanshi.Text = splitStrs[7];
-            //this.tbCh1Xjchufashijian.Text = splitStrs[8];
-            this.tbCh1Xjchufashichang.Text = splitStrs[9];
+            double temp_r = (double)   ((long.Parse(splitStrs[6])) | ((long.Parse(splitStrs[7])) << 24))     ;
+            temp_r = temp_r / 1000;
+            this.tbCh1Faguangshijian.Text = temp_r.ToString();
+            this.tbCh1Xjchufashichang.Text = splitStrs[8];
+          
 
-            this.tbCh2Shuchuyanshi.Text = splitStrs[10];
-            this.tbCh2Faguangshijian.Text = splitStrs[11];
-            //this.tbCh2Faguangyanshi.Text = splitStrs[12];
-            //this.tbCh2Xjchufashijian.Text = splitStrs[13];
-            this.tbCh2Xjchufashichang.Text = splitStrs[14];
+            this.tbCh2Shuchuyanshi.Text = splitStrs[9];
+            double temp_y = (double)((long.Parse(splitStrs[10])) | ((long.Parse(splitStrs[11])) << 24));
+            temp_y = temp_y / 1000;
+            this.tbCh2Faguangshijian.Text = temp_y.ToString();  
+            this.tbCh2Xjchufashichang.Text = splitStrs[12];
 
-            this.tbCh3Shuchuyanshi.Text = splitStrs[15];
-            this.tbCh3Faguangshijian.Text = splitStrs[16];
-            //this.tbCh3Faguangyanshi.Text = splitStrs[17];
-            //this.tbCh3Xjchufashijian.Text = splitStrs[18];
-            this.tbCh3Xjchufashichang.Text = splitStrs[19];
 
-            this.tbCh4Shuchuyanshi.Text = splitStrs[20];
-            this.tbCh4Faguangshijian.Text = splitStrs[21];
-            //this.tbCh4Faguangyanshi.Text = splitStrs[22];
-            //this.tbCh4Xjchufashijian.Text = splitStrs[23];
-            this.tbCh4Xjchufashichang.Text = splitStrs[24];
+            this.tbCh3Shuchuyanshi.Text = splitStrs[13];
+            double temp_b = (double)((long.Parse(splitStrs[14])) | ((long.Parse(splitStrs[15])) << 24));
+            temp_b = temp_b / 1000;
+            this.tbCh3Faguangshijian.Text = temp_b.ToString(); ;
+            this.tbCh3Xjchufashichang.Text = splitStrs[16];
+
+
+            this.tbCh4Shuchuyanshi.Text = splitStrs[17];
+            double temp_g = (double)((long.Parse(splitStrs[18])) | ((long.Parse(splitStrs[19])) << 24));
+            temp_g = temp_g / 1000;
+            this.tbCh4Faguangshijian.Text = temp_g.ToString(); ;
+            this.tbCh4Xjchufashichang.Text = splitStrs[20];
+
+
+
+
+
         }
 
 
@@ -857,30 +902,30 @@ namespace PsecstoolOut
         {
             //MessageBox.Show("输入报警密码长度不合法，请输入3位数字！", "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
-            if (!RegIPAndPort.IsHefaValue(tbCh1Shuchuyanshi.Text.Trim()) || 
-                !RegIPAndPort.IsHefaValue(tbCh1Faguangshijian.Text.Trim()) || 
-                //需要增加
+            //if (!RegIPAndPort.IsHefaValue(tbCh1Shuchuyanshi.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh1Faguangshijian.Text.Trim()) || 
+            //    //需要增加
                
-                !RegIPAndPort.IsHefaValue(tbCh1Xjchufashichang.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh1Xjchufashichang.Text.Trim()) || 
 
-                !RegIPAndPort.IsHefaValue(tbCh2Shuchuyanshi.Text.Trim()) || 
-                !RegIPAndPort.IsHefaValue(tbCh2Faguangshijian.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh2Shuchuyanshi.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh2Faguangshijian.Text.Trim()) || 
                 
-                !RegIPAndPort.IsHefaValue(tbCh2Xjchufashichang.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh2Xjchufashichang.Text.Trim()) || 
 
-                !RegIPAndPort.IsHefaValue(tbCh3Shuchuyanshi.Text.Trim()) || 
-                !RegIPAndPort.IsHefaValue(tbCh3Faguangshijian.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh3Shuchuyanshi.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh3Faguangshijian.Text.Trim()) || 
                 
-                !RegIPAndPort.IsHefaValue(tbCh3Xjchufashichang.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh3Xjchufashichang.Text.Trim()) || 
 
-                !RegIPAndPort.IsHefaValue(tbCh4Shuchuyanshi.Text.Trim()) || 
-                !RegIPAndPort.IsHefaValue(tbCh4Faguangshijian.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh4Shuchuyanshi.Text.Trim()) || 
+            //    !RegIPAndPort.IsHefaValue(tbCh4Faguangshijian.Text.Trim()) || 
                
-                !RegIPAndPort.IsHefaValue(tbCh4Xjchufashichang.Text.Trim())                 )
-            {
-                DialogBox.Message("通道配置参数内容有误，请确认！", DialogBox.DialogType.Error);
-                return;
-            }
+            //    !RegIPAndPort.IsHefaValue(tbCh4Xjchufashichang.Text.Trim())                 )
+            //{
+            //    DialogBox.Message("通道配置参数内容有误，请确认！", DialogBox.DialogType.Error);
+            //    return;
+            //}
 
 
 
@@ -917,27 +962,37 @@ namespace PsecstoolOut
             int pinci = int.Parse(tbChufaPinci.Text);
 
             int Ch11 = int.Parse(tbCh1Shuchuyanshi.Text);//通道1 输出延时
-            int Ch12 = (int)(0x000000ffffff & long.Parse(tbCh1Faguangshijian.Text));//通道1 发光延时  低24位
-            int Ch13 = (int)(0xffffff000000 & long.Parse(tbCh1Faguangshijian.Text)>>24);//通道1 发光延时  高24位
+            if (double.Parse(tbCh1Faguangshijian.Text) < 0.1) DialogBox.Message("红色通道发光时间需>=0.1", DialogBox.DialogType.Error);
+            long temp_red = (long)(double.Parse(tbCh1Faguangshijian.Text) * 1000);
+            int Ch12 = (int)(0x000000ffffff & temp_red);//通道1 发光延时  低24位
+            int Ch13 = (int)((0xffffff000000 & temp_red)>>24);//通道1 发光延时  高24位
+
+
             int Ch14 = int.Parse(tbCh1Xjchufashichang.Text);//通道1  触发时长
 
 
 
             int Ch15 = int.Parse(tbCh2Shuchuyanshi.Text);//通道2 输出延时
-            int Ch21 = (int)(0x000000ffffff & long.Parse(tbCh2Faguangshijian.Text));//通道2 发光延时  低24位
-            int Ch22 = (int)(0xffffff000000 & long.Parse(tbCh2Faguangshijian.Text) >> 24);//通道2 发光延时  高24位
+            if (double.Parse(tbCh2Faguangshijian.Text) < 0.1) DialogBox.Message("黄色通道发光时间需>=0.1", DialogBox.DialogType.Error);
+            long temp_yellow = (long)(double.Parse(tbCh2Faguangshijian.Text) * 1000);
+            int Ch21 = (int)(0x000000ffffff & temp_yellow);//通道2 发光延时  低24位
+            int Ch22 = (int)((0xffffff000000 & temp_yellow) >> 24);//通道2 发光延时  高24位
             int Ch23 = int.Parse(tbCh2Xjchufashichang.Text);//通道2  触发时长
 
             int Ch24 = int.Parse(tbCh3Shuchuyanshi.Text);//通道3 输出延时
-            int Ch25 = (int)(0x000000ffffff & long.Parse(tbCh3Faguangshijian.Text));//通道3 发光延时  低24位
-            int Ch31 = (int)(0xffffff000000 & long.Parse(tbCh3Faguangshijian.Text) >> 24);//通道3 发光延时  高24位
+            if (double.Parse(tbCh3Faguangshijian.Text) < 0.1) DialogBox.Message("蓝色色通道发光时间需>=0.1", DialogBox.DialogType.Error);       
+            long temp_blue = (long)(double.Parse(tbCh3Faguangshijian.Text) * 1000);
+            int Ch25 = (int)(0x000000ffffff & temp_blue);//通道3 发光延时  低24位
+            int Ch31 = (int)((0xffffff000000 & temp_blue) >> 24);//通道3 发光延时  高24位
             int Ch32 = int.Parse(tbCh3Xjchufashichang.Text);//通道3  触发时长
 
 
 
             int Ch33 = int.Parse(tbCh4Shuchuyanshi.Text);//通道4 输出延时
-            int Ch34 = (int)(0x000000ffffff & long.Parse(tbCh4Faguangshijian.Text));//通道4 发光延时  低24位
-            int Ch35 = (int)(0xffffff000000 & long.Parse(tbCh4Faguangshijian.Text) >> 24);//通道4 发光延时  高24位
+            long temp_green = (long)(double.Parse(tbCh4Faguangshijian.Text) * 1000);
+            if (double.Parse(tbCh3Faguangshijian.Text) < 0.1) { DialogBox.Message("绿色色通道发光时间需>=0.1", DialogBox.DialogType.Error); return; }           
+            int Ch34 = (int)(0x000000ffffff & temp_green);//通道4 发光延时  低24位
+            int Ch35 = (int)((0xffffff000000 & temp_green) >> 24);//通道4 发光延时  高24位
             int Ch41 = int.Parse(tbCh4Xjchufashichang.Text);//通道4  触发时长
 
 
@@ -1096,7 +1151,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：0.1us";
+            string tipOverwrite = "范围：0.1-16777215。单位：us";
             ttpSettings.SetToolTip(tbCh1Faguangshijian, tipOverwrite);
         }
 
@@ -1150,7 +1205,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：0.1us";
+            string tipOverwrite = "范围：0.1-16777215。单位：us";
             ttpSettings.SetToolTip(tbCh2Faguangshijian, tipOverwrite);
         }
 
@@ -1163,7 +1218,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：0.1us";
+            string tipOverwrite = "范围：0.1-16777215。单位：us";
             ttpSettings.SetToolTip(tbCh3Faguangshijian, tipOverwrite);
         }
 
@@ -1176,7 +1231,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：0.1us";
+            string tipOverwrite = "范围：0.1-16777215。单位：us";
             ttpSettings.SetToolTip(tbCh4Faguangshijian, tipOverwrite);
         }
 
@@ -1540,6 +1595,8 @@ namespace PsecstoolOut
                 ch3_g.Enabled = true;
             }
         }
+
+     
 
   
 
