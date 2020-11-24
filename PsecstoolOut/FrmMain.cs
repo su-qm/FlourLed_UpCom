@@ -1024,20 +1024,20 @@ namespace PsecstoolOut
             }
             if(temp==4)
             {
-                 if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)) DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error);
-                 if ((Ch01 != temp - 2) && (Ch02 != temp - 2) && (Ch03 != temp - 2) && (Ch04 != temp - 2)) DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error);
-                 if ((Ch01 != temp - 3) && (Ch02 != temp - 3) && (Ch03 != temp - 3) && (Ch04 != temp - 3)) DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error);
+                if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)) { DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
+                 if ((Ch01 != temp - 2) && (Ch02 != temp - 2) && (Ch03 != temp - 2) && (Ch04 != temp - 2)){ DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
+                 if ((Ch01 != temp - 3) && (Ch02 != temp - 3) && (Ch03 != temp - 3) && (Ch04 != temp - 3)){ DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
          
             }
             else if (temp == 3)
             {
-                if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)) DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error);
-                if ((Ch01 != temp - 2) && (Ch02 != temp - 2) && (Ch03 != temp - 2) && (Ch04 != temp - 2)) DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error);
+                if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)){ DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
+                if ((Ch01 != temp - 2) && (Ch02 != temp - 2) && (Ch03 != temp - 2) && (Ch04 != temp - 2)){ DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
         
             }
             else if (temp == 2)
             {
-                if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)) DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error);
+                if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)) { DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
              
             }
            
