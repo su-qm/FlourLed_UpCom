@@ -404,37 +404,78 @@ namespace PsecstoolOut
             }
         }
 
-        private void UpdatetePARAText(string[] splitStrs)//需要增加
+        private void UpdatetePARAText(string[] splitStrs)
         {
+           
+            switch (int.Parse(splitStrs[0]))
+            {
+              case 0x00 : ch1_r.Enabled = false;  ch2_r.Enabled = false;ch3_r.Enabled = false; ch4_r.Enabled = false; break;
+              case 0x01: ch1_r.Enabled = true; ch2_r.Enabled = false; ch3_r.Enabled = false; ch4_r.Enabled = false; break;
+              case 0x02: ch1_r.Enabled = false; ch2_r.Enabled = true; ch3_r.Enabled = false; ch4_r.Enabled = false; break;
+              case 0x03: ch1_r.Enabled = false; ch2_r.Enabled = false; ch3_r.Enabled = true; ch4_r.Enabled = false; break;
+              case 0x04: ch1_r.Enabled = false; ch2_r.Enabled = false; ch3_r.Enabled = false; ch4_r.Enabled = true; break;
+                
+            }
+
+            switch (int.Parse(splitStrs[1]))
+            {
+                case 0x00: ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = false; break;
+                case 0x01: ch1_y.Enabled = true; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = false; break;
+                case 0x02: ch1_y.Enabled = false; ch2_y.Enabled = true; ch3_y.Enabled = false; ch4_y.Enabled = false; break;
+                case 0x03: ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = true; ch4_y.Enabled = false; break;
+                case 0x04: ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = true; break;
+
+            }
+
+            switch (int.Parse(splitStrs[2]))
+            {
+                case 0x00: ch1_b.Enabled = false; ch2_b.Enabled = false; ch3_b.Enabled = false; ch4_b.Enabled = false; break;
+                case 0x01: ch1_b.Enabled = true; ch2_b.Enabled = false; ch3_b.Enabled = false; ch4_b.Enabled = false; break;
+                case 0x02: ch1_b.Enabled = false; ch2_b.Enabled = true; ch3_b.Enabled = false; ch4_b.Enabled = false; break;
+                case 0x03: ch1_b.Enabled = false; ch2_b.Enabled = false; ch3_b.Enabled = true; ch4_b.Enabled = false; break;
+                case 0x04: ch1_b.Enabled = false; ch2_b.Enabled = false; ch3_b.Enabled = false; ch4_b.Enabled = true; break;
+
+            }
+            switch (int.Parse(splitStrs[3]))
+            {
+                case 0x00: ch1_g.Enabled = false; ch2_g.Enabled = false; ch3_g.Enabled = false; ch4_g.Enabled = false; break;
+                case 0x01: ch1_g.Enabled = true; ch2_g.Enabled = false; ch3_g.Enabled = false; ch4_g.Enabled = false; break;
+                case 0x02: ch1_g.Enabled = false; ch2_g.Enabled = true; ch3_g.Enabled = false; ch4_g.Enabled = false; break;
+                case 0x03: ch1_g.Enabled = false; ch2_g.Enabled = false; ch3_g.Enabled = true; ch4_g.Enabled = false; break;
+                case 0x04: ch1_g.Enabled = false; ch2_g.Enabled = false; ch3_g.Enabled = false; ch4_g.Enabled = true; break;
+
+            }
+
+
             tbChufaPinci.Text = splitStrs[4];
-            //this.cmbCh1Dlsx.SelectedIndex = int.Parse(splitStrs[0]);
-            //this.cmbCh2Dlsx.SelectedIndex = int.Parse(splitStrs[1]);
-            //this.cmbCh3Dlsx.SelectedIndex = int.Parse(splitStrs[2]);
-            //this.cmbCh4Dlsx.SelectedIndex = int.Parse(splitStrs[3]);
 
             this.tbCh1Shuchuyanshi.Text = splitStrs[5];
-            this.tbCh1Faguangshijian.Text = splitStrs[6];
-            //this.tbCh1Faguangyanshi.Text = splitStrs[7];
-            //this.tbCh1Xjchufashijian.Text = splitStrs[8];
-            this.tbCh1Xjchufashichang.Text = splitStrs[9];
+            long temp = (long.Parse(splitStrs[6])) | ((long.Parse(splitStrs[7])) << 24);
+           this.tbCh1Faguangshijian.Text = temp.ToString();
+            this.tbCh1Xjchufashichang.Text = splitStrs[8];
+          
 
-            this.tbCh2Shuchuyanshi.Text = splitStrs[10];
-            this.tbCh2Faguangshijian.Text = splitStrs[11];
-            //this.tbCh2Faguangyanshi.Text = splitStrs[12];
-            //this.tbCh2Xjchufashijian.Text = splitStrs[13];
-            this.tbCh2Xjchufashichang.Text = splitStrs[14];
+            this.tbCh2Shuchuyanshi.Text = splitStrs[9];
+            temp = (long.Parse(splitStrs[10])) | ((long.Parse(splitStrs[11])) << 24);
+            this.tbCh2Faguangshijian.Text = temp.ToString();  
+            this.tbCh2Xjchufashichang.Text = splitStrs[12];
 
-            this.tbCh3Shuchuyanshi.Text = splitStrs[15];
-            this.tbCh3Faguangshijian.Text = splitStrs[16];
-            //this.tbCh3Faguangyanshi.Text = splitStrs[17];
-            //this.tbCh3Xjchufashijian.Text = splitStrs[18];
-            this.tbCh3Xjchufashichang.Text = splitStrs[19];
 
-            this.tbCh4Shuchuyanshi.Text = splitStrs[20];
-            this.tbCh4Faguangshijian.Text = splitStrs[21];
-            //this.tbCh4Faguangyanshi.Text = splitStrs[22];
-            //this.tbCh4Xjchufashijian.Text = splitStrs[23];
-            this.tbCh4Xjchufashichang.Text = splitStrs[24];
+            this.tbCh3Shuchuyanshi.Text = splitStrs[13];
+            temp = (long.Parse(splitStrs[14])) | ((long.Parse(splitStrs[15])) << 24);
+            this.tbCh3Faguangshijian.Text = temp.ToString(); ;
+            this.tbCh3Xjchufashichang.Text = splitStrs[16];
+
+
+            this.tbCh4Shuchuyanshi.Text = splitStrs[17];
+            temp = (long.Parse(splitStrs[18])) | ((long.Parse(splitStrs[19])) << 24);
+             this.tbCh4Faguangshijian.Text = temp.ToString(); ;
+            this.tbCh4Xjchufashichang.Text = splitStrs[20];
+
+
+
+
+
         }
 
 
