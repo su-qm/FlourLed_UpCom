@@ -1,0 +1,11 @@
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\bin\Release\CommLibrarys.dll
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\bin\Release\CommLibrarys.pdb
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\obj\Release\CommLibrarys.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\obj\Release\CommLibrarys.dll
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\obj\Release\CommLibrarys.pdb
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\bin\Release\CommLibrarys.dll
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\bin\Release\CommLibrarys.pdb
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\obj\Release\CommLibrarys.csprojAssemblyReference.cache
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\obj\Release\CommLibrarys.csproj.CoreCompileInputs.cache
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\obj\Release\CommLibrarys.dll
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\CommLibrarys\obj\Release\CommLibrarys.pdb

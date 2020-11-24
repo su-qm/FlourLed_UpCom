@@ -1,0 +1,11 @@
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\bin\Release\GATEECSCPSDK.dll
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\bin\Release\GATEECSCPSDK.pdb
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\obj\Release\GATEECSCPSDK.csproj.CoreCompileInputs.cache
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\obj\Release\GATEECSCPSDK.dll
+C:\Users\1\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\obj\Release\GATEECSCPSDK.pdb
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\bin\Release\GATEECSCPSDK.dll
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\bin\Release\GATEECSCPSDK.pdb
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\obj\Release\GATEECSCPSDK.csprojAssemblyReference.cache
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\obj\Release\GATEECSCPSDK.csproj.CoreCompileInputs.cache
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\obj\Release\GATEECSCPSDK.dll
+C:\Users\qm.su\Desktop\LED_CONTROL_ECS_V10\LEDECSCPSDK\obj\Release\GATEECSCPSDK.pdb

@@ -1,0 +1,4 @@
+E:\通讯库\JZ_PS_ECS\PsecscsharpSDK\bin\Debug\PsecsCsharpSDK.dll
+E:\通讯库\JZ_PS_ECS\PsecscsharpSDK\bin\Debug\PsecsCsharpSDK.pdb
+E:\通讯库\JZ_PS_ECS\PsecscsharpSDK\obj\Debug\PsecsCsharpSDK.dll
+E:\通讯库\JZ_PS_ECS\PsecscsharpSDK\obj\Debug\PsecsCsharpSDK.pdb
