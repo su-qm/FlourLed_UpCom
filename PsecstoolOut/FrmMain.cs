@@ -436,7 +436,7 @@ namespace PsecstoolOut
                 case 0x04: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = true; break;
 
             }
-            switch (int.Parse(splitStrs[3]))
+            switch (int.Parse(splitStrs[3]))//选择框失效的选择还需要补充
             {
                 case 0x00: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false; break;
                 case 0x01: ch1_g.Checked = true; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false; break;
@@ -447,34 +447,34 @@ namespace PsecstoolOut
             }
 
 
-            tbChufaPinci.Text = splitStrs[4];
-
-            this.tbCh1Shuchuyanshi.Text = splitStrs[5];
-            double temp_r = (double)   ((long.Parse(splitStrs[6])) | ((long.Parse(splitStrs[7])) << 24))     ;
+              frequency.Text = splitStrs[4];
+             tbChufaPinci.Text= splitStrs[5];
+            this.tbCh1Shuchuyanshi.Text = splitStrs[6];
+            double temp_r = (double)   ((long.Parse(splitStrs[7])) | ((long.Parse(splitStrs[8])) << 24))     ;
             temp_r = temp_r / 1000;
             this.tbCh1Faguangshijian.Text = temp_r.ToString();
-            this.tbCh1Xjchufashichang.Text = splitStrs[8];
+            this.tbCh1Xjchufashichang.Text = splitStrs[9];
           
 
-            this.tbCh2Shuchuyanshi.Text = splitStrs[9];
-            double temp_y = (double)((long.Parse(splitStrs[10])) | ((long.Parse(splitStrs[11])) << 24));
+            this.tbCh2Shuchuyanshi.Text = splitStrs[10];
+            double temp_y = (double)((long.Parse(splitStrs[11])) | ((long.Parse(splitStrs[12])) << 24));
             temp_y = temp_y / 1000;
             this.tbCh2Faguangshijian.Text = temp_y.ToString();  
-            this.tbCh2Xjchufashichang.Text = splitStrs[12];
+            this.tbCh2Xjchufashichang.Text = splitStrs[13];
 
 
-            this.tbCh3Shuchuyanshi.Text = splitStrs[13];
-            double temp_b = (double)((long.Parse(splitStrs[14])) | ((long.Parse(splitStrs[15])) << 24));
+            this.tbCh3Shuchuyanshi.Text = splitStrs[14];
+            double temp_b = (double)((long.Parse(splitStrs[15])) | ((long.Parse(splitStrs[16])) << 24));
             temp_b = temp_b / 1000;
             this.tbCh3Faguangshijian.Text = temp_b.ToString(); ;
-            this.tbCh3Xjchufashichang.Text = splitStrs[16];
+            this.tbCh3Xjchufashichang.Text = splitStrs[17];
 
 
-            this.tbCh4Shuchuyanshi.Text = splitStrs[17];
-            double temp_g = (double)((long.Parse(splitStrs[18])) | ((long.Parse(splitStrs[19])) << 24));
+            this.tbCh4Shuchuyanshi.Text = splitStrs[18];
+            double temp_g = (double)((long.Parse(splitStrs[19])) | ((long.Parse(splitStrs[20])) << 24));
             temp_g = temp_g / 1000;
             this.tbCh4Faguangshijian.Text = temp_g.ToString(); ;
-            this.tbCh4Xjchufashichang.Text = splitStrs[20];
+            this.tbCh4Xjchufashichang.Text = splitStrs[21];
 
 
 
@@ -959,47 +959,62 @@ namespace PsecstoolOut
 
 
 
-            int pinci = int.Parse(tbChufaPinci.Text);
+      
 
-            int Ch11 = int.Parse(tbCh1Shuchuyanshi.Text);//通道1 输出延时
-            if (double.Parse(tbCh1Faguangshijian.Text) < 0.1) DialogBox.Message("红色通道发光时间需>=0.1", DialogBox.DialogType.Error);
+
+            if (((double.Parse(tbCh1Shuchuyanshi.Text) + double.Parse(tbCh1Faguangshijian.Text)) * double.Parse(tbChufaPinci.Text)) > 1000000) { DialogBox.Message("红色通道数据配置错误", DialogBox.DialogType.Error); }//判断通道时间是否过大
+            if (((double.Parse(tbCh2Shuchuyanshi.Text) + double.Parse(tbCh2Faguangshijian.Text)) * double.Parse(tbChufaPinci.Text)) > 1000000){ DialogBox.Message("黄色通道数据配置错误", DialogBox.DialogType.Error);}
+            if (((double.Parse(tbCh3Shuchuyanshi.Text) + double.Parse(tbCh3Faguangshijian.Text)) * double.Parse(tbChufaPinci.Text)) > 1000000){ DialogBox.Message("蓝色通道数据配置错误", DialogBox.DialogType.Error);}
+            if (((double.Parse(tbCh4Shuchuyanshi.Text) + double.Parse(tbCh4Faguangshijian.Text)) * double.Parse(tbChufaPinci.Text)) > 1000000) { DialogBox.Message("绿色通道数据配置错误", DialogBox.DialogType.Error); }
+
+
+            int pinci = int.Parse(frequency.Text);//周期
+            int Ch11 = int.Parse(tbChufaPinci.Text);//触法每秒
+
+            int Ch12 = int.Parse(tbCh1Shuchuyanshi.Text);//通道1 输出延时
+                   if (double.Parse(tbCh1Faguangshijian.Text) < 0.1) DialogBox.Message("红色通道发光时间需>=0.1", DialogBox.DialogType.Error);
             long temp_red = (long)(double.Parse(tbCh1Faguangshijian.Text) * 1000);
-            int Ch12 = (int)(0x000000ffffff & temp_red);//通道1 发光延时  低24位
-            int Ch13 = (int)((0xffffff000000 & temp_red)>>24);//通道1 发光延时  高24位
+            int Ch13 = (int)(0x000000ffffff & temp_red);//通道1 发光延时  低24位
 
 
-            int Ch14 = int.Parse(tbCh1Xjchufashichang.Text);//通道1  触发时长
+            int Ch14 = (int)((0xffffff000000 & temp_red)>>24);//通道1 发光延时  高24位
 
 
 
-            int Ch15 = int.Parse(tbCh2Shuchuyanshi.Text);//通道2 输出延时
-            if (double.Parse(tbCh2Faguangshijian.Text) < 0.1) DialogBox.Message("黄色通道发光时间需>=0.1", DialogBox.DialogType.Error);
+            int Ch15 = int.Parse(tbCh1Xjchufashichang.Text);//通道1  触发时长
+            
+            int Ch21 = int.Parse(tbCh2Shuchuyanshi.Text);//通道2 输出延时
+                if (double.Parse(tbCh2Faguangshijian.Text) < 0.1) DialogBox.Message("黄色通道发光时间需>=0.1", DialogBox.DialogType.Error);
             long temp_yellow = (long)(double.Parse(tbCh2Faguangshijian.Text) * 1000);
-            int Ch21 = (int)(0x000000ffffff & temp_yellow);//通道2 发光延时  低24位
-            int Ch22 = (int)((0xffffff000000 & temp_yellow) >> 24);//通道2 发光延时  高24位
-            int Ch23 = int.Parse(tbCh2Xjchufashichang.Text);//通道2  触发时长
+            int Ch22 = (int)(0x000000ffffff & temp_yellow);//通道2 发光延时  低24位
+            int Ch23 = (int)((0xffffff000000 & temp_yellow) >> 24);//通道2 发光延时  高24位
+            int Ch24 = int.Parse(tbCh2Xjchufashichang.Text);//通道2  触发时长
 
-            int Ch24 = int.Parse(tbCh3Shuchuyanshi.Text);//通道3 输出延时
+
+
+            int Ch25 = int.Parse(tbCh3Shuchuyanshi.Text);//通道3 输出延时
             if (double.Parse(tbCh3Faguangshijian.Text) < 0.1) DialogBox.Message("蓝色色通道发光时间需>=0.1", DialogBox.DialogType.Error);       
             long temp_blue = (long)(double.Parse(tbCh3Faguangshijian.Text) * 1000);
-            int Ch25 = (int)(0x000000ffffff & temp_blue);//通道3 发光延时  低24位
-            int Ch31 = (int)((0xffffff000000 & temp_blue) >> 24);//通道3 发光延时  高24位
-            int Ch32 = int.Parse(tbCh3Xjchufashichang.Text);//通道3  触发时长
+  
+            int Ch31 = (int)(0x000000ffffff & temp_blue);//通道3 发光延时  低24位
+            int Ch32 = (int)((0xffffff000000 & temp_blue) >> 24);//通道3 发光延时  高24位
 
 
 
-            int Ch33 = int.Parse(tbCh4Shuchuyanshi.Text);//通道4 输出延时
+            int Ch33 = int.Parse(tbCh3Xjchufashichang.Text);//通道3  触发时长
+
+
+            
+             int Ch34 = int.Parse(tbCh4Shuchuyanshi.Text);//通道4 输出延时
             long temp_green = (long)(double.Parse(tbCh4Faguangshijian.Text) * 1000);
             if (double.Parse(tbCh3Faguangshijian.Text) < 0.1) { DialogBox.Message("绿色色通道发光时间需>=0.1", DialogBox.DialogType.Error); return; }           
-            int Ch34 = (int)(0x000000ffffff & temp_green);//通道4 发光延时  低24位
-            int Ch35 = (int)((0xffffff000000 & temp_green) >> 24);//通道4 发光延时  高24位
-            int Ch41 = int.Parse(tbCh4Xjchufashichang.Text);//通道4  触发时长
+           
+            int Ch35 = (int)(0x000000ffffff & temp_green);//通道4 发光延时  低24位
+            int Ch41 = (int)((0xffffff000000 & temp_green) >> 24);//通道4 发光延时  高24位
+            int Ch42 =int.Parse(tbCh4Xjchufashichang.Text);//通道4  触发时长
 
-
-
-            int Ch42 =int.Parse( p13.Text);
-            int Ch43 = int.Parse(p14.Text);
-            int Ch44 = 0;
+            int Ch43 = int.Parse( p13.Text);
+            int Ch44 = int.Parse(p14.Text);
             int Ch45 = 0;
             int temp = 0;
 
@@ -1299,24 +1314,24 @@ namespace PsecstoolOut
                 if (temp < 100 & temp >= 1)
                 {
                     temp = Convert.ToInt32(frequency.Text);
-                  
-                    sum = Convert.ToInt32(tbCh1Shuchuyanshi.Text) + Convert.ToInt32(tbCh1Faguangshijian.Text) + + Convert.ToInt32(tbCh1Xjchufashichang.Text) +
-                                  Convert.ToInt32(tbCh2Shuchuyanshi.Text) + Convert.ToInt32(tbCh2Faguangshijian.Text)   + Convert.ToInt32(tbCh2Xjchufashichang.Text) +
-                                  Convert.ToInt32(tbCh3Shuchuyanshi.Text) + Convert.ToInt32(tbCh3Faguangshijian.Text)  + Convert.ToInt32(tbCh3Xjchufashichang.Text) +
-                                  Convert.ToInt32(tbCh4Shuchuyanshi.Text) + Convert.ToInt32(tbCh4Faguangshijian.Text) +  Convert.ToInt32(tbCh4Xjchufashichang.Text);
-                    result = ((1000000 / temp)-sum);
+
+                    sum = Convert.ToInt32(tbCh1Shuchuyanshi.Text) + Convert.ToInt32(tbCh1Faguangshijian.Text) + +Convert.ToInt32(tbCh1Xjchufashichang.Text) +
+                                  Convert.ToInt32(tbCh2Shuchuyanshi.Text) + Convert.ToInt32(tbCh2Faguangshijian.Text) + Convert.ToInt32(tbCh2Xjchufashichang.Text) +
+                                  Convert.ToInt32(tbCh3Shuchuyanshi.Text) + Convert.ToInt32(tbCh3Faguangshijian.Text) + Convert.ToInt32(tbCh3Xjchufashichang.Text) +
+                                  Convert.ToInt32(tbCh4Shuchuyanshi.Text) + Convert.ToInt32(tbCh4Faguangshijian.Text) + Convert.ToInt32(tbCh4Xjchufashichang.Text);
+                    result = ((1000000 / temp) - sum);
                     result = result / 4;
 
-              //      this.tbCh1Xjchufashijian.Text = result.ToString();
-               //     this.tbCh2Xjchufashijian.Text = result.ToString();
-               //     this.tbCh3Xjchufashijian.Text = result.ToString();
-               //     this.tbCh4Xjchufashijian.Text = result.ToString();
+                    //this.tbCh1Xjchufashijian.Text = result.ToString();
+                    //this.tbCh2Xjchufashijian.Text = result.ToString();
+                    //this.tbCh3Xjchufashijian.Text = result.ToString();
+                    //this.tbCh4Xjchufashijian.Text = result.ToString();
                 }
             }
 
             catch
             {
- 
+
             }
            
         }
