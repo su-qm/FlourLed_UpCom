@@ -409,40 +409,81 @@ namespace PsecstoolOut
            
             switch (int.Parse(splitStrs[0]))
             {
-                case 0x00: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false; break;
-                case 0x01: ch1_r.Checked = true; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false; break;
-                case 0x02: ch1_r.Checked = false; ch2_r.Checked = true; ch3_r.Checked = false; ch4_r.Checked = false; break;
-                case 0x03: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = true; ch4_r.Checked = false; break;
-                case 0x04: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = true; break;
+                case 0x00: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false; 
+                           ch1_r.Enabled = true; ch2_r.Enabled = true; ch3_r.Enabled = true; ch4_r.Enabled = true; 
+                                
+                    break;
+                case 0x01: ch1_r.Checked = true; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false;
+                     ch1_r.Enabled = true; ch2_r.Enabled = false; ch3_r.Enabled = false; ch4_r.Enabled = false;
+                    break;
+                case 0x02: ch1_r.Checked = false; ch2_r.Checked = true; ch3_r.Checked = false; ch4_r.Checked = false;
+                    ch1_r.Enabled = false; ch2_r.Enabled = true; ch3_r.Enabled = false; ch4_r.Enabled = false;
+                    break;
+                case 0x03: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = true; ch4_r.Checked = false; 
+                    ch1_r.Enabled = false; ch2_r.Enabled = false; ch3_r.Enabled = true; ch4_r.Enabled = false;
+                    break;
+                case 0x04: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = true;
+                    ch1_r.Enabled = false; ch2_r.Enabled = false; ch3_r.Enabled = false; ch4_r.Enabled = true;
+                    break;
                 
             }
 
             switch (int.Parse(splitStrs[1]))
             {
-                case 0x00: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false; break;
-                case 0x01: ch1_y.Checked = true; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false; break;
-                case 0x02: ch1_y.Checked = false; ch2_y.Checked = true; ch3_y.Checked = false; ch4_y.Checked = false; break;
-                case 0x03: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = true; ch4_y.Checked = false; break;
-                case 0x04: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = true; break;
+                case 0x00: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false; 
+                    ch1_y.Enabled = true; ch2_y.Enabled = true; ch3_y.Enabled = true; ch4_y.Enabled = true;
+                    break;
+                case 0x01: ch1_y.Checked = true; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false;
+                    ch1_y.Enabled = true; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = false; 
+                    break;
+                case 0x02: ch1_y.Checked = false; ch2_y.Checked = true; ch3_y.Checked = false; ch4_y.Checked = false; 
+                    ch1_y.Enabled = false; ch2_y.Enabled = true; ch3_y.Enabled = false; ch4_y.Enabled = false;
+                    break;
+                case 0x03: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = true; ch4_y.Checked = false;
+                    ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = true; ch4_y.Enabled = false; 
+                    break;
+                case 0x04: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = true;
+                     ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = true; 
+                    break;
 
             }
 
             switch (int.Parse(splitStrs[2]))
             {
-                case 0x00: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false; break;
-                case 0x01: ch1_b.Checked = true; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false; break;
-                case 0x02: ch1_b.Checked = false; ch2_b.Checked = true; ch3_b.Checked = false; ch4_b.Checked = false; break;
-                case 0x03: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = true; ch4_b.Checked = false; break;
-                case 0x04: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = true; break;
+                case 0x00: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false; 
+                    ch1_b.Enabled = true; ch2_b.Enabled = true; ch3_b.Enabled = true; ch4_b.Enabled = true; 
+                    break;
+                case 0x01: ch1_b.Checked = true; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false; 
+                    ch1_b.Enabled = true; ch2_b.Enabled = false; ch3_b.Enabled = false; ch4_b.Enabled = false;
+                    break;
+                case 0x02: ch1_b.Checked = false; ch2_b.Checked = true; ch3_b.Checked = false; ch4_b.Checked = false; 
+                    ch1_b.Enabled = false; ch2_b.Enabled = true; ch3_b.Enabled = false; ch4_b.Enabled = false;
+                    break;
+                case 0x03: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = true; ch4_b.Checked = false;
+                    ch1_b.Enabled = false; ch2_b.Enabled = false; ch3_b.Enabled = true; ch4_b.Enabled = false;
+                    break;
+                case 0x04: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = true; 
+                    ch1_b.Enabled = false; ch2_b.Enabled = false; ch3_b.Enabled = false; ch4_b.Enabled = true;
+                    break;
 
             }
             switch (int.Parse(splitStrs[3]))//选择框失效的选择还需要补充
             {
-                case 0x00: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false; break;
-                case 0x01: ch1_g.Checked = true; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false; break;
-                case 0x02: ch1_g.Checked = false; ch2_g.Checked = true; ch3_g.Checked = false; ch4_g.Checked = false; break;
-                case 0x03: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = true; ch4_g.Checked = false; break;
-                case 0x04: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = true; break;
+                case 0x00: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false; 
+                     ch1_g.Enabled = true; ch2_g.Enabled = true; ch3_g.Enabled = true; ch4_g.Enabled = true;
+                    break;
+                case 0x01: ch1_g.Checked = true; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false;
+                    ch1_g.Enabled = true; ch2_g.Enabled = false; ch3_g.Enabled = false; ch4_g.Enabled = false; 
+                    break;
+                case 0x02: ch1_g.Checked = false; ch2_g.Checked = true; ch3_g.Checked = false; ch4_g.Checked = false;
+                     ch1_g.Enabled = false; ch2_g.Enabled = true; ch3_g.Enabled = false; ch4_g.Enabled = false;
+                    break;
+                case 0x03: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = true; ch4_g.Checked = false;
+                    ch1_g.Enabled = false; ch2_g.Enabled = false; ch3_g.Enabled = true; ch4_g.Enabled = false;
+                    break;
+                case 0x04: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = true; 
+                    ch1_g.Enabled = false; ch2_g.Enabled = false; ch3_g.Enabled = false; ch4_g.Enabled = true;
+                    break;
 
             }
 
@@ -1336,7 +1377,7 @@ namespace PsecstoolOut
            
         }
 
-      
+
 
         private void ch1_r_CheckedChanged(object sender, EventArgs e)
         {
@@ -1610,6 +1651,12 @@ namespace PsecstoolOut
                 ch3_g.Enabled = true;
             }
         }
+
+       
+
+     
+
+   
 
      
 

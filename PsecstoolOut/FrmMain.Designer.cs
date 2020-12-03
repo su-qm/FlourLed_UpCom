@@ -1542,6 +1542,7 @@
             this.ch4_g.TabIndex = 19;
             this.ch4_g.Text = "绿";
             this.ch4_g.UseVisualStyleBackColor = true;
+            this.ch4_g.CheckedChanged += new System.EventHandler(this.ch4_g_CheckedChanged);
             // 
             // ch4_b
             // 
@@ -1552,6 +1553,7 @@
             this.ch4_b.TabIndex = 18;
             this.ch4_b.Text = "蓝";
             this.ch4_b.UseVisualStyleBackColor = true;
+            this.ch4_b.CheckedChanged += new System.EventHandler(this.ch4_b_CheckedChanged);
             // 
             // ch4_y
             // 
@@ -1562,6 +1564,7 @@
             this.ch4_y.TabIndex = 17;
             this.ch4_y.Text = "黄";
             this.ch4_y.UseVisualStyleBackColor = true;
+            this.ch4_y.CheckedChanged += new System.EventHandler(this.ch4_y_CheckedChanged);
             // 
             // ch4_r
             // 
@@ -1572,6 +1575,7 @@
             this.ch4_r.TabIndex = 16;
             this.ch4_r.Text = "红";
             this.ch4_r.UseVisualStyleBackColor = true;
+            this.ch4_r.CheckedChanged += new System.EventHandler(this.ch4_r_CheckedChanged);
             // 
             // ch1_g
             // 
@@ -1582,6 +1586,7 @@
             this.ch1_g.TabIndex = 15;
             this.ch1_g.Text = "绿";
             this.ch1_g.UseVisualStyleBackColor = true;
+            this.ch1_g.CheckedChanged += new System.EventHandler(this.ch1_g_CheckedChanged);
             // 
             // ch3_g
             // 
@@ -1592,6 +1597,7 @@
             this.ch3_g.TabIndex = 7;
             this.ch3_g.Text = "绿";
             this.ch3_g.UseVisualStyleBackColor = true;
+            this.ch3_g.CheckedChanged += new System.EventHandler(this.ch3_g_CheckedChanged);
             // 
             // ch3_b
             // 
@@ -1602,6 +1608,7 @@
             this.ch3_b.TabIndex = 6;
             this.ch3_b.Text = "蓝";
             this.ch3_b.UseVisualStyleBackColor = true;
+            this.ch3_b.CheckedChanged += new System.EventHandler(this.ch3_b_CheckedChanged);
             // 
             // ch2_g
             // 
@@ -1612,6 +1619,7 @@
             this.ch2_g.TabIndex = 11;
             this.ch2_g.Text = "绿";
             this.ch2_g.UseVisualStyleBackColor = true;
+            this.ch2_g.CheckedChanged += new System.EventHandler(this.ch2_g_CheckedChanged);
             // 
             // ch3_y
             // 
@@ -1622,6 +1630,7 @@
             this.ch3_y.TabIndex = 5;
             this.ch3_y.Text = "黄";
             this.ch3_y.UseVisualStyleBackColor = true;
+            this.ch3_y.CheckedChanged += new System.EventHandler(this.ch3_y_CheckedChanged);
             // 
             // ch2_b
             // 
@@ -1632,6 +1641,7 @@
             this.ch2_b.TabIndex = 10;
             this.ch2_b.Text = "蓝";
             this.ch2_b.UseVisualStyleBackColor = true;
+            this.ch2_b.CheckedChanged += new System.EventHandler(this.ch2_b_CheckedChanged);
             // 
             // ch3_r
             // 
@@ -1642,6 +1652,7 @@
             this.ch3_r.TabIndex = 4;
             this.ch3_r.Text = "红";
             this.ch3_r.UseVisualStyleBackColor = true;
+            this.ch3_r.CheckedChanged += new System.EventHandler(this.ch3_r_CheckedChanged);
             // 
             // ch1_b
             // 
@@ -1652,6 +1663,7 @@
             this.ch1_b.TabIndex = 14;
             this.ch1_b.Text = "蓝";
             this.ch1_b.UseVisualStyleBackColor = true;
+            this.ch1_b.CheckedChanged += new System.EventHandler(this.ch1_b_CheckedChanged);
             // 
             // ch2_y
             // 
@@ -1662,6 +1674,7 @@
             this.ch2_y.TabIndex = 9;
             this.ch2_y.Text = "黄";
             this.ch2_y.UseVisualStyleBackColor = true;
+            this.ch2_y.CheckedChanged += new System.EventHandler(this.ch2_y_CheckedChanged);
             // 
             // ch1_y
             // 
@@ -1672,6 +1685,7 @@
             this.ch1_y.TabIndex = 13;
             this.ch1_y.Text = "黄";
             this.ch1_y.UseVisualStyleBackColor = true;
+            this.ch1_y.CheckedChanged += new System.EventHandler(this.ch1_y_CheckedChanged);
             // 
             // ch2_r
             // 
@@ -1682,6 +1696,7 @@
             this.ch2_r.TabIndex = 8;
             this.ch2_r.Text = "红";
             this.ch2_r.UseVisualStyleBackColor = true;
+            this.ch2_r.CheckedChanged += new System.EventHandler(this.ch2_r_CheckedChanged);
             // 
             // ch1_r
             // 
@@ -1692,6 +1707,7 @@
             this.ch1_r.TabIndex = 12;
             this.ch1_r.Text = "红";
             this.ch1_r.UseVisualStyleBackColor = true;
+            this.ch1_r.CheckedChanged += new System.EventHandler(this.ch1_r_CheckedChanged);
             // 
             // btnCloseCurSocket
             // 
