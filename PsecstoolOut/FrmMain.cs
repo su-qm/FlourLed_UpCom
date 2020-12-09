@@ -488,8 +488,9 @@ namespace PsecstoolOut
             }
 
 
-              frequency.Text = splitStrs[4];
+             frequency.Text = splitStrs[4];
              tbChufaPinci.Text= splitStrs[5];
+
             this.tbCh1Shuchuyanshi.Text = splitStrs[6];
             double temp_r = (double)   ((long.Parse(splitStrs[7])) | ((long.Parse(splitStrs[8])) << 24))     ;
             temp_r = temp_r / 1000;
@@ -1010,6 +1011,7 @@ namespace PsecstoolOut
 
 
             int pinci = int.Parse(frequency.Text);//周期
+            if (pinci > 65535) { DialogBox.Message("循环次数应小于65535", DialogBox.DialogType.Error); return; }
             int Ch11 = int.Parse(tbChufaPinci.Text);//触法每秒
 
             int Ch12 = int.Parse(tbCh1Shuchuyanshi.Text);//通道1 输出延时
