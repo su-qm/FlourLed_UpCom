@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="设备配置工具.exe" size="98304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="设备配置工具.exe" size="97792">
       <assemblyIdentity name="设备配置工具" version="4.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vSYn7E/YArqo6ZAvL+KbFhaOQ14=</dsig:DigestValue>
+        <dsig:DigestValue>LHDaVbH+66cuDLTLSa2HP/5EdOY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,13 +114,13 @@
       <dsig:DigestValue>jE0I0xPrPfxgGpHr7ua6dpR+qwg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="设备配置工具.exe.config" size="141">
+  <file name="设备配置工具.exe.config" size="144">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>dZFxrC6iVI5YGbM5q/fROBzin+s=</dsig:DigestValue>
+      <dsig:DigestValue>cpzNzlRjZspwKGLNlX6RAlU3880=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

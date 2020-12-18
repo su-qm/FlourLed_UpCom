@@ -392,7 +392,7 @@ namespace PsecstoolOut
 
 
         private delegate void UpdatePARAText(string[] splitStrs);
-        private void UpdatePARA(string[] splitStrs)
+        private void UpdatePARA(string[] splitStrs)//更新返回的参数
         {
             if (tbChufaPinci.InvokeRequired)
             {
@@ -492,31 +492,23 @@ namespace PsecstoolOut
              tbChufaPinci.Text= splitStrs[5];
 
             this.tbCh1Shuchuyanshi.Text = splitStrs[6];
-            double temp_r = (double)   ((long.Parse(splitStrs[7])) | ((long.Parse(splitStrs[8])) << 24))     ;
-            temp_r = temp_r / 1000;
-            this.tbCh1Faguangshijian.Text = temp_r.ToString();
-            this.tbCh1Xjchufashichang.Text = splitStrs[9];
+            this.tbCh1Faguangshijian.Text = splitStrs[7];
+            this.tbCh1Xjchufashichang.Text = splitStrs[8];
           
 
-            this.tbCh2Shuchuyanshi.Text = splitStrs[10];
-            double temp_y = (double)((long.Parse(splitStrs[11])) | ((long.Parse(splitStrs[12])) << 24));
-            temp_y = temp_y / 1000;
-            this.tbCh2Faguangshijian.Text = temp_y.ToString();  
-            this.tbCh2Xjchufashichang.Text = splitStrs[13];
+            this.tbCh2Shuchuyanshi.Text = splitStrs[9];
+            this.tbCh2Faguangshijian.Text = splitStrs[10];  
+            this.tbCh2Xjchufashichang.Text = splitStrs[11];
 
 
-            this.tbCh3Shuchuyanshi.Text = splitStrs[14];
-            double temp_b = (double)((long.Parse(splitStrs[15])) | ((long.Parse(splitStrs[16])) << 24));
-            temp_b = temp_b / 1000;
-            this.tbCh3Faguangshijian.Text = temp_b.ToString(); ;
-            this.tbCh3Xjchufashichang.Text = splitStrs[17];
+            this.tbCh3Shuchuyanshi.Text = splitStrs[12];
+            this.tbCh3Faguangshijian.Text = splitStrs[13]; ;
+            this.tbCh3Xjchufashichang.Text = splitStrs[14];
 
 
-            this.tbCh4Shuchuyanshi.Text = splitStrs[18];
-            double temp_g = (double)((long.Parse(splitStrs[19])) | ((long.Parse(splitStrs[20])) << 24));
-            temp_g = temp_g / 1000;
-            this.tbCh4Faguangshijian.Text = temp_g.ToString(); ;
-            this.tbCh4Xjchufashichang.Text = splitStrs[21];
+            this.tbCh4Shuchuyanshi.Text = splitStrs[15];
+            this.tbCh4Faguangshijian.Text = splitStrs[16]; ;
+            this.tbCh4Xjchufashichang.Text = splitStrs[17];
 
 
 
@@ -1001,60 +993,46 @@ namespace PsecstoolOut
 
 
 
-      
 
 
-            if (((double.Parse(tbCh1Shuchuyanshi.Text) + double.Parse(tbCh1Faguangshijian.Text)) * double.Parse(tbChufaPinci.Text)) > 1000000) { DialogBox.Message("红色通道数据配置错误", DialogBox.DialogType.Error); }//判断通道时间是否过大
-            if (((double.Parse(tbCh2Shuchuyanshi.Text) + double.Parse(tbCh2Faguangshijian.Text)) * double.Parse(tbChufaPinci.Text)) > 1000000){ DialogBox.Message("黄色通道数据配置错误", DialogBox.DialogType.Error);}
-            if (((double.Parse(tbCh3Shuchuyanshi.Text) + double.Parse(tbCh3Faguangshijian.Text)) * double.Parse(tbChufaPinci.Text)) > 1000000){ DialogBox.Message("蓝色通道数据配置错误", DialogBox.DialogType.Error);}
-            if (((double.Parse(tbCh4Shuchuyanshi.Text) + double.Parse(tbCh4Faguangshijian.Text)) * double.Parse(tbChufaPinci.Text)) > 1000000) { DialogBox.Message("绿色通道数据配置错误", DialogBox.DialogType.Error); }
+
+            if (((int.Parse(tbCh1Shuchuyanshi.Text) + int.Parse(tbCh1Faguangshijian.Text)) * int.Parse(tbChufaPinci.Text)) > 10000000) { DialogBox.Message("红色通道数据配置错误", DialogBox.DialogType.Error); }//判断通道时间是否过大
+            if (((int.Parse(tbCh2Shuchuyanshi.Text) + int.Parse(tbCh2Faguangshijian.Text)) * int.Parse(tbChufaPinci.Text)) > 10000000) { DialogBox.Message("黄色通道数据配置错误", DialogBox.DialogType.Error); }
+            if (((int.Parse(tbCh3Shuchuyanshi.Text) + int.Parse(tbCh3Faguangshijian.Text)) * int.Parse(tbChufaPinci.Text)) > 10000000) { DialogBox.Message("蓝色通道数据配置错误", DialogBox.DialogType.Error); }
+            if (((int.Parse(tbCh4Shuchuyanshi.Text) + int.Parse(tbCh4Faguangshijian.Text)) * int.Parse(tbChufaPinci.Text)) > 10000000) { DialogBox.Message("绿色通道数据配置错误", DialogBox.DialogType.Error); }
 
 
             int pinci = int.Parse(frequency.Text);//周期
             if (pinci > 65535) { DialogBox.Message("循环次数应小于65535", DialogBox.DialogType.Error); return; }
-            int Ch11 = int.Parse(tbChufaPinci.Text);//触法每秒
+            int Ch11 = int.Parse(tbChufaPinci.Text);//触发每秒
 
-            int Ch12 = int.Parse(tbCh1Shuchuyanshi.Text);//通道1 输出延时
-                   if (double.Parse(tbCh1Faguangshijian.Text) < 0.1) DialogBox.Message("红色通道发光时间需>=0.1", DialogBox.DialogType.Error);
-            long temp_red = (long)(double.Parse(tbCh1Faguangshijian.Text) * 1000);
-            int Ch13 = (int)(0x000000ffffff & temp_red);//通道1 发光延时  低24位
-
-
-            int Ch14 = (int)((0xffffff000000 & temp_red)>>24);//通道1 发光延时  高24位
+            int Ch12 = int.Parse(tbCh1Shuchuyanshi.Text);//通道1 输出延时            
+            int Ch13 = int.Parse(tbCh1Faguangshijian.Text);//通道1 发光延时 
+            int Ch14 = int.Parse(tbCh1Xjchufashichang.Text);//通道1  相机触发时长
 
 
 
-            int Ch15 = int.Parse(tbCh1Xjchufashichang.Text);//通道1  触发时长
-            
-            int Ch21 = int.Parse(tbCh2Shuchuyanshi.Text);//通道2 输出延时
-                if (double.Parse(tbCh2Faguangshijian.Text) < 0.1) DialogBox.Message("黄色通道发光时间需>=0.1", DialogBox.DialogType.Error);
-            long temp_yellow = (long)(double.Parse(tbCh2Faguangshijian.Text) * 1000);
-            int Ch22 = (int)(0x000000ffffff & temp_yellow);//通道2 发光延时  低24位
-            int Ch23 = (int)((0xffffff000000 & temp_yellow) >> 24);//通道2 发光延时  高24位
-            int Ch24 = int.Parse(tbCh2Xjchufashichang.Text);//通道2  触发时长
+            int Ch15 = int.Parse(tbCh2Shuchuyanshi.Text);//通道2 输出延时
+            int Ch21 = int.Parse(tbCh2Faguangshijian.Text);//通道2 发光时间
+            int Ch22 = int.Parse(tbCh2Xjchufashichang.Text);//通道2  相机触发时长
 
 
 
-            int Ch25 = int.Parse(tbCh3Shuchuyanshi.Text);//通道3 输出延时
-            if (double.Parse(tbCh3Faguangshijian.Text) < 0.1) DialogBox.Message("蓝色色通道发光时间需>=0.1", DialogBox.DialogType.Error);       
-            long temp_blue = (long)(double.Parse(tbCh3Faguangshijian.Text) * 1000);
-  
-            int Ch31 = (int)(0x000000ffffff & temp_blue);//通道3 发光延时  低24位
-            int Ch32 = (int)((0xffffff000000 & temp_blue) >> 24);//通道3 发光延时  高24位
+            int Ch23 = int.Parse(tbCh3Shuchuyanshi.Text);//通道3 输出延时
+            int Ch24 = int.Parse(tbCh3Faguangshijian.Text);//通道3 发光时间
+            int Ch25 = int.Parse(tbCh3Xjchufashichang.Text);//通道3  相机触发时长
+
+
+            int Ch31 = int.Parse(tbCh4Shuchuyanshi.Text);//通道4 输出延时
+            int Ch32 = int.Parse(tbCh3Faguangshijian.Text);//通道4 发光时间
+            int Ch33 = int.Parse(tbCh4Xjchufashichang.Text);//通道4相机触发时长
 
 
 
-            int Ch33 = int.Parse(tbCh3Xjchufashichang.Text);//通道3  触发时长
-
-
-            
-             int Ch34 = int.Parse(tbCh4Shuchuyanshi.Text);//通道4 输出延时
-            long temp_green = (long)(double.Parse(tbCh4Faguangshijian.Text) * 1000);
-            if (double.Parse(tbCh3Faguangshijian.Text) < 0.1) { DialogBox.Message("绿色色通道发光时间需>=0.1", DialogBox.DialogType.Error); return; }           
-           
-            int Ch35 = (int)(0x000000ffffff & temp_green);//通道4 发光延时  低24位
-            int Ch41 = (int)((0xffffff000000 & temp_green) >> 24);//通道4 发光延时  高24位
-            int Ch42 =int.Parse(tbCh4Xjchufashichang.Text);//通道4  触发时长
+            int Ch34 = 0;            
+            int Ch35 = 0;
+            int Ch41 = 0;
+            int Ch42 =0;
 
             int Ch43 = int.Parse( p13.Text);
             int Ch44 = int.Parse(p14.Text);
@@ -1196,7 +1174,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：us";
+            string tipOverwrite = "范围：0-16777215。单位：0.1us";
             ttpSettings.SetToolTip(tbCh1Shuchuyanshi, tipOverwrite);
         }
 
@@ -1209,7 +1187,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0.1-16777215。单位：us";
+            string tipOverwrite = "范围：0-16777215。单位：0.1us";
             ttpSettings.SetToolTip(tbCh1Faguangshijian, tipOverwrite);
         }
 
@@ -1224,7 +1202,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：us";
+            string tipOverwrite = "范围：0-16777215。单位：0.1us";
             ttpSettings.SetToolTip(tbCh2Shuchuyanshi, tipOverwrite);
         }
 
@@ -1237,7 +1215,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：us";
+            string tipOverwrite = "范围：0-16777215。单位：0.1us";
             ttpSettings.SetToolTip(tbCh3Shuchuyanshi, tipOverwrite);
         }
 
@@ -1250,7 +1228,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：us";
+            string tipOverwrite = "范围：0-16777215。单位：0.1us";
             ttpSettings.SetToolTip(tbCh4Shuchuyanshi, tipOverwrite);
         }
 
@@ -1263,7 +1241,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0.1-16777215。单位：us";
+            string tipOverwrite = "范围：0-16777215。单位：0.1us";
             ttpSettings.SetToolTip(tbCh2Faguangshijian, tipOverwrite);
         }
 
@@ -1276,7 +1254,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0.1-16777215。单位：us";
+            string tipOverwrite = "范围：0-16777215。单位：0.1us";
             ttpSettings.SetToolTip(tbCh3Faguangshijian, tipOverwrite);
         }
 
@@ -1289,7 +1267,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0.1-16777215。单位：us";
+            string tipOverwrite = "范围：0-16777215。单位：0.1us";
             ttpSettings.SetToolTip(tbCh4Faguangshijian, tipOverwrite);
         }
 
@@ -1653,6 +1631,7 @@ namespace PsecstoolOut
                 ch3_g.Enabled = true;
             }
         }
+
 
        
 
