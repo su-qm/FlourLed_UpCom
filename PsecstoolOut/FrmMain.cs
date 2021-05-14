@@ -1024,7 +1024,7 @@ namespace PsecstoolOut
 
 
             int Ch31 = int.Parse(tbCh4Shuchuyanshi.Text);//通道4 输出延时
-            int Ch32 = int.Parse(tbCh3Faguangshijian.Text);//通道4 发光时间
+            int Ch32 = int.Parse(tbCh4Faguangshijian.Text);//通道4 发光时间
             int Ch33 = int.Parse(tbCh4Xjchufashichang.Text);//通道4相机触发时长
 
 

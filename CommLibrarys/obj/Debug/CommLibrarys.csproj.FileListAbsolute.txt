@@ -47,3 +47,8 @@ C:\Users\qm\Desktop\四色光源\LED_CONTROL_ECS_V11_20201119\CommLibrarys\bin\D
 C:\Users\qm\Desktop\四色光源\LED_CONTROL_ECS_V11_20201119\CommLibrarys\obj\Debug\CommLibrarys.csprojResolveAssemblyReference.cache
 C:\Users\qm\Desktop\四色光源\LED_CONTROL_ECS_V11_20201119\CommLibrarys\obj\Debug\CommLibrarys.dll
 C:\Users\qm\Desktop\四色光源\LED_CONTROL_ECS_V11_20201119\CommLibrarys\obj\Debug\CommLibrarys.pdb
+E:\code\FlourLed_UpCom\CommLibrarys\bin\Debug\CommLibrarys.dll
+E:\code\FlourLed_UpCom\CommLibrarys\bin\Debug\CommLibrarys.pdb
+E:\code\FlourLed_UpCom\CommLibrarys\obj\Debug\CommLibrarys.csprojResolveAssemblyReference.cache
+E:\code\FlourLed_UpCom\CommLibrarys\obj\Debug\CommLibrarys.dll
+E:\code\FlourLed_UpCom\CommLibrarys\obj\Debug\CommLibrarys.pdb

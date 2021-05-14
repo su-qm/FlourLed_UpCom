@@ -7,14 +7,14 @@
     <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="设备配置工具.exe.manifest" size="6293">
+    <dependentAssembly dependencyType="install" codebase="设备配置工具.exe.manifest" size="6294">
       <assemblyIdentity name="设备配置工具.exe" version="3.0.0.4" publicKeyToken="0000000000000000" language="zh-CN" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>XRhmtwJANCvWWYKNNQbyeYC0ujU=</dsig:DigestValue>
+        <dsig:DigestValue>vciyCzwmVTIikYLjAUunQLOG0R8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
