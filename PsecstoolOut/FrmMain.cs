@@ -1036,7 +1036,10 @@ namespace PsecstoolOut
 
             int Ch43 = int.Parse( p13.Text);
             int Ch44 = int.Parse(p14.Text);
-            int Ch45 = 0;
+            int Ch45 = 0x00;
+            if ((Ch13 > 500000) || (Ch21 > 500000) || (Ch32 > 500000)) Ch45 = 0xff;
+            else Ch45 = 0x00;
+            
             int temp = 0;
 
             if (Ch43 > 100) DialogBox.Message("亮度不在范围内！（0~100）", DialogBox.DialogType.Error);
@@ -1630,6 +1633,11 @@ namespace PsecstoolOut
                 ch2_g.Enabled = true;
                 ch3_g.Enabled = true;
             }
+        }
+
+        private void tbCh1Shuchuyanshi_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
 

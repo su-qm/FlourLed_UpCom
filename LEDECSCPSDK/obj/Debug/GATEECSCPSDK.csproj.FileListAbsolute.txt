@@ -48,3 +48,4 @@ E:\code\FlourLed_UpCom\LEDECSCPSDK\bin\Debug\GATEECSCPSDK.dll
 E:\code\FlourLed_UpCom\LEDECSCPSDK\bin\Debug\GATEECSCPSDK.pdb
 E:\code\FlourLed_UpCom\LEDECSCPSDK\obj\Debug\GATEECSCPSDK.dll
 E:\code\FlourLed_UpCom\LEDECSCPSDK\obj\Debug\GATEECSCPSDK.pdb
+E:\code\FlourLed_UpCom\LEDECSCPSDK\obj\Debug\GATEECSCPSDK.csprojResolveAssemblyReference.cache

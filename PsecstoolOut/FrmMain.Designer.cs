@@ -219,7 +219,7 @@
             this.btnSetcallback.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetcallback.ForeColor = System.Drawing.Color.Red;
             this.btnSetcallback.Location = new System.Drawing.Point(8, 16);
-            this.btnSetcallback.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSetcallback.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetcallback.Name = "btnSetcallback";
             this.btnSetcallback.Size = new System.Drawing.Size(196, 60);
             this.btnSetcallback.TabIndex = 0;
@@ -232,7 +232,7 @@
             this.btnStartup.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnStartup.ForeColor = System.Drawing.Color.Red;
             this.btnStartup.Location = new System.Drawing.Point(971, 18);
-            this.btnStartup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStartup.Margin = new System.Windows.Forms.Padding(4);
             this.btnStartup.Name = "btnStartup";
             this.btnStartup.Size = new System.Drawing.Size(117, 60);
             this.btnStartup.TabIndex = 1;
@@ -244,7 +244,7 @@
             // 
             this.btnShutdown.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShutdown.Location = new System.Drawing.Point(1108, 18);
-            this.btnShutdown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShutdown.Margin = new System.Windows.Forms.Padding(4);
             this.btnShutdown.Name = "btnShutdown";
             this.btnShutdown.Size = new System.Drawing.Size(117, 60);
             this.btnShutdown.TabIndex = 2;
@@ -255,7 +255,7 @@
             // btnFindSocketid
             // 
             this.btnFindSocketid.Location = new System.Drawing.Point(211, 198);
-            this.btnFindSocketid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFindSocketid.Margin = new System.Windows.Forms.Padding(4);
             this.btnFindSocketid.Name = "btnFindSocketid";
             this.btnFindSocketid.Size = new System.Drawing.Size(211, 29);
             this.btnFindSocketid.TabIndex = 3;
@@ -267,7 +267,7 @@
             // 
             this.txbSocketIP.ForeColor = System.Drawing.Color.Gray;
             this.txbSocketIP.Location = new System.Drawing.Point(56, 198);
-            this.txbSocketIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbSocketIP.Margin = new System.Windows.Forms.Padding(4);
             this.txbSocketIP.Name = "txbSocketIP";
             this.txbSocketIP.Size = new System.Drawing.Size(145, 25);
             this.txbSocketIP.TabIndex = 4;
@@ -289,9 +289,9 @@
             this.groupBox1.Controls.Add(this.btnShutdown);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(1293, 86);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -303,7 +303,7 @@
             this.cmbServerIp.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbServerIp.FormattingEnabled = true;
             this.cmbServerIp.Location = new System.Drawing.Point(387, 32);
-            this.cmbServerIp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbServerIp.Margin = new System.Windows.Forms.Padding(4);
             this.cmbServerIp.Name = "cmbServerIp";
             this.cmbServerIp.Size = new System.Drawing.Size(239, 26);
             this.cmbServerIp.TabIndex = 6;
@@ -335,7 +335,7 @@
             this.tbServerPort.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbServerPort.ForeColor = System.Drawing.Color.OrangeRed;
             this.tbServerPort.Location = new System.Drawing.Point(761, 32);
-            this.tbServerPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbServerPort.Margin = new System.Windows.Forms.Padding(4);
             this.tbServerPort.Name = "tbServerPort";
             this.tbServerPort.Size = new System.Drawing.Size(160, 28);
             this.tbServerPort.TabIndex = 4;
@@ -347,7 +347,7 @@
             // 
             this.txbSocketid.ForeColor = System.Drawing.Color.Gray;
             this.txbSocketid.Location = new System.Drawing.Point(56, 231);
-            this.txbSocketid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txbSocketid.Margin = new System.Windows.Forms.Padding(4);
             this.txbSocketid.Name = "txbSocketid";
             this.txbSocketid.Size = new System.Drawing.Size(145, 25);
             this.txbSocketid.TabIndex = 4;
@@ -357,7 +357,7 @@
             // btnFindSocketIP
             // 
             this.btnFindSocketIP.Location = new System.Drawing.Point(211, 231);
-            this.btnFindSocketIP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFindSocketIP.Margin = new System.Windows.Forms.Padding(4);
             this.btnFindSocketIP.Name = "btnFindSocketIP";
             this.btnFindSocketIP.Size = new System.Drawing.Size(211, 29);
             this.btnFindSocketIP.TabIndex = 3;
@@ -373,7 +373,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1293, 859);
             this.panel1.TabIndex = 13;
@@ -383,7 +383,7 @@
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(309, 86);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(984, 739);
             this.panel4.TabIndex = 16;
@@ -394,9 +394,9 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.ForeColor = System.Drawing.Color.OrangeRed;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox2.Size = new System.Drawing.Size(984, 739);
             this.groupBox2.TabIndex = 14;
@@ -409,7 +409,7 @@
             this.tabDeviceInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabDeviceInfo.Font = new System.Drawing.Font("宋体", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabDeviceInfo.Location = new System.Drawing.Point(4, 22);
-            this.tabDeviceInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabDeviceInfo.Margin = new System.Windows.Forms.Padding(4);
             this.tabDeviceInfo.Name = "tabDeviceInfo";
             this.tabDeviceInfo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabDeviceInfo.SelectedIndex = 0;
@@ -420,9 +420,9 @@
             // 
             this.tabPage1.Controls.Add(this.groupBox5);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabPage1.Size = new System.Drawing.Size(968, 682);
             this.tabPage1.TabIndex = 0;
@@ -437,9 +437,9 @@
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox5.Location = new System.Drawing.Point(4, 4);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox5.Size = new System.Drawing.Size(960, 674);
             this.groupBox5.TabIndex = 9;
@@ -453,9 +453,9 @@
             this.gpbMAC.Controls.Add(this.tbMAC);
             this.gpbMAC.Dock = System.Windows.Forms.DockStyle.Top;
             this.gpbMAC.Location = new System.Drawing.Point(4, 179);
-            this.gpbMAC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbMAC.Margin = new System.Windows.Forms.Padding(4);
             this.gpbMAC.Name = "gpbMAC";
-            this.gpbMAC.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbMAC.Padding = new System.Windows.Forms.Padding(4);
             this.gpbMAC.Size = new System.Drawing.Size(952, 78);
             this.gpbMAC.TabIndex = 11;
             this.gpbMAC.TabStop = false;
@@ -466,7 +466,7 @@
             this.btnGetMAC.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetMAC.ForeColor = System.Drawing.Color.Gray;
             this.btnGetMAC.Location = new System.Drawing.Point(13, 22);
-            this.btnGetMAC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGetMAC.Margin = new System.Windows.Forms.Padding(4);
             this.btnGetMAC.Name = "btnGetMAC";
             this.btnGetMAC.Size = new System.Drawing.Size(204, 44);
             this.btnGetMAC.TabIndex = 1;
@@ -479,7 +479,7 @@
             this.btnSetMAC.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetMAC.ForeColor = System.Drawing.Color.Gray;
             this.btnSetMAC.Location = new System.Drawing.Point(728, 22);
-            this.btnSetMAC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSetMAC.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetMAC.Name = "btnSetMAC";
             this.btnSetMAC.Size = new System.Drawing.Size(204, 44);
             this.btnSetMAC.TabIndex = 1;
@@ -492,7 +492,7 @@
             this.tbMAC.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbMAC.ForeColor = System.Drawing.Color.OrangeRed;
             this.tbMAC.Location = new System.Drawing.Point(347, 29);
-            this.tbMAC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbMAC.Margin = new System.Windows.Forms.Padding(4);
             this.tbMAC.Name = "tbMAC";
             this.tbMAC.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbMAC.Size = new System.Drawing.Size(251, 28);
@@ -523,9 +523,9 @@
             this.gpbDeviceInfos.Dock = System.Windows.Forms.DockStyle.Top;
             this.gpbDeviceInfos.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gpbDeviceInfos.Location = new System.Drawing.Point(4, 24);
-            this.gpbDeviceInfos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbDeviceInfos.Margin = new System.Windows.Forms.Padding(4);
             this.gpbDeviceInfos.Name = "gpbDeviceInfos";
-            this.gpbDeviceInfos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbDeviceInfos.Padding = new System.Windows.Forms.Padding(4);
             this.gpbDeviceInfos.Size = new System.Drawing.Size(952, 155);
             this.gpbDeviceInfos.TabIndex = 14;
             this.gpbDeviceInfos.TabStop = false;
@@ -536,7 +536,7 @@
             this.btnGetMtiPara.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetMtiPara.ForeColor = System.Drawing.Color.Gray;
             this.btnGetMtiPara.Location = new System.Drawing.Point(21, 46);
-            this.btnGetMtiPara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGetMtiPara.Margin = new System.Windows.Forms.Padding(4);
             this.btnGetMtiPara.Name = "btnGetMtiPara";
             this.btnGetMtiPara.Size = new System.Drawing.Size(93, 88);
             this.btnGetMtiPara.TabIndex = 10;
@@ -549,7 +549,7 @@
             this.tbDevicePort.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbDevicePort.ForeColor = System.Drawing.Color.Black;
             this.tbDevicePort.Location = new System.Drawing.Point(613, 85);
-            this.tbDevicePort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDevicePort.Margin = new System.Windows.Forms.Padding(4);
             this.tbDevicePort.Name = "tbDevicePort";
             this.tbDevicePort.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbDevicePort.Size = new System.Drawing.Size(172, 25);
@@ -563,7 +563,7 @@
             this.tbSocketId.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbSocketId.ForeColor = System.Drawing.Color.Gray;
             this.tbSocketId.Location = new System.Drawing.Point(264, 18);
-            this.tbSocketId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSocketId.Margin = new System.Windows.Forms.Padding(4);
             this.tbSocketId.Name = "tbSocketId";
             this.tbSocketId.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbSocketId.Size = new System.Drawing.Size(172, 25);
@@ -575,7 +575,7 @@
             this.tbSeverPort.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbSeverPort.ForeColor = System.Drawing.Color.Black;
             this.tbSeverPort.Location = new System.Drawing.Point(613, 51);
-            this.tbSeverPort.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSeverPort.Margin = new System.Windows.Forms.Padding(4);
             this.tbSeverPort.Name = "tbSeverPort";
             this.tbSeverPort.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbSeverPort.Size = new System.Drawing.Size(172, 25);
@@ -588,7 +588,7 @@
             this.btnSetMtiPara.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetMtiPara.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnSetMtiPara.Location = new System.Drawing.Point(828, 46);
-            this.btnSetMtiPara.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSetMtiPara.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetMtiPara.Name = "btnSetMtiPara";
             this.btnSetMtiPara.Size = new System.Drawing.Size(93, 88);
             this.btnSetMtiPara.TabIndex = 10;
@@ -601,7 +601,7 @@
             this.tbDeviceip.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbDeviceip.ForeColor = System.Drawing.Color.Black;
             this.tbDeviceip.Location = new System.Drawing.Point(264, 85);
-            this.tbDeviceip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDeviceip.Margin = new System.Windows.Forms.Padding(4);
             this.tbDeviceip.Name = "tbDeviceip";
             this.tbDeviceip.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbDeviceip.Size = new System.Drawing.Size(172, 25);
@@ -637,7 +637,7 @@
             this.tbSeverIp.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbSeverIp.ForeColor = System.Drawing.Color.Black;
             this.tbSeverIp.Location = new System.Drawing.Point(264, 51);
-            this.tbSeverIp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbSeverIp.Margin = new System.Windows.Forms.Padding(4);
             this.tbSeverIp.Name = "tbSeverIp";
             this.tbSeverIp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbSeverIp.Size = new System.Drawing.Size(172, 25);
@@ -685,7 +685,7 @@
             this.tbDeviceSub.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbDeviceSub.ForeColor = System.Drawing.Color.Black;
             this.tbDeviceSub.Location = new System.Drawing.Point(264, 120);
-            this.tbDeviceSub.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDeviceSub.Margin = new System.Windows.Forms.Padding(4);
             this.tbDeviceSub.Name = "tbDeviceSub";
             this.tbDeviceSub.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbDeviceSub.Size = new System.Drawing.Size(172, 25);
@@ -721,7 +721,7 @@
             this.tbDeviceGatway.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tbDeviceGatway.ForeColor = System.Drawing.Color.Black;
             this.tbDeviceGatway.Location = new System.Drawing.Point(613, 118);
-            this.tbDeviceGatway.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbDeviceGatway.Margin = new System.Windows.Forms.Padding(4);
             this.tbDeviceGatway.Name = "tbDeviceGatway";
             this.tbDeviceGatway.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbDeviceGatway.Size = new System.Drawing.Size(172, 25);
@@ -751,9 +751,9 @@
             this.gpbAlarm.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gpbAlarm.ForeColor = System.Drawing.Color.RoyalBlue;
             this.gpbAlarm.Location = new System.Drawing.Point(4, 261);
-            this.gpbAlarm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbAlarm.Margin = new System.Windows.Forms.Padding(4);
             this.gpbAlarm.Name = "gpbAlarm";
-            this.gpbAlarm.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gpbAlarm.Padding = new System.Windows.Forms.Padding(4);
             this.gpbAlarm.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.gpbAlarm.Size = new System.Drawing.Size(952, 409);
             this.gpbAlarm.TabIndex = 13;
@@ -786,21 +786,21 @@
             // 
             this.p14.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.p14.Location = new System.Drawing.Point(209, 379);
-            this.p14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p14.Margin = new System.Windows.Forms.Padding(4);
             this.p14.Name = "p14";
             this.p14.Size = new System.Drawing.Size(89, 25);
             this.p14.TabIndex = 43;
-            this.p14.Text = "0";
+            this.p14.Text = "10";
             // 
             // p13
             // 
             this.p13.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.p13.Location = new System.Drawing.Point(60, 379);
-            this.p13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.p13.Margin = new System.Windows.Forms.Padding(4);
             this.p13.Name = "p13";
             this.p13.Size = new System.Drawing.Size(89, 25);
             this.p13.TabIndex = 42;
-            this.p13.Text = "0";
+            this.p13.Text = "10";
             // 
             // label13
             // 
@@ -821,7 +821,7 @@
             this.panel13.Controls.Add(this.Brightness);
             this.panel13.Controls.Add(this.label23);
             this.panel13.Location = new System.Drawing.Point(13, 332);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(223, 34);
             this.panel13.TabIndex = 6;
@@ -830,7 +830,7 @@
             // 
             this.Brightness.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.Brightness.Location = new System.Drawing.Point(111, 4);
-            this.Brightness.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Brightness.Margin = new System.Windows.Forms.Padding(4);
             this.Brightness.Name = "Brightness";
             this.Brightness.Size = new System.Drawing.Size(89, 25);
             this.Brightness.TabIndex = 2;
@@ -861,7 +861,7 @@
             // 
             this.frequency.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.frequency.Location = new System.Drawing.Point(533, 29);
-            this.frequency.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.frequency.Margin = new System.Windows.Forms.Padding(4);
             this.frequency.Name = "frequency";
             this.frequency.Size = new System.Drawing.Size(89, 25);
             this.frequency.TabIndex = 40;
@@ -876,9 +876,9 @@
             this.groupBox10.Controls.Add(this.panel29);
             this.groupBox10.Controls.Add(this.panel26);
             this.groupBox10.Location = new System.Drawing.Point(713, 78);
-            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox10.Size = new System.Drawing.Size(224, 221);
             this.groupBox10.TabIndex = 39;
             this.groupBox10.TabStop = false;
@@ -902,7 +902,7 @@
             this.panel30.Controls.Add(this.tbCh4Shuchuyanshi);
             this.panel30.Controls.Add(this.label40);
             this.panel30.Location = new System.Drawing.Point(4, 46);
-            this.panel30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel30.Margin = new System.Windows.Forms.Padding(4);
             this.panel30.Name = "panel30";
             this.panel30.Size = new System.Drawing.Size(216, 34);
             this.panel30.TabIndex = 13;
@@ -911,7 +911,7 @@
             // 
             this.tbCh4Shuchuyanshi.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh4Shuchuyanshi.Location = new System.Drawing.Point(89, 4);
-            this.tbCh4Shuchuyanshi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh4Shuchuyanshi.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh4Shuchuyanshi.Name = "tbCh4Shuchuyanshi";
             this.tbCh4Shuchuyanshi.Size = new System.Drawing.Size(121, 25);
             this.tbCh4Shuchuyanshi.TabIndex = 2;
@@ -947,7 +947,7 @@
             this.panel29.Controls.Add(this.tbCh4Faguangshijian);
             this.panel29.Controls.Add(this.label39);
             this.panel29.Location = new System.Drawing.Point(4, 88);
-            this.panel29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel29.Margin = new System.Windows.Forms.Padding(4);
             this.panel29.Name = "panel29";
             this.panel29.Size = new System.Drawing.Size(216, 34);
             this.panel29.TabIndex = 14;
@@ -956,7 +956,7 @@
             // 
             this.tbCh4Faguangshijian.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh4Faguangshijian.Location = new System.Drawing.Point(89, 4);
-            this.tbCh4Faguangshijian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh4Faguangshijian.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh4Faguangshijian.Name = "tbCh4Faguangshijian";
             this.tbCh4Faguangshijian.Size = new System.Drawing.Size(121, 25);
             this.tbCh4Faguangshijian.TabIndex = 2;
@@ -980,7 +980,7 @@
             this.panel26.Controls.Add(this.tbCh4Xjchufashichang);
             this.panel26.Controls.Add(this.label36);
             this.panel26.Location = new System.Drawing.Point(4, 166);
-            this.panel26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel26.Margin = new System.Windows.Forms.Padding(4);
             this.panel26.Name = "panel26";
             this.panel26.Size = new System.Drawing.Size(212, 34);
             this.panel26.TabIndex = 17;
@@ -989,7 +989,7 @@
             // 
             this.tbCh4Xjchufashichang.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh4Xjchufashichang.Location = new System.Drawing.Point(83, 4);
-            this.tbCh4Xjchufashichang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh4Xjchufashichang.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh4Xjchufashichang.Name = "tbCh4Xjchufashichang";
             this.tbCh4Xjchufashichang.Size = new System.Drawing.Size(124, 25);
             this.tbCh4Xjchufashichang.TabIndex = 2;
@@ -1014,9 +1014,9 @@
             this.groupBox9.Controls.Add(this.panel24);
             this.groupBox9.Controls.Add(this.panel21);
             this.groupBox9.Location = new System.Drawing.Point(476, 78);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox9.Size = new System.Drawing.Size(224, 221);
             this.groupBox9.TabIndex = 39;
             this.groupBox9.TabStop = false;
@@ -1040,7 +1040,7 @@
             this.panel25.Controls.Add(this.tbCh3Shuchuyanshi);
             this.panel25.Controls.Add(this.label33);
             this.panel25.Location = new System.Drawing.Point(4, 46);
-            this.panel25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel25.Margin = new System.Windows.Forms.Padding(4);
             this.panel25.Name = "panel25";
             this.panel25.Size = new System.Drawing.Size(216, 34);
             this.panel25.TabIndex = 13;
@@ -1049,7 +1049,7 @@
             // 
             this.tbCh3Shuchuyanshi.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh3Shuchuyanshi.Location = new System.Drawing.Point(89, 4);
-            this.tbCh3Shuchuyanshi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh3Shuchuyanshi.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh3Shuchuyanshi.Name = "tbCh3Shuchuyanshi";
             this.tbCh3Shuchuyanshi.Size = new System.Drawing.Size(121, 25);
             this.tbCh3Shuchuyanshi.TabIndex = 2;
@@ -1085,7 +1085,7 @@
             this.panel24.Controls.Add(this.tbCh3Faguangshijian);
             this.panel24.Controls.Add(this.label32);
             this.panel24.Location = new System.Drawing.Point(4, 88);
-            this.panel24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel24.Margin = new System.Windows.Forms.Padding(4);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(216, 34);
             this.panel24.TabIndex = 14;
@@ -1094,7 +1094,7 @@
             // 
             this.tbCh3Faguangshijian.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh3Faguangshijian.Location = new System.Drawing.Point(89, 4);
-            this.tbCh3Faguangshijian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh3Faguangshijian.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh3Faguangshijian.Name = "tbCh3Faguangshijian";
             this.tbCh3Faguangshijian.Size = new System.Drawing.Size(121, 25);
             this.tbCh3Faguangshijian.TabIndex = 2;
@@ -1119,7 +1119,7 @@
             this.panel21.Controls.Add(this.tbCh3Xjchufashichang);
             this.panel21.Controls.Add(this.label29);
             this.panel21.Location = new System.Drawing.Point(8, 166);
-            this.panel21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel21.Margin = new System.Windows.Forms.Padding(4);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(216, 34);
             this.panel21.TabIndex = 17;
@@ -1140,7 +1140,7 @@
             // 
             this.tbCh3Xjchufashichang.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh3Xjchufashichang.Location = new System.Drawing.Point(96, 4);
-            this.tbCh3Xjchufashichang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh3Xjchufashichang.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh3Xjchufashichang.Name = "tbCh3Xjchufashichang";
             this.tbCh3Xjchufashichang.Size = new System.Drawing.Size(115, 25);
             this.tbCh3Xjchufashichang.TabIndex = 2;
@@ -1165,9 +1165,9 @@
             this.groupBox7.Controls.Add(this.panel19);
             this.groupBox7.Controls.Add(this.panel16);
             this.groupBox7.Location = new System.Drawing.Point(244, 78);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox7.Size = new System.Drawing.Size(224, 221);
             this.groupBox7.TabIndex = 38;
             this.groupBox7.TabStop = false;
@@ -1191,7 +1191,7 @@
             this.panel20.Controls.Add(this.tbCh2Shuchuyanshi);
             this.panel20.Controls.Add(this.label26);
             this.panel20.Location = new System.Drawing.Point(4, 46);
-            this.panel20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel20.Margin = new System.Windows.Forms.Padding(4);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(216, 34);
             this.panel20.TabIndex = 13;
@@ -1200,7 +1200,7 @@
             // 
             this.tbCh2Shuchuyanshi.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh2Shuchuyanshi.Location = new System.Drawing.Point(88, 4);
-            this.tbCh2Shuchuyanshi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh2Shuchuyanshi.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh2Shuchuyanshi.Name = "tbCh2Shuchuyanshi";
             this.tbCh2Shuchuyanshi.Size = new System.Drawing.Size(123, 25);
             this.tbCh2Shuchuyanshi.TabIndex = 2;
@@ -1236,7 +1236,7 @@
             this.panel19.Controls.Add(this.tbCh2Faguangshijian);
             this.panel19.Controls.Add(this.label25);
             this.panel19.Location = new System.Drawing.Point(4, 88);
-            this.panel19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel19.Margin = new System.Windows.Forms.Padding(4);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(216, 34);
             this.panel19.TabIndex = 14;
@@ -1245,7 +1245,7 @@
             // 
             this.tbCh2Faguangshijian.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh2Faguangshijian.Location = new System.Drawing.Point(88, 4);
-            this.tbCh2Faguangshijian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh2Faguangshijian.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh2Faguangshijian.Name = "tbCh2Faguangshijian";
             this.tbCh2Faguangshijian.Size = new System.Drawing.Size(123, 25);
             this.tbCh2Faguangshijian.TabIndex = 2;
@@ -1269,7 +1269,7 @@
             this.panel16.Controls.Add(this.tbCh2Xjchufashichang);
             this.panel16.Controls.Add(this.label22);
             this.panel16.Location = new System.Drawing.Point(4, 166);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(216, 34);
             this.panel16.TabIndex = 17;
@@ -1278,7 +1278,7 @@
             // 
             this.tbCh2Xjchufashichang.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh2Xjchufashichang.Location = new System.Drawing.Point(88, 4);
-            this.tbCh2Xjchufashichang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh2Xjchufashichang.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh2Xjchufashichang.Name = "tbCh2Xjchufashichang";
             this.tbCh2Xjchufashichang.Size = new System.Drawing.Size(123, 25);
             this.tbCh2Xjchufashichang.TabIndex = 2;
@@ -1303,9 +1303,9 @@
             this.groupBox6.Controls.Add(this.panel11);
             this.groupBox6.Controls.Add(this.panel8);
             this.groupBox6.Location = new System.Drawing.Point(16, 78);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox6.Size = new System.Drawing.Size(224, 221);
             this.groupBox6.TabIndex = 37;
             this.groupBox6.TabStop = false;
@@ -1341,7 +1341,7 @@
             this.panel14.Controls.Add(this.tbCh1Xjchufashichang);
             this.panel14.Controls.Add(this.label16);
             this.panel14.Location = new System.Drawing.Point(4, 162);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(216, 34);
             this.panel14.TabIndex = 5;
@@ -1350,7 +1350,7 @@
             // 
             this.tbCh1Xjchufashichang.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh1Xjchufashichang.Location = new System.Drawing.Point(92, 4);
-            this.tbCh1Xjchufashichang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh1Xjchufashichang.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh1Xjchufashichang.Name = "tbCh1Xjchufashichang";
             this.tbCh1Xjchufashichang.Size = new System.Drawing.Size(119, 25);
             this.tbCh1Xjchufashichang.TabIndex = 2;
@@ -1373,7 +1373,7 @@
             this.panel11.Controls.Add(this.tbCh1Faguangshijian);
             this.panel11.Controls.Add(this.label11);
             this.panel11.Location = new System.Drawing.Point(4, 88);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(216, 34);
             this.panel11.TabIndex = 3;
@@ -1382,7 +1382,7 @@
             // 
             this.tbCh1Faguangshijian.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh1Faguangshijian.Location = new System.Drawing.Point(92, 4);
-            this.tbCh1Faguangshijian.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh1Faguangshijian.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh1Faguangshijian.Name = "tbCh1Faguangshijian";
             this.tbCh1Faguangshijian.Size = new System.Drawing.Size(119, 25);
             this.tbCh1Faguangshijian.TabIndex = 2;
@@ -1407,7 +1407,7 @@
             this.panel8.Controls.Add(this.tbCh1Shuchuyanshi);
             this.panel8.Controls.Add(this.label1);
             this.panel8.Location = new System.Drawing.Point(4, 46);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(216, 34);
             this.panel8.TabIndex = 0;
@@ -1416,11 +1416,12 @@
             // 
             this.tbCh1Shuchuyanshi.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbCh1Shuchuyanshi.Location = new System.Drawing.Point(92, 4);
-            this.tbCh1Shuchuyanshi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbCh1Shuchuyanshi.Margin = new System.Windows.Forms.Padding(4);
             this.tbCh1Shuchuyanshi.Name = "tbCh1Shuchuyanshi";
             this.tbCh1Shuchuyanshi.Size = new System.Drawing.Size(119, 25);
             this.tbCh1Shuchuyanshi.TabIndex = 2;
             this.tbCh1Shuchuyanshi.Text = "5";
+            this.tbCh1Shuchuyanshi.TextChanged += new System.EventHandler(this.tbCh1Shuchuyanshi_TextChanged);
             this.tbCh1Shuchuyanshi.MouseEnter += new System.EventHandler(this.tbCh1Shuchuyanshi_MouseEnter);
             // 
             // label1
@@ -1448,7 +1449,7 @@
             // 
             this.tbChufaPinci.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.tbChufaPinci.Location = new System.Drawing.Point(336, 29);
-            this.tbChufaPinci.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbChufaPinci.Margin = new System.Windows.Forms.Padding(4);
             this.tbChufaPinci.Name = "tbChufaPinci";
             this.tbChufaPinci.Size = new System.Drawing.Size(92, 25);
             this.tbChufaPinci.TabIndex = 1;
@@ -1460,7 +1461,7 @@
             this.btnGetAlarmpwd.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetAlarmpwd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnGetAlarmpwd.Location = new System.Drawing.Point(13, 19);
-            this.btnGetAlarmpwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGetAlarmpwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnGetAlarmpwd.Name = "btnGetAlarmpwd";
             this.btnGetAlarmpwd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnGetAlarmpwd.Size = new System.Drawing.Size(204, 44);
@@ -1474,7 +1475,7 @@
             this.btnAction.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAction.ForeColor = System.Drawing.Color.OrangeRed;
             this.btnAction.Location = new System.Drawing.Point(807, 19);
-            this.btnAction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAction.Margin = new System.Windows.Forms.Padding(4);
             this.btnAction.Name = "btnAction";
             this.btnAction.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnAction.Size = new System.Drawing.Size(127, 44);
@@ -1488,7 +1489,7 @@
             this.btnSetAlarmpwd.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetAlarmpwd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSetAlarmpwd.Location = new System.Drawing.Point(632, 19);
-            this.btnSetAlarmpwd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSetAlarmpwd.Margin = new System.Windows.Forms.Padding(4);
             this.btnSetAlarmpwd.Name = "btnSetAlarmpwd";
             this.btnSetAlarmpwd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnSetAlarmpwd.Size = new System.Drawing.Size(167, 44);
@@ -1502,7 +1503,7 @@
             this.panel3.Controls.Add(this.groupBox3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 86);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(309, 739);
             this.panel3.TabIndex = 15;
@@ -1513,9 +1514,9 @@
             this.groupBox3.Controls.Add(this.panel15);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(0, 0);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(309, 739);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
@@ -1527,7 +1528,7 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(4, 70);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(301, 665);
             this.panel5.TabIndex = 7;
@@ -1537,7 +1538,7 @@
             this.panel7.Controls.Add(this.lstBoxDownIPS);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(301, 314);
             this.panel7.TabIndex = 5;
@@ -1550,7 +1551,7 @@
             this.lstBoxDownIPS.HorizontalScrollbar = true;
             this.lstBoxDownIPS.ItemHeight = 17;
             this.lstBoxDownIPS.Location = new System.Drawing.Point(0, 0);
-            this.lstBoxDownIPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstBoxDownIPS.Margin = new System.Windows.Forms.Padding(4);
             this.lstBoxDownIPS.Name = "lstBoxDownIPS";
             this.lstBoxDownIPS.Size = new System.Drawing.Size(301, 314);
             this.lstBoxDownIPS.TabIndex = 1;
@@ -1564,7 +1565,7 @@
             this.panel6.Controls.Add(this.btnCloseAllSocket);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(0, 314);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(301, 351);
             this.panel6.TabIndex = 4;
@@ -1595,7 +1596,7 @@
             this.panel18.Controls.Add(this.ch1_r);
             this.panel18.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel18.Location = new System.Drawing.Point(8, 79);
-            this.panel18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel18.Margin = new System.Windows.Forms.Padding(4);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(276, 245);
             this.panel18.TabIndex = 16;
@@ -1664,7 +1665,7 @@
             // 
             this.ch4_g.AutoSize = true;
             this.ch4_g.Location = new System.Drawing.Point(219, 189);
-            this.ch4_g.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch4_g.Margin = new System.Windows.Forms.Padding(4);
             this.ch4_g.Name = "ch4_g";
             this.ch4_g.Size = new System.Drawing.Size(44, 19);
             this.ch4_g.TabIndex = 19;
@@ -1676,7 +1677,7 @@
             // 
             this.ch4_b.AutoSize = true;
             this.ch4_b.Location = new System.Drawing.Point(163, 189);
-            this.ch4_b.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch4_b.Margin = new System.Windows.Forms.Padding(4);
             this.ch4_b.Name = "ch4_b";
             this.ch4_b.Size = new System.Drawing.Size(44, 19);
             this.ch4_b.TabIndex = 18;
@@ -1688,7 +1689,7 @@
             // 
             this.ch4_y.AutoSize = true;
             this.ch4_y.Location = new System.Drawing.Point(107, 189);
-            this.ch4_y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch4_y.Margin = new System.Windows.Forms.Padding(4);
             this.ch4_y.Name = "ch4_y";
             this.ch4_y.Size = new System.Drawing.Size(44, 19);
             this.ch4_y.TabIndex = 17;
@@ -1700,7 +1701,7 @@
             // 
             this.ch4_r.AutoSize = true;
             this.ch4_r.Location = new System.Drawing.Point(51, 188);
-            this.ch4_r.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch4_r.Margin = new System.Windows.Forms.Padding(4);
             this.ch4_r.Name = "ch4_r";
             this.ch4_r.Size = new System.Drawing.Size(44, 19);
             this.ch4_r.TabIndex = 16;
@@ -1712,7 +1713,7 @@
             // 
             this.ch1_g.AutoSize = true;
             this.ch1_g.Location = new System.Drawing.Point(219, 75);
-            this.ch1_g.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch1_g.Margin = new System.Windows.Forms.Padding(4);
             this.ch1_g.Name = "ch1_g";
             this.ch1_g.Size = new System.Drawing.Size(44, 19);
             this.ch1_g.TabIndex = 15;
@@ -1724,7 +1725,7 @@
             // 
             this.ch3_g.AutoSize = true;
             this.ch3_g.Location = new System.Drawing.Point(219, 150);
-            this.ch3_g.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch3_g.Margin = new System.Windows.Forms.Padding(4);
             this.ch3_g.Name = "ch3_g";
             this.ch3_g.Size = new System.Drawing.Size(44, 19);
             this.ch3_g.TabIndex = 7;
@@ -1736,7 +1737,7 @@
             // 
             this.ch3_b.AutoSize = true;
             this.ch3_b.Location = new System.Drawing.Point(163, 150);
-            this.ch3_b.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch3_b.Margin = new System.Windows.Forms.Padding(4);
             this.ch3_b.Name = "ch3_b";
             this.ch3_b.Size = new System.Drawing.Size(44, 19);
             this.ch3_b.TabIndex = 6;
@@ -1748,7 +1749,7 @@
             // 
             this.ch2_g.AutoSize = true;
             this.ch2_g.Location = new System.Drawing.Point(219, 112);
-            this.ch2_g.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch2_g.Margin = new System.Windows.Forms.Padding(4);
             this.ch2_g.Name = "ch2_g";
             this.ch2_g.Size = new System.Drawing.Size(44, 19);
             this.ch2_g.TabIndex = 11;
@@ -1760,7 +1761,7 @@
             // 
             this.ch3_y.AutoSize = true;
             this.ch3_y.Location = new System.Drawing.Point(107, 150);
-            this.ch3_y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch3_y.Margin = new System.Windows.Forms.Padding(4);
             this.ch3_y.Name = "ch3_y";
             this.ch3_y.Size = new System.Drawing.Size(44, 19);
             this.ch3_y.TabIndex = 5;
@@ -1772,7 +1773,7 @@
             // 
             this.ch2_b.AutoSize = true;
             this.ch2_b.Location = new System.Drawing.Point(163, 112);
-            this.ch2_b.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch2_b.Margin = new System.Windows.Forms.Padding(4);
             this.ch2_b.Name = "ch2_b";
             this.ch2_b.Size = new System.Drawing.Size(44, 19);
             this.ch2_b.TabIndex = 10;
@@ -1784,7 +1785,7 @@
             // 
             this.ch3_r.AutoSize = true;
             this.ch3_r.Location = new System.Drawing.Point(51, 150);
-            this.ch3_r.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch3_r.Margin = new System.Windows.Forms.Padding(4);
             this.ch3_r.Name = "ch3_r";
             this.ch3_r.Size = new System.Drawing.Size(44, 19);
             this.ch3_r.TabIndex = 4;
@@ -1796,7 +1797,7 @@
             // 
             this.ch1_b.AutoSize = true;
             this.ch1_b.Location = new System.Drawing.Point(163, 75);
-            this.ch1_b.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch1_b.Margin = new System.Windows.Forms.Padding(4);
             this.ch1_b.Name = "ch1_b";
             this.ch1_b.Size = new System.Drawing.Size(44, 19);
             this.ch1_b.TabIndex = 14;
@@ -1808,7 +1809,7 @@
             // 
             this.ch2_y.AutoSize = true;
             this.ch2_y.Location = new System.Drawing.Point(107, 110);
-            this.ch2_y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch2_y.Margin = new System.Windows.Forms.Padding(4);
             this.ch2_y.Name = "ch2_y";
             this.ch2_y.Size = new System.Drawing.Size(44, 19);
             this.ch2_y.TabIndex = 9;
@@ -1820,7 +1821,7 @@
             // 
             this.ch1_y.AutoSize = true;
             this.ch1_y.Location = new System.Drawing.Point(107, 75);
-            this.ch1_y.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch1_y.Margin = new System.Windows.Forms.Padding(4);
             this.ch1_y.Name = "ch1_y";
             this.ch1_y.Size = new System.Drawing.Size(44, 19);
             this.ch1_y.TabIndex = 13;
@@ -1832,7 +1833,7 @@
             // 
             this.ch2_r.AutoSize = true;
             this.ch2_r.Location = new System.Drawing.Point(51, 110);
-            this.ch2_r.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch2_r.Margin = new System.Windows.Forms.Padding(4);
             this.ch2_r.Name = "ch2_r";
             this.ch2_r.Size = new System.Drawing.Size(44, 19);
             this.ch2_r.TabIndex = 8;
@@ -1844,7 +1845,7 @@
             // 
             this.ch1_r.AutoSize = true;
             this.ch1_r.Location = new System.Drawing.Point(51, 75);
-            this.ch1_r.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ch1_r.Margin = new System.Windows.Forms.Padding(4);
             this.ch1_r.Name = "ch1_r";
             this.ch1_r.Size = new System.Drawing.Size(44, 19);
             this.ch1_r.TabIndex = 12;
@@ -1857,7 +1858,7 @@
             this.btnCloseCurSocket.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCloseCurSocket.ForeColor = System.Drawing.Color.Gray;
             this.btnCloseCurSocket.Location = new System.Drawing.Point(8, 8);
-            this.btnCloseCurSocket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCloseCurSocket.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseCurSocket.Name = "btnCloseCurSocket";
             this.btnCloseCurSocket.Size = new System.Drawing.Size(88, 44);
             this.btnCloseCurSocket.TabIndex = 3;
@@ -1870,7 +1871,7 @@
             this.btnClearOfflineDev.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnClearOfflineDev.ForeColor = System.Drawing.Color.Gray;
             this.btnClearOfflineDev.Location = new System.Drawing.Point(203, 8);
-            this.btnClearOfflineDev.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClearOfflineDev.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearOfflineDev.Name = "btnClearOfflineDev";
             this.btnClearOfflineDev.Size = new System.Drawing.Size(88, 44);
             this.btnClearOfflineDev.TabIndex = 2;
@@ -1883,7 +1884,7 @@
             this.btnCloseAllSocket.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCloseAllSocket.ForeColor = System.Drawing.Color.Gray;
             this.btnCloseAllSocket.Location = new System.Drawing.Point(105, 8);
-            this.btnCloseAllSocket.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCloseAllSocket.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseAllSocket.Name = "btnCloseAllSocket";
             this.btnCloseAllSocket.Size = new System.Drawing.Size(88, 44);
             this.btnCloseAllSocket.TabIndex = 2;
@@ -1897,7 +1898,7 @@
             this.panel15.Controls.Add(this.lbDeviceState);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(4, 22);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(301, 48);
             this.panel15.TabIndex = 11;
@@ -1959,9 +1960,9 @@
             this.groupBox4.Controls.Add(this.panel9);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Location = new System.Drawing.Point(1293, 0);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(447, 859);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
@@ -1972,7 +1973,7 @@
             this.panel10.Controls.Add(this.lstLog);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(4, 76);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(439, 779);
             this.panel10.TabIndex = 14;
@@ -1984,7 +1985,7 @@
             this.lstLog.HorizontalScrollbar = true;
             this.lstLog.ItemHeight = 15;
             this.lstLog.Location = new System.Drawing.Point(0, 0);
-            this.lstLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lstLog.Margin = new System.Windows.Forms.Padding(4);
             this.lstLog.Name = "lstLog";
             this.lstLog.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lstLog.Size = new System.Drawing.Size(439, 779);
@@ -1996,7 +1997,7 @@
             this.panel9.Controls.Add(this.btnClearLstLog);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(4, 22);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(439, 54);
             this.panel9.TabIndex = 13;
@@ -2004,7 +2005,7 @@
             // btnClearLstLog
             // 
             this.btnClearLstLog.Location = new System.Drawing.Point(27, 6);
-            this.btnClearLstLog.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClearLstLog.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearLstLog.Name = "btnClearLstLog";
             this.btnClearLstLog.Size = new System.Drawing.Size(113, 44);
             this.btnClearLstLog.TabIndex = 38;
@@ -2020,7 +2021,7 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
