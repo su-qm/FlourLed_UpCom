@@ -30,15 +30,95 @@ namespace PsecstoolOut
         private string selecteditemPort = "";
         private string selecteditemSocketId = "";
         private bool m_bCloseFrm = false;
-        private int m_ReadheadNum = 0xFF;
-
+        private int m_ReadheadNum = 0xFF;                                                                                                                                                                                                                   
         private int MAX_BATCHPER_NUM = 60;
+
+        public int lightnessChR, lightnessChY, lightnessChB, lightnessChG;//用来计算电压、电流的发光时间
+  
+    #region 四个通道使能函数 
+
+        public void ChanneInit()
+        {
+            Red_ChannelEnable(false);
+            Yellow_ChannelEnable(false);
+            Blue_ChannelEnable(false);
+            Green_ChannelEnable(false);
+        }
+
+        public void Red_ChannelEnable(bool Red_ChannelEnable_Flag)
+        {
+            if (Red_ChannelEnable_Flag == false)
+            {
+                tbCh1Shuchuyanshi.Enabled = false;
+                tbCh1Faguangshijian.Enabled = false;
+                tbCh1Xjchufashichang.Enabled = false;
+            }
+            else
+            {
+                tbCh1Shuchuyanshi.Enabled = true;
+                tbCh1Faguangshijian.Enabled = true;
+                tbCh1Xjchufashichang.Enabled = true;
+            }
+        }
+
+
+        public void Yellow_ChannelEnable(bool Yellow_ChannelEnable_Flag)
+        {
+            if (Yellow_ChannelEnable_Flag == false)
+            {
+                tbCh2Shuchuyanshi.Enabled = false;
+                tbCh2Faguangshijian.Enabled = false;
+                tbCh2Xjchufashichang.Enabled = false;
+            }
+            else
+            {
+                tbCh2Shuchuyanshi.Enabled = true;
+                tbCh2Faguangshijian.Enabled = true;
+                tbCh2Xjchufashichang.Enabled = true;        
+            }
+        }
+
+        public void Blue_ChannelEnable(bool Blue_ChannelEnable_Flag)
+        {
+            if (Blue_ChannelEnable_Flag == false)
+            {
+                tbCh3Shuchuyanshi.Enabled = false;
+                tbCh3Faguangshijian.Enabled = false;
+                tbCh3Xjchufashichang.Enabled = false;
+            }
+            else
+            {
+                tbCh3Shuchuyanshi.Enabled = true;
+                tbCh3Faguangshijian.Enabled = true;
+                tbCh3Xjchufashichang.Enabled = true;
+            }
+        }
+
+        public void Green_ChannelEnable(bool Green_ChannelEnable_Flag)
+        {
+            if (Green_ChannelEnable_Flag == false)
+            {
+                tbCh4Shuchuyanshi.Enabled = false;
+                tbCh4Faguangshijian.Enabled = false;
+                tbCh4Xjchufashichang.Enabled = false;
+            }
+            else
+            {
+                tbCh4Shuchuyanshi.Enabled = true;
+                tbCh4Faguangshijian.Enabled = true;
+                tbCh4Xjchufashichang.Enabled = true;
+            }
+        }
+
+#endregion
 
         public FrmMain()
         {
             InitializeComponent();
             dicChildHost = new Dictionary<string, string>();
             ServerEventBus.MessageReceived += new ServerEventBus.MessageReceivedEvent(ServerEventBus_MessageReceived);
+            ChanneInit();
+            SetLight();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -56,7 +136,7 @@ namespace PsecstoolOut
                 this.cmbServerIp.SelectedIndex = 0;
             }
 
-
+          
             this.btnStartup.Enabled = false;
             this.btnShutdown.Enabled = false;
             this.tabDeviceInfo.SelectedIndex = 1;
@@ -64,13 +144,118 @@ namespace PsecstoolOut
             //this.cmbCh2Dlsx.SelectedIndex = 1;
             //this.cmbCh3Dlsx.SelectedIndex = 2;
             //this.cmbCh4Dlsx.SelectedIndex = 3;
-            this.ch1_r.Checked = true;
-            this.ch2_y.Checked = true;
-            this.ch3_b.Checked = true;
-            this.ch4_g.Checked = true;
+       
         
 
         }
+
+
+        public void SetLight()//亮灯初始化
+        {
+            OneSequence(true);
+            TwoSequence(false);
+            ThreeSequence(false);
+            FourSequence(false);
+
+        }
+
+        public void OneSequence(bool status)
+        {
+            if (status)
+            {
+                if ((ch4_r.Checked | ch2_r.Checked | ch3_r.Checked) != true) ch1_r.Enabled = true;
+                if ((ch4_y.Checked | ch2_y.Checked | ch3_y.Checked) != true) ch1_y.Enabled = true;
+                if ((ch4_b.Checked | ch2_b.Checked | ch3_b.Checked) != true) ch1_b.Enabled = true;
+                if ((ch4_g.Checked | ch2_g.Checked | ch3_g.Checked) != true) ch1_g.Enabled = true; 
+
+            }
+            else
+            {
+                ch1_r.Enabled = false;
+                ch1_y.Enabled = false;
+                ch1_b.Enabled = false;
+                ch1_g.Enabled = false;
+
+                ch1_r.Checked = false;
+                ch1_y.Checked = false;
+                ch1_b.Checked = false;
+                ch1_g.Checked = false;
+
+            }
+
+        }
+
+        public void TwoSequence(bool status)
+        {
+            if (status)
+            {
+                if ((ch4_r.Checked | ch1_r.Checked | ch3_r.Checked) != true) ch2_r.Enabled = true;
+                if ((ch4_y.Checked | ch1_y.Checked | ch3_y.Checked) != true) ch2_y.Enabled = true;
+                if ((ch4_b.Checked | ch1_b.Checked | ch3_b.Checked) != true) ch2_b.Enabled = true;
+                if ((ch4_g.Checked | ch1_g.Checked | ch3_g.Checked) != true) ch2_g.Enabled = true;
+            }
+            else
+            {
+                ch2_r.Checked = false; ch2_y.Checked = false; ch2_b.Checked = false; ch2_g.Checked = false;
+                ch2_r.Enabled = false;ch2_y.Enabled = false;ch2_b.Enabled = false;ch2_g.Enabled = false;
+               
+
+            }
+        }
+
+        public void ThreeSequence(bool status)
+        {
+            if (status)
+            {
+                if ((ch4_r.Checked | ch1_r.Checked | ch2_r.Checked) != true) ch3_r.Enabled = true;
+                if ((ch4_y.Checked | ch1_y.Checked | ch2_y.Checked) != true) ch3_y.Enabled = true;
+                if ((ch4_b.Checked | ch1_b.Checked | ch2_b.Checked) != true) ch3_b.Enabled = true;
+                if ((ch4_g.Checked | ch1_g.Checked | ch2_g.Checked) != true) ch3_g.Enabled = true;
+            }
+
+            else
+            {
+                ch3_r.Checked = false;
+                ch3_y.Checked = false;
+                ch3_b.Checked = false;
+                ch3_g.Checked = false;
+
+                ch3_r.Enabled = false;
+                ch3_y.Enabled = false;
+                ch3_b.Enabled = false;
+                ch3_g.Enabled = false;
+
+         
+            }
+        }
+
+        public void FourSequence(bool status)
+        {
+            if (status)
+            {
+                if ((ch3_r.Checked | ch1_r.Checked | ch2_r.Checked) != true) ch4_r.Enabled = true;
+                if ((ch3_y.Checked | ch1_y.Checked | ch2_y.Checked) != true) ch4_y.Enabled = true;
+                if ((ch3_b.Checked | ch1_b.Checked | ch2_b.Checked) != true) ch4_b.Enabled = true;
+                if ((ch3_g.Checked | ch1_g.Checked | ch2_g.Checked) != true) ch4_g.Enabled = true;
+
+            }
+            else
+            {
+                ch4_r.Checked = false;
+                ch4_y.Checked = false;
+                ch4_b.Checked = false;
+                ch4_g.Checked = false;
+
+                ch4_r.Enabled = false;
+                ch4_y.Enabled = false;
+                ch4_b.Enabled = false;
+                ch4_g.Enabled = false;
+
+           
+            }
+
+        }
+
 
         private void btnSetcallback_Click(object sender, EventArgs e)
         {
@@ -932,7 +1117,11 @@ namespace PsecstoolOut
             }
         }
 
-        private void btnSetAlarmpwd_Click(object sender, EventArgs e)
+
+
+
+
+        private void btnSetAlarmpwd_Click(object sender, EventArgs e)//设置配置控制信息
         {
             //MessageBox.Show("输入报警密码长度不合法，请输入3位数字！", "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
 
@@ -1037,7 +1226,7 @@ namespace PsecstoolOut
             int Ch43 = int.Parse( p13.Text);
             int Ch44 = int.Parse(p14.Text);
             int Ch45 = 0x00;
-            if ((Ch13 > 500000) || (Ch21 > 500000) || (Ch32 > 500000)) Ch45 = 0xff;
+            if ((Ch13 > 50000) || (Ch21 > 50000) || (Ch32 > 50000)) Ch45 = 0xff;
             else Ch45 = 0x00;
             
             int temp = 0;
@@ -1361,285 +1550,441 @@ namespace PsecstoolOut
         }
 
 
-
+        #region 红色通道选项卡
         private void ch1_r_CheckedChanged(object sender, EventArgs e)
         {
             if (ch1_r.Checked == true)
             {
-                ch2_r.Enabled = false;
-                ch3_r.Enabled = false;
-                ch4_r.Enabled = false;
+                TwoSequence(true);
+              
+
+                ch1_y.Enabled = false;
+                ch1_b.Enabled = false;
+                ch1_g.Enabled = false;
+              
             }
 
             else
             {
-                ch2_r.Enabled = true;
-                ch3_r.Enabled = true;
-                ch4_r.Enabled = true;
+                ch1_y.Enabled = true;
+                ch1_b.Enabled = true;
+                ch1_g.Enabled = true;
+
+            
+                TwoSequence(false);
+                ThreeSequence(false);
+                FourSequence(false);
             }
+            Red_ChannelEnable(ch1_r.Checked);
         }
 
         private void ch2_r_CheckedChanged(object sender, EventArgs e)
         {
             if (ch2_r.Checked == true)
             {
-                ch1_r.Enabled = false;
-                ch3_r.Enabled = false;
-                ch4_r.Enabled = false;
+                ThreeSequence(true);
+           
+
+                ch2_y.Enabled = false;
+                ch2_b.Enabled = false;
+                ch2_g.Enabled = false;
             }
 
             else
             {
-                ch1_r.Enabled = true;
-                ch3_r.Enabled = true;
-                ch4_r.Enabled = true;
+
+                if ((ch1_y.Checked ) != true) ch2_y.Enabled = true;
+                if ((ch1_b.Checked ) != true) ch2_b.Enabled = true;
+                if ((ch1_g.Checked ) != true) ch2_g.Enabled = true;
+                ThreeSequence(false);
+                FourSequence(false);
             }
+            Red_ChannelEnable(ch2_r.Checked);
         }
 
         private void ch3_r_CheckedChanged(object sender, EventArgs e)
         {
             if (ch3_r.Checked == true)
             {
-                ch1_r.Enabled = false;
-                ch2_r.Enabled = false;
-                ch4_r.Enabled = false;
+                FourSequence(true);
+  
+
+                ch3_y.Enabled = false;
+                ch3_b.Enabled = false;
+                ch3_g.Enabled = false;
             }
 
             else
             {
-                ch1_r.Enabled = true;
-                ch2_r.Enabled = true;
-                ch4_r.Enabled = true;
+                if ((ch1_y.Checked | ch2_y.Checked ) != true) ch3_y.Enabled = true;
+                if ((ch1_b.Checked | ch2_b.Checked ) != true) ch3_b.Enabled = true;
+                if ((ch1_g.Checked | ch2_g.Checked ) != true) ch3_g.Enabled = true;
+                FourSequence(false);
             }
+            Red_ChannelEnable(ch3_r.Checked);
         }
 
         private void ch4_r_CheckedChanged(object sender, EventArgs e)
         {
             if (ch4_r.Checked == true)
             {
+   
+                ch4_y.Enabled = false;
+                ch4_b.Enabled = false;
+                ch4_g.Enabled = false;
+            }
+
+            else
+            {
+
+                if ((ch1_y.Checked | ch2_y.Checked | ch3_y.Checked) != true) ch4_y.Enabled = true;
+                if ((ch1_b.Checked | ch2_b.Checked | ch3_b.Checked) != true) ch4_b.Enabled = true;
+                if ((ch1_g.Checked | ch2_g.Checked | ch3_g.Checked) != true) ch4_g.Enabled = true;
+            }
+            Red_ChannelEnable(ch4_r.Checked);
+        }
+        #endregion
+
+
+        #region 黄色通道选项卡
+        private void ch1_y_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ch1_y.Checked == true)
+            {
+                TwoSequence(true);
                 ch1_r.Enabled = false;
-                ch2_r.Enabled = false;
-                ch3_r.Enabled = false;
+                ch1_b.Enabled = false;
+                ch1_g.Enabled = false;
             }
 
             else
             {
                 ch1_r.Enabled = true;
-                ch2_r.Enabled = true;
-                ch3_r.Enabled = true;
-            }
-        }
+                ch1_b.Enabled = true;
+                ch1_g.Enabled = true;
 
-        private void ch1_y_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ch1_y.Checked == true)
-            {
-                ch2_y.Enabled = false;
-                ch3_y.Enabled = false;
-                ch4_y.Enabled = false;
+                TwoSequence(false);
+                ThreeSequence(false);
+                FourSequence(false);
             }
-
-            else
-            {
-                ch2_y.Enabled = true;
-                ch3_y.Enabled = true;
-                ch4_y.Enabled = true;
-            }
+            Yellow_ChannelEnable(ch1_y.Checked);
         }
 
         private void ch2_y_CheckedChanged(object sender, EventArgs e)
         {
             if (ch2_y.Checked == true)
             {
-                ch1_y.Enabled = false;
-                ch3_y.Enabled = false;
-                ch4_y.Enabled = false;
+                ThreeSequence(true);
+                ch2_r.Enabled = false;
+                ch2_b.Enabled = false;
+                ch2_g.Enabled = false;
             }
 
             else
             {
-                ch1_y.Enabled = true;
-                ch3_y.Enabled = true;
-                ch4_y.Enabled = true;
+                if (ch1_r.Checked != true) ch2_r.Enabled = true;
+                if (ch1_b.Checked != true) ch2_b.Enabled = true;
+                if ( ch1_g.Checked != true) ch2_g.Enabled = true;
+
+                ThreeSequence(false);
+                FourSequence(false);
             }
+            Yellow_ChannelEnable(ch2_y.Checked);
         }
 
         private void ch3_y_CheckedChanged(object sender, EventArgs e)
         {
             if (ch3_y.Checked == true)
             {
-                ch1_y.Enabled = false;
-                ch2_y.Enabled = false;
-                ch4_y.Enabled = false;
+                FourSequence(true);
+                ch3_r.Enabled = false;
+                ch3_b.Enabled = false;
+                ch3_g.Enabled = false;
             }
 
             else
             {
-                ch1_y.Enabled = true;
-                ch2_y.Enabled = true;
-                ch4_y.Enabled = true;
+                if ((ch1_r.Checked | ch2_r.Checked) != true) ch3_r.Enabled = true;
+                if (( ch1_b.Checked | ch2_b.Checked) != true) ch3_b.Enabled = true;
+                if (( ch1_g.Checked | ch2_g.Checked) != true) ch3_g.Enabled = true;
+                FourSequence(false);
             }
+            Yellow_ChannelEnable(ch3_y.Checked);
         }
 
         private void ch4_y_CheckedChanged(object sender, EventArgs e)
         {
             if (ch4_y.Checked == true)
             {
-                ch1_y.Enabled = false;
-                ch2_y.Enabled = false;
-                ch3_y.Enabled = false;
+                ch4_r.Enabled = false;
+                ch4_b.Enabled = false;
+                ch4_g.Enabled = false;
             }
 
             else
             {
-                ch1_y.Enabled = true;
-                ch2_y.Enabled = true;
-                ch3_y.Enabled = true;
+                if ((ch3_r.Checked | ch1_r.Checked | ch2_r.Checked) != true) ch4_r.Enabled = true;
+                if ((ch3_b.Checked | ch1_b.Checked | ch2_b.Checked) != true) ch4_b.Enabled = true;
+                if ((ch3_g.Checked | ch1_g.Checked | ch2_g.Checked) != true) ch4_g.Enabled = true;
             }
+            Yellow_ChannelEnable(ch4_y.Checked);
         }
 
+
+#endregion
+
+        #region 蓝色通道选项卡
         private void ch1_b_CheckedChanged(object sender, EventArgs e)
         {
             if (ch1_b.Checked == true)
             {
-                ch2_b.Enabled = false;
-                ch3_b.Enabled = false;
-                ch4_b.Enabled = false;
+                TwoSequence(true);
+                ch1_r.Enabled = false;
+                ch1_y.Enabled = false;
+                ch1_g.Enabled = false;
             }
 
             else
             {
-                ch2_b.Enabled = true;
-                ch3_b.Enabled = true;
-                ch4_b.Enabled = true;
+                ch1_r.Enabled = true;
+                ch1_y.Enabled = true;
+                ch1_g.Enabled = true;
+                TwoSequence(false);
+                ThreeSequence(false);
+                FourSequence(false);
             }
+            Blue_ChannelEnable(ch1_b.Checked);
         }
 
         private void ch2_b_CheckedChanged(object sender, EventArgs e)
         {
             if (ch2_b.Checked == true)
             {
-                ch1_b.Enabled = false;
-                ch3_b.Enabled = false;
-                ch4_b.Enabled = false;
+                ThreeSequence(true);
+                ch2_r.Enabled = false;
+                ch2_y.Enabled = false;
+                ch2_g.Enabled = false;
             }
 
             else
             {
-                ch1_b.Enabled = true;
-                ch3_b.Enabled = true;
-                ch4_b.Enabled = true;
+                if (( ch1_r.Checked) != true) ch2_r.Enabled = true;
+                if (( ch1_y.Checked) != true) ch2_y.Enabled = true;
+                if (( ch1_g.Checked) != true) ch2_g.Enabled = true;
+                ThreeSequence(false);
+                FourSequence(false);
             }
+            Blue_ChannelEnable(ch2_b.Checked);
         }
 
         private void ch3_b_CheckedChanged(object sender, EventArgs e)
         {
             if (ch3_b.Checked == true)
             {
-                ch1_b.Enabled = false;
-                ch2_b.Enabled = false;
-                ch4_b.Enabled = false;
+                FourSequence(true);
+                ch3_r.Enabled = false;
+                ch3_y.Enabled = false;
+                ch3_g.Enabled = false;
             }
 
             else
             {
-                ch1_b.Enabled = true;
-                ch2_b.Enabled = true;
-                ch4_b.Enabled = true;
+                if ((ch2_r.Checked |  ch1_r.Checked) != true) ch3_r.Enabled = true;
+                if ((ch2_y.Checked |  ch1_y.Checked) != true) ch3_y.Enabled = true;
+                if ((ch2_g.Checked |  ch1_g.Checked) != true) ch3_g.Enabled = true;
+                FourSequence(false);
             }
+            Blue_ChannelEnable(ch3_b.Checked);
         }
 
         private void ch4_b_CheckedChanged(object sender, EventArgs e)
         {
             if (ch4_b.Checked == true)
             {
-                ch1_b.Enabled = false;
-                ch2_b.Enabled = false;
-                ch3_b.Enabled = false;
-            }
-
-            else
-            {
-                ch1_b.Enabled = true;
-                ch2_b.Enabled = true;
-                ch3_b.Enabled = true;
-            }
-
-        }
-
-        private void ch1_g_CheckedChanged(object sender, EventArgs e)
-        {
-            if (ch1_g.Checked == true)
-            {
-                ch2_g.Enabled = false;
-                ch3_g.Enabled = false;
+                ch4_r.Enabled = false;
+                ch4_y.Enabled = false;
                 ch4_g.Enabled = false;
             }
 
             else
             {
-                ch2_g.Enabled = true;
-                ch3_g.Enabled = true;
-                ch4_g.Enabled = true;
+                if ((ch2_r.Checked | ch3_r.Checked | ch1_r.Checked) != true) ch4_r.Enabled = true;
+                if ((ch2_y.Checked | ch3_y.Checked | ch1_y.Checked) != true) ch4_y.Enabled = true;
+                if ((ch2_g.Checked | ch3_g.Checked | ch1_g.Checked) != true) ch4_g.Enabled = true;
             }
+            Blue_ChannelEnable(ch4_b.Checked);
+        }
+        #endregion
+
+        #region 绿色通道选项卡
+        private void ch1_g_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ch1_g.Checked == true)
+            {
+                TwoSequence(true);
+                ch1_r.Enabled = false;
+                ch1_y.Enabled = false;
+                ch1_b.Enabled = false;
+            }
+
+            else
+            {
+                ch1_r.Enabled = true;
+                ch1_y.Enabled = true;
+                ch1_b.Enabled = true;
+                TwoSequence(false);
+                ThreeSequence(false);
+                FourSequence(false);
+            }
+            Green_ChannelEnable(ch1_g.Checked);
         }
 
         private void ch2_g_CheckedChanged(object sender, EventArgs e)
         {
             if (ch2_g.Checked == true)
             {
-                ch1_g.Enabled = false;
-                ch3_g.Enabled = false;
-                ch4_g.Enabled = false;
+                ThreeSequence(true);
+                ch2_r.Enabled = false;
+                ch2_y.Enabled = false;
+                ch2_b.Enabled = false;
             }
 
             else
             {
-                ch1_g.Enabled = true;
-                ch3_g.Enabled = true;
-                ch4_g.Enabled = true;
+                if ((ch1_r.Checked ) != true) ch2_r.Enabled = true;
+                if ((ch1_y.Checked ) != true) ch2_y.Enabled = true;
+                if ((ch1_b.Checked ) != true) ch2_b.Enabled = true;
+                ThreeSequence(false);
+                FourSequence(false);
             }
+            Green_ChannelEnable(ch2_g.Checked);
         }
 
         private void ch3_g_CheckedChanged(object sender, EventArgs e)
         {
             if (ch3_g.Checked == true)
             {
-                ch1_g.Enabled = false;
-                ch2_g.Enabled = false;
-                ch4_g.Enabled = false;
+                FourSequence(true);
+                ch3_r.Enabled = false;
+                ch3_y.Enabled = false;
+                ch3_b.Enabled = false;
             }
 
             else
             {
-                ch1_g.Enabled = true;
-                ch2_g.Enabled = true;
-                ch4_g.Enabled = true;
+                if ((ch1_r.Checked | ch2_r.Checked ) != true) ch3_r.Enabled = true;
+                if ((ch1_y.Checked | ch2_y.Checked ) != true) ch3_y.Enabled = true;
+                if ((ch1_b.Checked | ch2_b.Checked ) != true) ch3_b.Enabled = true;
+                FourSequence(false);
             }
+            Green_ChannelEnable(ch3_g.Checked);
         }
 
         private void ch4_g_CheckedChanged(object sender, EventArgs e)
         {
             if (ch4_g.Checked == true)
             {
-                ch1_g.Enabled = false;
-                ch2_g.Enabled = false;
-                ch3_g.Enabled = false;
+                ch4_r.Enabled = false;
+                ch4_y.Enabled = false;
+                ch4_b.Enabled = false;
             }
 
             else
             {
-                ch1_g.Enabled = true;
-                ch2_g.Enabled = true;
-                ch3_g.Enabled = true;
+                if ((ch1_r.Checked | ch2_r.Checked | ch3_r.Checked) != true) ch4_r.Enabled = true;
+                if ((ch1_y.Checked | ch2_y.Checked | ch3_y.Checked) != true) ch4_y.Enabled = true;
+                if ((ch1_b.Checked | ch2_b.Checked | ch3_b.Checked) != true) ch4_b.Enabled = true;
             }
+            Green_ChannelEnable(ch4_g.Checked);
         }
+        #endregion
+
 
         private void tbCh1Shuchuyanshi_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        private void Brightness_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            brightnessValue.Text = Convert.ToString(trackBar_brightness.Value);
+        }
+
+        public void JudgeLightTime()
+        {
+            if ((int.Parse(tbCh1Faguangshijian.Text) > 0) &
+                (int.Parse(tbCh1Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0;brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+
+            if ((int.Parse(tbCh2Faguangshijian.Text) > 0) &
+                (int.Parse(tbCh2Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+
+            if ((int.Parse(tbCh3Faguangshijian.Text) > 0) &
+                (int.Parse(tbCh3Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+
+            if ((int.Parse(tbCh4Faguangshijian.Text) > 0) &
+                (int.Parse(tbCh4Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+
+            trackBar_brightness.Enabled = true;
+        }
+
+        private void tbCh1Faguangshijian_TextChanged(object sender, EventArgs e)
+        {
+            if (int.Parse(tbCh1Faguangshijian.Text) > 10000000) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh1Faguangshijian.Text = Convert.ToString(10000000); }
+           
+            JudgeLightTime();
+            lightnessChR = int.Parse(tbCh1Faguangshijian.Text);
+        }
+
+        private void tbCh2Faguangshijian_TextChanged(object sender, EventArgs e)
+        {
+            if (int.Parse(tbCh2Faguangshijian.Text) > 10000000) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh2Faguangshijian.Text = Convert.ToString(10000000); }
+       
+            JudgeLightTime();
+            lightnessChY=int.Parse(tbCh2Faguangshijian.Text);
+        }
+
+        private void tbCh3Faguangshijian_TextChanged(object sender, EventArgs e)
+        {
+            if (int.Parse(tbCh3Faguangshijian.Text) > 10000000) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh3Faguangshijian.Text = Convert.ToString(10000000); }
+        
+            JudgeLightTime();
+            lightnessChB = int.Parse(tbCh3Faguangshijian.Text);
+        }
+
+        private void tbCh4Faguangshijian_TextChanged(object sender, EventArgs e)
+        {
+            if (int.Parse(tbCh4Faguangshijian.Text) > 10000000) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh4Faguangshijian.Text = Convert.ToString(10000000); }
+          
+            JudgeLightTime();
+            lightnessChG = int.Parse(tbCh4Faguangshijian.Text);
+        }
+
+        //lightnessChR, lightnessChY, lightnessChB, lightnessChG
+        public void countIV()//计算电压电流值   p13电流  p14电压
+        {
+            int Temp=0;
+
+            if (lightnessChR > 0) Temp = lightnessChR;
+            if (lightnessChY > 0) { if (Temp > lightnessChY ) Temp=lightnessChY;}
+            if (lightnessChB > 0) { if (Temp > lightnessChB)Temp = lightnessChB; }
+            if (lightnessChG > 0) { if (Temp > lightnessChG)Temp = lightnessChG; }
+
+
+
+            if (Temp == 5) { p13.Text = Convert.ToString(10); p14.Text = Convert.ToString(45); return; }
+
+            if (Temp  5) { p13.Text = Convert.ToString(10); p14.Text = Convert.ToString(45); return; }
+          
+
+        }
+
+     
+      
 
        
 

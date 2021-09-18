@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>vtp4YGlp/JEJVR+AeF2nNxCQB0M=</dsig:DigestValue>
+        <dsig:DigestValue>u62HmajEMwEcOCqmSnis+haxWq0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,19 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>q3b9gFXA11u3cwq5zOCazAMiAmY=</dsig:DigestValue>
+        <dsig:DigestValue>0OnQvKd14Bd8MOcr3rRTAlZ0JA0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="设备配置工具.exe" size="100864">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="设备配置工具.exe" size="103424">
       <assemblyIdentity name="设备配置工具" version="4.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>0y1sVm5qLfEnynVddA2Qc1N2ZeE=</dsig:DigestValue>
+        <dsig:DigestValue>xNXiE/M/RGuD3d5+Ghsh470mpd4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
