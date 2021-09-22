@@ -174,6 +174,10 @@
             this.lstLog = new System.Windows.Forms.ListBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnClearLstLog = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -686,13 +690,13 @@
             // 
             // gpbAlarm
             // 
+            this.gpbAlarm.Controls.Add(this.checkBox4);
+            this.gpbAlarm.Controls.Add(this.checkBox3);
+            this.gpbAlarm.Controls.Add(this.checkBox2);
+            this.gpbAlarm.Controls.Add(this.checkBox1);
             this.gpbAlarm.Controls.Add(this.brightnessValue);
             this.gpbAlarm.Controls.Add(this.label23);
             this.gpbAlarm.Controls.Add(this.trackBar_brightness);
-            this.gpbAlarm.Controls.Add(this.label24);
-            this.gpbAlarm.Controls.Add(this.label12);
-            this.gpbAlarm.Controls.Add(this.p14);
-            this.gpbAlarm.Controls.Add(this.p13);
             this.gpbAlarm.Controls.Add(this.label13);
             this.gpbAlarm.Controls.Add(this.label45);
             this.gpbAlarm.Controls.Add(this.frequency);
@@ -720,7 +724,7 @@
             // 
             this.brightnessValue.AutoSize = true;
             this.brightnessValue.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.brightnessValue.Location = new System.Drawing.Point(154, 262);
+            this.brightnessValue.Location = new System.Drawing.Point(154, 287);
             this.brightnessValue.Name = "brightnessValue";
             this.brightnessValue.Size = new System.Drawing.Size(17, 16);
             this.brightnessValue.TabIndex = 46;
@@ -730,7 +734,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(14, 266);
+            this.label23.Location = new System.Drawing.Point(14, 291);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(57, 12);
             this.label23.TabIndex = 1;
@@ -740,20 +744,21 @@
             // 
             this.trackBar_brightness.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.trackBar_brightness.Enabled = false;
-            this.trackBar_brightness.Location = new System.Drawing.Point(73, 258);
+            this.trackBar_brightness.Location = new System.Drawing.Point(77, 287);
             this.trackBar_brightness.Maximum = 5;
             this.trackBar_brightness.Name = "trackBar_brightness";
             this.trackBar_brightness.Size = new System.Drawing.Size(79, 45);
             this.trackBar_brightness.TabIndex = 45;
             this.trackBar_brightness.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            this.trackBar_brightness.ValueChanged += new System.EventHandler(this.Brightness_TextChanged);
             // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(174, 309);
+            this.label24.Location = new System.Drawing.Point(330, 9);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(78, 12);
+            this.label24.Size = new System.Drawing.Size(71, 12);
             this.label24.TabIndex = 44;
             this.label24.Text = "p14（电压）";
             // 
@@ -761,9 +766,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(8, 306);
+            this.label12.Location = new System.Drawing.Point(131, 12);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 12);
+            this.label12.Size = new System.Drawing.Size(71, 12);
             this.label12.TabIndex = 3;
             this.label12.Text = "p13（电流）";
             // 
@@ -771,28 +776,28 @@
             // 
             this.p14.Enabled = false;
             this.p14.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.p14.Location = new System.Drawing.Point(252, 306);
+            this.p14.Location = new System.Drawing.Point(402, 3);
             this.p14.Name = "p14";
             this.p14.Size = new System.Drawing.Size(68, 21);
             this.p14.TabIndex = 43;
-            this.p14.Text = "10";
+            this.p14.Text = "0";
             // 
             // p13
             // 
             this.p13.Enabled = false;
             this.p13.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.p13.Location = new System.Drawing.Point(92, 303);
+            this.p13.Location = new System.Drawing.Point(208, 6);
             this.p13.Name = "p13";
             this.p13.Size = new System.Drawing.Size(68, 21);
             this.p13.TabIndex = 42;
-            this.p13.Text = "10";
+            this.p13.Text = "0";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label13.ForeColor = System.Drawing.Color.Green;
-            this.label13.Location = new System.Drawing.Point(10, 243);
+            this.label13.Location = new System.Drawing.Point(14, 262);
             this.label13.Name = "label13";
             this.label13.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label13.Size = new System.Drawing.Size(57, 12);
@@ -815,7 +820,7 @@
             this.frequency.Name = "frequency";
             this.frequency.Size = new System.Drawing.Size(68, 21);
             this.frequency.TabIndex = 40;
-            this.frequency.Text = "1";
+            this.frequency.Text = "0";
             this.frequency.TextChanged += new System.EventHandler(this.frequency_TextChanged);
             // 
             // groupBox10
@@ -903,6 +908,7 @@
             this.tbCh4Faguangshijian.TabIndex = 2;
             this.tbCh4Faguangshijian.Text = "0";
             this.tbCh4Faguangshijian.TextChanged += new System.EventHandler(this.tbCh4Faguangshijian_TextChanged);
+            this.tbCh4Faguangshijian.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCh4Faguangshijian_KeyPress);
             this.tbCh4Faguangshijian.MouseEnter += new System.EventHandler(this.tbCh4Faguangshijian_MouseEnter);
             // 
             // label39
@@ -1029,6 +1035,7 @@
             this.tbCh3Faguangshijian.TabIndex = 2;
             this.tbCh3Faguangshijian.Text = "0";
             this.tbCh3Faguangshijian.TextChanged += new System.EventHandler(this.tbCh3Faguangshijian_TextChanged);
+            this.tbCh3Faguangshijian.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCh3Faguangshijian_KeyPress);
             this.tbCh3Faguangshijian.MouseEnter += new System.EventHandler(this.tbCh3Faguangshijian_MouseEnter);
             // 
             // label32
@@ -1167,6 +1174,7 @@
             this.tbCh2Faguangshijian.TabIndex = 2;
             this.tbCh2Faguangshijian.Text = "0";
             this.tbCh2Faguangshijian.TextChanged += new System.EventHandler(this.tbCh2Faguangshijian_TextChanged);
+            this.tbCh2Faguangshijian.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCh2Faguangshijian_KeyPress);
             this.tbCh2Faguangshijian.MouseEnter += new System.EventHandler(this.tbCh2Faguangshijian_MouseEnter);
             // 
             // label25
@@ -1292,6 +1300,7 @@
             this.tbCh1Faguangshijian.TabIndex = 2;
             this.tbCh1Faguangshijian.Text = "0";
             this.tbCh1Faguangshijian.TextChanged += new System.EventHandler(this.tbCh1Faguangshijian_TextChanged);
+            this.tbCh1Faguangshijian.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbCh1Faguangshijian_KeyPress);
             this.tbCh1Faguangshijian.MouseEnter += new System.EventHandler(this.tbCh1Faguangshijian_MouseEnter);
             // 
             // label11
@@ -1352,7 +1361,7 @@
             this.tbChufaPinci.Name = "tbChufaPinci";
             this.tbChufaPinci.Size = new System.Drawing.Size(70, 21);
             this.tbChufaPinci.TabIndex = 1;
-            this.tbChufaPinci.Text = "100";
+            this.tbChufaPinci.Text = "0";
             this.tbChufaPinci.MouseEnter += new System.EventHandler(this.tbChufaPinci_MouseEnter);
             // 
             // btnGetAlarmpwd
@@ -1785,6 +1794,10 @@
             // 
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.lbOpraResult);
+            this.panel2.Controls.Add(this.p13);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label24);
+            this.panel2.Controls.Add(this.p14);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 660);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
@@ -1868,6 +1881,53 @@
             this.btnClearLstLog.Text = "清除日志";
             this.btnClearLstLog.UseVisualStyleBackColor = true;
             this.btnClearLstLog.Click += new System.EventHandler(this.btnClearLstLog_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.Red;
+            this.checkBox1.Location = new System.Drawing.Point(192, 287);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(76, 16);
+            this.checkBox1.TabIndex = 47;
+            this.checkBox1.Text = "红光常亮";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.ForeColor = System.Drawing.Color.Gold;
+            this.checkBox2.Location = new System.Drawing.Point(275, 287);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(76, 16);
+            this.checkBox2.TabIndex = 48;
+            this.checkBox2.Text = "黄光常亮";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(358, 287);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(76, 16);
+            this.checkBox3.TabIndex = 49;
+            this.checkBox3.Text = "蓝光常亮";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.ForeColor = System.Drawing.Color.Lime;
+            this.checkBox4.Location = new System.Drawing.Point(440, 287);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(76, 16);
+            this.checkBox4.TabIndex = 50;
+            this.checkBox4.Text = "绿光常亮";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // FrmMain
             // 
@@ -2094,6 +2154,10 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TrackBar trackBar_brightness;
         private System.Windows.Forms.Label brightnessValue;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

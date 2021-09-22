@@ -30,12 +30,12 @@ namespace PsecstoolOut
         private string selecteditemPort = "";
         private string selecteditemSocketId = "";
         private bool m_bCloseFrm = false;
-        private int m_ReadheadNum = 0xFF;                                                                                                                                                                                                                   
+        private int m_ReadheadNum = 0xFF;
         private int MAX_BATCHPER_NUM = 60;
 
         public int lightnessChR, lightnessChY, lightnessChB, lightnessChG;//用来计算电压、电流的发光时间
-  
-    #region 四个通道使能函数 
+
+        #region 四个通道使能函数
 
         public void ChanneInit()
         {
@@ -74,7 +74,7 @@ namespace PsecstoolOut
             {
                 tbCh2Shuchuyanshi.Enabled = true;
                 tbCh2Faguangshijian.Enabled = true;
-                tbCh2Xjchufashichang.Enabled = true;        
+                tbCh2Xjchufashichang.Enabled = true;
             }
         }
 
@@ -110,7 +110,7 @@ namespace PsecstoolOut
             }
         }
 
-#endregion
+        #endregion
 
         public FrmMain()
         {
@@ -136,7 +136,7 @@ namespace PsecstoolOut
                 this.cmbServerIp.SelectedIndex = 0;
             }
 
-          
+
             this.btnStartup.Enabled = false;
             this.btnShutdown.Enabled = false;
             this.tabDeviceInfo.SelectedIndex = 1;
@@ -144,8 +144,8 @@ namespace PsecstoolOut
             //this.cmbCh2Dlsx.SelectedIndex = 1;
             //this.cmbCh3Dlsx.SelectedIndex = 2;
             //this.cmbCh4Dlsx.SelectedIndex = 3;
-       
-        
+
+
 
         }
 
@@ -166,7 +166,7 @@ namespace PsecstoolOut
                 if ((ch4_r.Checked | ch2_r.Checked | ch3_r.Checked) != true) ch1_r.Enabled = true;
                 if ((ch4_y.Checked | ch2_y.Checked | ch3_y.Checked) != true) ch1_y.Enabled = true;
                 if ((ch4_b.Checked | ch2_b.Checked | ch3_b.Checked) != true) ch1_b.Enabled = true;
-                if ((ch4_g.Checked | ch2_g.Checked | ch3_g.Checked) != true) ch1_g.Enabled = true; 
+                if ((ch4_g.Checked | ch2_g.Checked | ch3_g.Checked) != true) ch1_g.Enabled = true;
 
             }
             else
@@ -197,8 +197,8 @@ namespace PsecstoolOut
             else
             {
                 ch2_r.Checked = false; ch2_y.Checked = false; ch2_b.Checked = false; ch2_g.Checked = false;
-                ch2_r.Enabled = false;ch2_y.Enabled = false;ch2_b.Enabled = false;ch2_g.Enabled = false;
-               
+                ch2_r.Enabled = false; ch2_y.Enabled = false; ch2_b.Enabled = false; ch2_g.Enabled = false;
+
 
             }
         }
@@ -225,7 +225,7 @@ namespace PsecstoolOut
                 ch3_b.Enabled = false;
                 ch3_g.Enabled = false;
 
-         
+
             }
         }
 
@@ -251,7 +251,7 @@ namespace PsecstoolOut
                 ch4_b.Enabled = false;
                 ch4_g.Enabled = false;
 
-           
+
             }
 
         }
@@ -262,8 +262,8 @@ namespace PsecstoolOut
             uint i = GATEECSSDK.DT_GATEECS_SETCAllBACK(p1, p2, p3, p4, p5);
             if (0 != i)
             {
-                UpdateOpraResult(String.Format("初始化错误。错误码：{0}", i));
-                return;
+        //        UpdateOpraResult(String.Format("初始化错误。错误码：{0}", i));
+        //        return;
             }
 
             this.btnStartup.Enabled = true;
@@ -272,7 +272,7 @@ namespace PsecstoolOut
 
         private void btnStartup_Click(object sender, EventArgs e)
         {
-            if (this.cmbServerIp.Text =="")
+            if (this.cmbServerIp.Text == "")
             {
                 MessageBox.Show("请选择服务器ip地址！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
@@ -291,10 +291,10 @@ namespace PsecstoolOut
             string strIp = this.cmbServerIp.Text.Trim();
             if (IsValidIp(strIp))
             {
-                uint i = GATEECSSDK.DT_GATEECS_LOGIN(this.cmbServerIp.Text, int.Parse(this.tbServerPort.Text.Trim()), 8 * 2, 2 *1000);
+                uint i = GATEECSSDK.DT_GATEECS_LOGIN(this.cmbServerIp.Text, int.Parse(this.tbServerPort.Text.Trim()), 8 * 2, 2 * 1000);
                 if (i != 0)
                 {
-                    UpdateOpraResult(String.Format("初始化错误。错误码：{0}", i));
+                 //   UpdateOpraResult(String.Format("初始化错误。错误码：{0}", i));
                 }
             }
             else
@@ -342,7 +342,7 @@ namespace PsecstoolOut
         private void btnFindSocketid_Click(object sender, EventArgs e)
         {
             int nodeCount = CommonData.node.showNodenum();
-            if (nodeCount<1)
+            if (nodeCount < 1)
             {
                 UpdateOpraResult("链表不存在");
                 return;
@@ -374,7 +374,7 @@ namespace PsecstoolOut
             txbSocketIP.ForeColor = Color.Black;
         }
 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          private void btnFindSocketIP_Click(object sender, EventArgs e)
+        private void btnFindSocketIP_Click(object sender, EventArgs e)
         {
             int nodeCount = CommonData.node.showNodenum();
             if (nodeCount < 1)
@@ -556,10 +556,10 @@ namespace PsecstoolOut
         {
             tbDeviceGatway.Text = msg;
         }
-        
+
         private delegate void UpdateMACText(string msg);
         private void UpdateMAC(string msg)
-        {                    
+        {
             if (tbMAC.InvokeRequired)
             {
                 tbMAC.Invoke(new UpdateMACText(UpdateteMACText), msg);
@@ -591,98 +591,98 @@ namespace PsecstoolOut
 
         private void UpdatetePARAText(string[] splitStrs)
         {
-           
+
             switch (int.Parse(splitStrs[0]))
             {
-                case 0x00: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false; 
-                           ch1_r.Enabled = true; ch2_r.Enabled = true; ch3_r.Enabled = true; ch4_r.Enabled = true; 
-                                
+                case 0x00: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false;
+                    ch1_r.Enabled = true; ch2_r.Enabled = true; ch3_r.Enabled = true; ch4_r.Enabled = true;
+
                     break;
                 case 0x01: ch1_r.Checked = true; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = false;
-                     ch1_r.Enabled = true; ch2_r.Enabled = false; ch3_r.Enabled = false; ch4_r.Enabled = false;
+                    ch1_r.Enabled = true; ch2_r.Enabled = false; ch3_r.Enabled = false; ch4_r.Enabled = false;
                     break;
                 case 0x02: ch1_r.Checked = false; ch2_r.Checked = true; ch3_r.Checked = false; ch4_r.Checked = false;
                     ch1_r.Enabled = false; ch2_r.Enabled = true; ch3_r.Enabled = false; ch4_r.Enabled = false;
                     break;
-                case 0x03: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = true; ch4_r.Checked = false; 
+                case 0x03: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = true; ch4_r.Checked = false;
                     ch1_r.Enabled = false; ch2_r.Enabled = false; ch3_r.Enabled = true; ch4_r.Enabled = false;
                     break;
                 case 0x04: ch1_r.Checked = false; ch2_r.Checked = false; ch3_r.Checked = false; ch4_r.Checked = true;
                     ch1_r.Enabled = false; ch2_r.Enabled = false; ch3_r.Enabled = false; ch4_r.Enabled = true;
                     break;
-                
+
             }
 
             switch (int.Parse(splitStrs[1]))
             {
-                case 0x00: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false; 
+                case 0x00: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false;
                     ch1_y.Enabled = true; ch2_y.Enabled = true; ch3_y.Enabled = true; ch4_y.Enabled = true;
                     break;
                 case 0x01: ch1_y.Checked = true; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = false;
-                    ch1_y.Enabled = true; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = false; 
+                    ch1_y.Enabled = true; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = false;
                     break;
-                case 0x02: ch1_y.Checked = false; ch2_y.Checked = true; ch3_y.Checked = false; ch4_y.Checked = false; 
+                case 0x02: ch1_y.Checked = false; ch2_y.Checked = true; ch3_y.Checked = false; ch4_y.Checked = false;
                     ch1_y.Enabled = false; ch2_y.Enabled = true; ch3_y.Enabled = false; ch4_y.Enabled = false;
                     break;
                 case 0x03: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = true; ch4_y.Checked = false;
-                    ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = true; ch4_y.Enabled = false; 
+                    ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = true; ch4_y.Enabled = false;
                     break;
                 case 0x04: ch1_y.Checked = false; ch2_y.Checked = false; ch3_y.Checked = false; ch4_y.Checked = true;
-                     ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = true; 
+                    ch1_y.Enabled = false; ch2_y.Enabled = false; ch3_y.Enabled = false; ch4_y.Enabled = true;
                     break;
 
             }
 
             switch (int.Parse(splitStrs[2]))
             {
-                case 0x00: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false; 
-                    ch1_b.Enabled = true; ch2_b.Enabled = true; ch3_b.Enabled = true; ch4_b.Enabled = true; 
+                case 0x00: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false;
+                    ch1_b.Enabled = true; ch2_b.Enabled = true; ch3_b.Enabled = true; ch4_b.Enabled = true;
                     break;
-                case 0x01: ch1_b.Checked = true; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false; 
+                case 0x01: ch1_b.Checked = true; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = false;
                     ch1_b.Enabled = true; ch2_b.Enabled = false; ch3_b.Enabled = false; ch4_b.Enabled = false;
                     break;
-                case 0x02: ch1_b.Checked = false; ch2_b.Checked = true; ch3_b.Checked = false; ch4_b.Checked = false; 
+                case 0x02: ch1_b.Checked = false; ch2_b.Checked = true; ch3_b.Checked = false; ch4_b.Checked = false;
                     ch1_b.Enabled = false; ch2_b.Enabled = true; ch3_b.Enabled = false; ch4_b.Enabled = false;
                     break;
                 case 0x03: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = true; ch4_b.Checked = false;
                     ch1_b.Enabled = false; ch2_b.Enabled = false; ch3_b.Enabled = true; ch4_b.Enabled = false;
                     break;
-                case 0x04: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = true; 
+                case 0x04: ch1_b.Checked = false; ch2_b.Checked = false; ch3_b.Checked = false; ch4_b.Checked = true;
                     ch1_b.Enabled = false; ch2_b.Enabled = false; ch3_b.Enabled = false; ch4_b.Enabled = true;
                     break;
 
             }
             switch (int.Parse(splitStrs[3]))//选择框失效的选择还需要补充
             {
-                case 0x00: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false; 
-                     ch1_g.Enabled = true; ch2_g.Enabled = true; ch3_g.Enabled = true; ch4_g.Enabled = true;
+                case 0x00: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false;
+                    ch1_g.Enabled = true; ch2_g.Enabled = true; ch3_g.Enabled = true; ch4_g.Enabled = true;
                     break;
                 case 0x01: ch1_g.Checked = true; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = false;
-                    ch1_g.Enabled = true; ch2_g.Enabled = false; ch3_g.Enabled = false; ch4_g.Enabled = false; 
+                    ch1_g.Enabled = true; ch2_g.Enabled = false; ch3_g.Enabled = false; ch4_g.Enabled = false;
                     break;
                 case 0x02: ch1_g.Checked = false; ch2_g.Checked = true; ch3_g.Checked = false; ch4_g.Checked = false;
-                     ch1_g.Enabled = false; ch2_g.Enabled = true; ch3_g.Enabled = false; ch4_g.Enabled = false;
+                    ch1_g.Enabled = false; ch2_g.Enabled = true; ch3_g.Enabled = false; ch4_g.Enabled = false;
                     break;
                 case 0x03: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = true; ch4_g.Checked = false;
                     ch1_g.Enabled = false; ch2_g.Enabled = false; ch3_g.Enabled = true; ch4_g.Enabled = false;
                     break;
-                case 0x04: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = true; 
+                case 0x04: ch1_g.Checked = false; ch2_g.Checked = false; ch3_g.Checked = false; ch4_g.Checked = true;
                     ch1_g.Enabled = false; ch2_g.Enabled = false; ch3_g.Enabled = false; ch4_g.Enabled = true;
                     break;
 
             }
 
 
-             frequency.Text = splitStrs[4];
-             tbChufaPinci.Text= splitStrs[5];
+            frequency.Text = splitStrs[4];
+            tbChufaPinci.Text = splitStrs[5];
 
             this.tbCh1Shuchuyanshi.Text = splitStrs[6];
             this.tbCh1Faguangshijian.Text = splitStrs[7];
             this.tbCh1Xjchufashichang.Text = splitStrs[8];
-          
+
 
             this.tbCh2Shuchuyanshi.Text = splitStrs[9];
-            this.tbCh2Faguangshijian.Text = splitStrs[10];  
+            this.tbCh2Faguangshijian.Text = splitStrs[10];
             this.tbCh2Xjchufashichang.Text = splitStrs[11];
 
 
@@ -702,7 +702,7 @@ namespace PsecstoolOut
         }
 
 
-#endregion
+        #endregion
 
         //选择对应的设备
         private void lstBoxDownIPS_SelectedIndexChanged(object sender, EventArgs e)
@@ -724,13 +724,13 @@ namespace PsecstoolOut
             {
                 selecteditemSocketId = "0";
             }
-                        
+
             //tbDeviceip.Text = selecteditemip;
             //tbDevicePort.Text = selecteditemPort;
             tbSocketId.Text = selecteditemSocketId;
         }
 
-        
+
 
         //设置主板信息
         private void btnSetMtiPara_Click(object sender, EventArgs e)
@@ -765,12 +765,12 @@ namespace PsecstoolOut
                 DialogBox.Message("输入设备端口号内容有误，请确认！", DialogBox.DialogType.Error);
                 return;
             }
-            
+
             uint socketid = 0;
             if (GetDeviceIdFromLists(ref socketid))
             {
                 uint s = uint.Parse(socketid.ToString());
-                string ServerIP=tbSeverIp.Text;
+                string ServerIP = tbSeverIp.Text;
                 int ServerPort = int.Parse(tbSeverPort.Text);
                 string DoorConIP = tbDeviceip.Text;
                 int DoorConPort = int.Parse(tbDevicePort.Text);
@@ -809,7 +809,7 @@ namespace PsecstoolOut
                 MessageBox.Show("未选中任何在线设备！", "提示信息", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 UpdateOpraResult("操作失败");
             }
-            
+
         }
 
         private bool GetDeviceIdFromLists(ref uint socketid)
@@ -859,9 +859,9 @@ namespace PsecstoolOut
             //所以最终为 0-255的表达式重复三次{3}再跟一次没点的 
 
             //return Regex.IsMatch(strIn, @"^(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.
-                                                                                       //(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.
-                                                                                       //(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.
-                                                                                       //(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))$");
+            //(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.
+            //(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))\.
+            //(25[0-5]|2[0-4]\d|((1\d{2})|([1-9]?\d)))$");
 
             //return Regex.IsMatch(strIn, @"^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$");
             return Regex.IsMatch(strIn, @"\d{0,3}\.\d{0,3}\.\d{0,3}\.\d{0,3}");
@@ -911,7 +911,7 @@ namespace PsecstoolOut
         private void ServerEventBus_MessageReceived(object sender, uint session, uint msgtype, uint numOfParameters, string parameters)
         {
             GATEECSSDK.UpdateLable("", 0, String.Format("收到消息，消息类型为0x{0}，参数序列为:{1}", Convert.ToString(msgtype, 16), parameters));
-            string[] splitStrs= new string[30];
+            string[] splitStrs = new string[30];
             bool bSplit = SplitTheParameters(numOfParameters, parameters, ref splitStrs);
             if (!bSplit)
             {
@@ -985,12 +985,12 @@ namespace PsecstoolOut
                     break;
             }
             #endregion
-            
+
         }
 
         private bool SplitTheParameters(uint numOfParameters, string parameters, ref string[] outParas)
         {
-            bool succ =false;
+            bool succ = false;
             if (!succ)
             {
                 if (numOfParameters > 0)
@@ -1099,7 +1099,7 @@ namespace PsecstoolOut
         }
 
         private void btnGetAlarmpwd_Click(object sender, EventArgs e)
-        {     
+        {
             uint socketid = 0;
             if (GetDeviceIdFromLists(ref socketid))
             {
@@ -1128,22 +1128,22 @@ namespace PsecstoolOut
             //if (!RegIPAndPort.IsHefaValue(tbCh1Shuchuyanshi.Text.Trim()) || 
             //    !RegIPAndPort.IsHefaValue(tbCh1Faguangshijian.Text.Trim()) || 
             //    //需要增加
-               
+
             //    !RegIPAndPort.IsHefaValue(tbCh1Xjchufashichang.Text.Trim()) || 
 
             //    !RegIPAndPort.IsHefaValue(tbCh2Shuchuyanshi.Text.Trim()) || 
             //    !RegIPAndPort.IsHefaValue(tbCh2Faguangshijian.Text.Trim()) || 
-                
+
             //    !RegIPAndPort.IsHefaValue(tbCh2Xjchufashichang.Text.Trim()) || 
 
             //    !RegIPAndPort.IsHefaValue(tbCh3Shuchuyanshi.Text.Trim()) || 
             //    !RegIPAndPort.IsHefaValue(tbCh3Faguangshijian.Text.Trim()) || 
-                
+
             //    !RegIPAndPort.IsHefaValue(tbCh3Xjchufashichang.Text.Trim()) || 
 
             //    !RegIPAndPort.IsHefaValue(tbCh4Shuchuyanshi.Text.Trim()) || 
             //    !RegIPAndPort.IsHefaValue(tbCh4Faguangshijian.Text.Trim()) || 
-               
+
             //    !RegIPAndPort.IsHefaValue(tbCh4Xjchufashichang.Text.Trim())                 )
             //{
             //    DialogBox.Message("通道配置参数内容有误，请确认！", DialogBox.DialogType.Error);
@@ -1160,7 +1160,7 @@ namespace PsecstoolOut
 
 
             if (ch1_r.Checked == true) Ch01 = 1;
-            else  if (ch2_r.Checked == true) Ch01 = 2;
+            else if (ch2_r.Checked == true) Ch01 = 2;
             else if (ch3_r.Checked == true) Ch01 = 3;
             else if (ch4_r.Checked == true) Ch01 = 4;
 
@@ -1218,17 +1218,17 @@ namespace PsecstoolOut
 
 
 
-            int Ch34 = 0;            
+            int Ch34 = 0;
             int Ch35 = 0;
             int Ch41 = 0;
-            int Ch42 =0;
+            int Ch42 = 0;
 
-            int Ch43 = int.Parse( p13.Text);
+            int Ch43 = int.Parse(p13.Text);
             int Ch44 = int.Parse(p14.Text);
             int Ch45 = 0x00;
             if ((Ch13 > 50000) || (Ch21 > 50000) || (Ch32 > 50000)) Ch45 = 0xff;
             else Ch45 = 0x00;
-            
+
             int temp = 0;
 
             if (Ch43 > 100) DialogBox.Message("亮度不在范围内！（0~100）", DialogBox.DialogType.Error);
@@ -1238,7 +1238,7 @@ namespace PsecstoolOut
             {
                 if (Ch01 >= Ch03)
                 {
-                    if (Ch01 >= Ch04)  temp = Ch01;  else temp = Ch04;
+                    if (Ch01 >= Ch04) temp = Ch01; else temp = Ch04;
                 }
                 else
                 {
@@ -1248,35 +1248,35 @@ namespace PsecstoolOut
             else
             {
                 if (Ch02 >= Ch03) { if (Ch02 >= Ch04) temp = Ch02; else temp = Ch04; }
-                else   {if (Ch03 >= Ch04) temp = Ch03; else temp = Ch04;}    
+                else { if (Ch03 >= Ch04) temp = Ch03; else temp = Ch04; }
             }
-            if(temp==4)
+            if (temp == 4)
             {
                 if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)) { DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
-                 if ((Ch01 != temp - 2) && (Ch02 != temp - 2) && (Ch03 != temp - 2) && (Ch04 != temp - 2)){ DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
-                 if ((Ch01 != temp - 3) && (Ch02 != temp - 3) && (Ch03 != temp - 3) && (Ch04 != temp - 3)){ DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
-         
+                if ((Ch01 != temp - 2) && (Ch02 != temp - 2) && (Ch03 != temp - 2) && (Ch04 != temp - 2)) { DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
+                if ((Ch01 != temp - 3) && (Ch02 != temp - 3) && (Ch03 != temp - 3) && (Ch04 != temp - 3)) { DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
+
             }
             else if (temp == 3)
             {
-                if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)){ DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
-                if ((Ch01 != temp - 2) && (Ch02 != temp - 2) && (Ch03 != temp - 2) && (Ch04 != temp - 2)){ DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
-        
+                if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)) { DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
+                if ((Ch01 != temp - 2) && (Ch02 != temp - 2) && (Ch03 != temp - 2) && (Ch04 != temp - 2)) { DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
+
             }
             else if (temp == 2)
             {
                 if ((Ch01 != temp - 1) && (Ch02 != temp - 1) && (Ch03 != temp - 1) && (Ch04 != temp - 1)) { DialogBox.Message("点亮顺序有缺失！", DialogBox.DialogType.Error); return; }
-             
+
             }
-           
-           // if (Ch14 + Ch15 > Ch11 + Ch12 + Ch13 ||
-         //       Ch24 + Ch25 > Ch21 + Ch22 + Ch23 ||
-          //      Ch34 + Ch35 > Ch31 + Ch32 + Ch33 ||
-        //        Ch44 + Ch45 > Ch41 + Ch42 + Ch43)
-      //      {
-      //          DialogBox.Message("输入参数规则不合理，相机参数和应 <= 灯配置参数之和，请确认！", DialogBox.DialogType.Error);
-               // return;
-      //      }
+
+            // if (Ch14 + Ch15 > Ch11 + Ch12 + Ch13 ||
+            //       Ch24 + Ch25 > Ch21 + Ch22 + Ch23 ||
+            //      Ch34 + Ch35 > Ch31 + Ch32 + Ch33 ||
+            //        Ch44 + Ch45 > Ch41 + Ch42 + Ch43)
+            //      {
+            //          DialogBox.Message("输入参数规则不合理，相机参数和应 <= 灯配置参数之和，请确认！", DialogBox.DialogType.Error);
+            // return;
+            //      }
 
             uint socketid = 0;
             if (GetDeviceIdFromLists(ref socketid))
@@ -1366,7 +1366,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：0.1us";
+            string tipOverwrite = "范围：0-10000000。单位：0.1us";
             ttpSettings.SetToolTip(tbCh1Shuchuyanshi, tipOverwrite);
         }
 
@@ -1379,11 +1379,11 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：0.1us";
+            string tipOverwrite = "范围：0-10000000。单位：0.1us";
             ttpSettings.SetToolTip(tbCh1Faguangshijian, tipOverwrite);
         }
 
- 
+
 
         private void tbCh2Shuchuyanshi_MouseEnter(object sender, EventArgs e)
         {
@@ -1394,7 +1394,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：0.1us";
+            string tipOverwrite = "范围：0-10000000。单位：0.1us";
             ttpSettings.SetToolTip(tbCh2Shuchuyanshi, tipOverwrite);
         }
 
@@ -1407,7 +1407,7 @@ namespace PsecstoolOut
             ttpSettings.ShowAlways = true;
             ttpSettings.IsBalloon = true;
 
-            string tipOverwrite = "范围：0-16777215。单位：0.1us";
+            string tipOverwrite = "范围：0-10000000。单位：0.1us";
             ttpSettings.SetToolTip(tbCh3Shuchuyanshi, tipOverwrite);
         }
 
@@ -1463,7 +1463,7 @@ namespace PsecstoolOut
             ttpSettings.SetToolTip(tbCh4Faguangshijian, tipOverwrite);
         }
 
-     
+
 
 
         private void tbChufaPinci_MouseEnter(object sender, EventArgs e)
@@ -1520,7 +1520,7 @@ namespace PsecstoolOut
 
         private void frequency_TextChanged(object sender, EventArgs e)
         {
-            int temp =1;
+            int temp = 1;
             int sum, result;
             try
             {
@@ -1546,7 +1546,7 @@ namespace PsecstoolOut
             {
 
             }
-           
+
         }
 
 
@@ -1556,12 +1556,12 @@ namespace PsecstoolOut
             if (ch1_r.Checked == true)
             {
                 TwoSequence(true);
-              
+
 
                 ch1_y.Enabled = false;
                 ch1_b.Enabled = false;
                 ch1_g.Enabled = false;
-              
+
             }
 
             else
@@ -1569,11 +1569,12 @@ namespace PsecstoolOut
                 ch1_y.Enabled = true;
                 ch1_b.Enabled = true;
                 ch1_g.Enabled = true;
+                tbCh1Faguangshijian.Text = "0";
 
-            
                 TwoSequence(false);
                 ThreeSequence(false);
                 FourSequence(false);
+                Init_Brintness_vi();
             }
             Red_ChannelEnable(ch1_r.Checked);
         }
@@ -1583,7 +1584,7 @@ namespace PsecstoolOut
             if (ch2_r.Checked == true)
             {
                 ThreeSequence(true);
-           
+
 
                 ch2_y.Enabled = false;
                 ch2_b.Enabled = false;
@@ -1593,11 +1594,12 @@ namespace PsecstoolOut
             else
             {
 
-                if ((ch1_y.Checked ) != true) ch2_y.Enabled = true;
-                if ((ch1_b.Checked ) != true) ch2_b.Enabled = true;
-                if ((ch1_g.Checked ) != true) ch2_g.Enabled = true;
+                if ((ch1_y.Checked) != true) ch2_y.Enabled = true; tbCh1Faguangshijian.Text = "0";
+                if ((ch1_b.Checked) != true) ch2_b.Enabled = true;
+                if ((ch1_g.Checked) != true) ch2_g.Enabled = true;
                 ThreeSequence(false);
                 FourSequence(false);
+                Init_Brintness_vi();
             }
             Red_ChannelEnable(ch2_r.Checked);
         }
@@ -1607,7 +1609,7 @@ namespace PsecstoolOut
             if (ch3_r.Checked == true)
             {
                 FourSequence(true);
-  
+
 
                 ch3_y.Enabled = false;
                 ch3_b.Enabled = false;
@@ -1616,10 +1618,11 @@ namespace PsecstoolOut
 
             else
             {
-                if ((ch1_y.Checked | ch2_y.Checked ) != true) ch3_y.Enabled = true;
-                if ((ch1_b.Checked | ch2_b.Checked ) != true) ch3_b.Enabled = true;
-                if ((ch1_g.Checked | ch2_g.Checked ) != true) ch3_g.Enabled = true;
+                if ((ch1_y.Checked | ch2_y.Checked) != true) ch3_y.Enabled = true; tbCh1Faguangshijian.Text = "0";
+                if ((ch1_b.Checked | ch2_b.Checked) != true) ch3_b.Enabled = true;
+                if ((ch1_g.Checked | ch2_g.Checked) != true) ch3_g.Enabled = true;
                 FourSequence(false);
+                Init_Brintness_vi();
             }
             Red_ChannelEnable(ch3_r.Checked);
         }
@@ -1628,7 +1631,7 @@ namespace PsecstoolOut
         {
             if (ch4_r.Checked == true)
             {
-   
+
                 ch4_y.Enabled = false;
                 ch4_b.Enabled = false;
                 ch4_g.Enabled = false;
@@ -1637,11 +1640,12 @@ namespace PsecstoolOut
             else
             {
 
-                if ((ch1_y.Checked | ch2_y.Checked | ch3_y.Checked) != true) ch4_y.Enabled = true;
+                if ((ch1_y.Checked | ch2_y.Checked | ch3_y.Checked) != true) ch4_y.Enabled = true; tbCh1Faguangshijian.Text = "0";
                 if ((ch1_b.Checked | ch2_b.Checked | ch3_b.Checked) != true) ch4_b.Enabled = true;
-                if ((ch1_g.Checked | ch2_g.Checked | ch3_g.Checked) != true) ch4_g.Enabled = true;
+                if ((ch1_g.Checked | ch2_g.Checked | ch3_g.Checked) != true) ch4_g.Enabled = true; Init_Brintness_vi();
             }
             Red_ChannelEnable(ch4_r.Checked);
+         
         }
         #endregion
 
@@ -1659,13 +1663,14 @@ namespace PsecstoolOut
 
             else
             {
-                ch1_r.Enabled = true;
+                ch1_r.Enabled = true; tbCh2Faguangshijian.Text = "0";
                 ch1_b.Enabled = true;
                 ch1_g.Enabled = true;
 
                 TwoSequence(false);
                 ThreeSequence(false);
                 FourSequence(false);
+                Init_Brintness_vi();
             }
             Yellow_ChannelEnable(ch1_y.Checked);
         }
@@ -1682,10 +1687,10 @@ namespace PsecstoolOut
 
             else
             {
-                if (ch1_r.Checked != true) ch2_r.Enabled = true;
+                if (ch1_r.Checked != true) ch2_r.Enabled = true; tbCh2Faguangshijian.Text = "0";
                 if (ch1_b.Checked != true) ch2_b.Enabled = true;
-                if ( ch1_g.Checked != true) ch2_g.Enabled = true;
-
+                if (ch1_g.Checked != true) ch2_g.Enabled = true;
+                Init_Brintness_vi();
                 ThreeSequence(false);
                 FourSequence(false);
             }
@@ -1704,10 +1709,10 @@ namespace PsecstoolOut
 
             else
             {
-                if ((ch1_r.Checked | ch2_r.Checked) != true) ch3_r.Enabled = true;
-                if (( ch1_b.Checked | ch2_b.Checked) != true) ch3_b.Enabled = true;
-                if (( ch1_g.Checked | ch2_g.Checked) != true) ch3_g.Enabled = true;
-                FourSequence(false);
+                if ((ch1_r.Checked | ch2_r.Checked) != true) ch3_r.Enabled = true; tbCh2Faguangshijian.Text = "0";
+                if ((ch1_b.Checked | ch2_b.Checked) != true) ch3_b.Enabled = true;
+                if ((ch1_g.Checked | ch2_g.Checked) != true) ch3_g.Enabled = true;
+                FourSequence(false); Init_Brintness_vi();
             }
             Yellow_ChannelEnable(ch3_y.Checked);
         }
@@ -1723,15 +1728,15 @@ namespace PsecstoolOut
 
             else
             {
-                if ((ch3_r.Checked | ch1_r.Checked | ch2_r.Checked) != true) ch4_r.Enabled = true;
+                if ((ch3_r.Checked | ch1_r.Checked | ch2_r.Checked) != true) ch4_r.Enabled = true; tbCh2Faguangshijian.Text = "0";
                 if ((ch3_b.Checked | ch1_b.Checked | ch2_b.Checked) != true) ch4_b.Enabled = true;
-                if ((ch3_g.Checked | ch1_g.Checked | ch2_g.Checked) != true) ch4_g.Enabled = true;
+                if ((ch3_g.Checked | ch1_g.Checked | ch2_g.Checked) != true) ch4_g.Enabled = true; Init_Brintness_vi();
             }
             Yellow_ChannelEnable(ch4_y.Checked);
         }
 
 
-#endregion
+        #endregion
 
         #region 蓝色通道选项卡
         private void ch1_b_CheckedChanged(object sender, EventArgs e)
@@ -1746,12 +1751,12 @@ namespace PsecstoolOut
 
             else
             {
-                ch1_r.Enabled = true;
+                ch1_r.Enabled = true; tbCh3Faguangshijian.Text = "0";
                 ch1_y.Enabled = true;
                 ch1_g.Enabled = true;
                 TwoSequence(false);
                 ThreeSequence(false);
-                FourSequence(false);
+                FourSequence(false); Init_Brintness_vi();
             }
             Blue_ChannelEnable(ch1_b.Checked);
         }
@@ -1768,9 +1773,9 @@ namespace PsecstoolOut
 
             else
             {
-                if (( ch1_r.Checked) != true) ch2_r.Enabled = true;
-                if (( ch1_y.Checked) != true) ch2_y.Enabled = true;
-                if (( ch1_g.Checked) != true) ch2_g.Enabled = true;
+                if ((ch1_r.Checked) != true) ch2_r.Enabled = true; tbCh3Faguangshijian.Text = "0";
+                if ((ch1_y.Checked) != true) ch2_y.Enabled = true;
+                if ((ch1_g.Checked) != true) ch2_g.Enabled = true; Init_Brintness_vi();
                 ThreeSequence(false);
                 FourSequence(false);
             }
@@ -1789,10 +1794,10 @@ namespace PsecstoolOut
 
             else
             {
-                if ((ch2_r.Checked |  ch1_r.Checked) != true) ch3_r.Enabled = true;
-                if ((ch2_y.Checked |  ch1_y.Checked) != true) ch3_y.Enabled = true;
-                if ((ch2_g.Checked |  ch1_g.Checked) != true) ch3_g.Enabled = true;
-                FourSequence(false);
+                if ((ch2_r.Checked | ch1_r.Checked) != true) ch3_r.Enabled = true; tbCh3Faguangshijian.Text = "0";
+                if ((ch2_y.Checked | ch1_y.Checked) != true) ch3_y.Enabled = true;
+                if ((ch2_g.Checked | ch1_g.Checked) != true) ch3_g.Enabled = true;
+                FourSequence(false); Init_Brintness_vi();
             }
             Blue_ChannelEnable(ch3_b.Checked);
         }
@@ -1808,9 +1813,9 @@ namespace PsecstoolOut
 
             else
             {
-                if ((ch2_r.Checked | ch3_r.Checked | ch1_r.Checked) != true) ch4_r.Enabled = true;
+                if ((ch2_r.Checked | ch3_r.Checked | ch1_r.Checked) != true) ch4_r.Enabled = true; tbCh3Faguangshijian.Text = "0";
                 if ((ch2_y.Checked | ch3_y.Checked | ch1_y.Checked) != true) ch4_y.Enabled = true;
-                if ((ch2_g.Checked | ch3_g.Checked | ch1_g.Checked) != true) ch4_g.Enabled = true;
+                if ((ch2_g.Checked | ch3_g.Checked | ch1_g.Checked) != true) ch4_g.Enabled = true; Init_Brintness_vi();
             }
             Blue_ChannelEnable(ch4_b.Checked);
         }
@@ -1829,12 +1834,12 @@ namespace PsecstoolOut
 
             else
             {
-                ch1_r.Enabled = true;
+                ch1_r.Enabled = true; tbCh4Faguangshijian.Text = "0";
                 ch1_y.Enabled = true;
                 ch1_b.Enabled = true;
                 TwoSequence(false);
                 ThreeSequence(false);
-                FourSequence(false);
+                FourSequence(false); Init_Brintness_vi();
             }
             Green_ChannelEnable(ch1_g.Checked);
         }
@@ -1851,9 +1856,9 @@ namespace PsecstoolOut
 
             else
             {
-                if ((ch1_r.Checked ) != true) ch2_r.Enabled = true;
-                if ((ch1_y.Checked ) != true) ch2_y.Enabled = true;
-                if ((ch1_b.Checked ) != true) ch2_b.Enabled = true;
+                if ((ch1_r.Checked) != true) ch2_r.Enabled = true; tbCh4Faguangshijian.Text = "0";
+                if ((ch1_y.Checked) != true) ch2_y.Enabled = true;
+                if ((ch1_b.Checked) != true) ch2_b.Enabled = true; Init_Brintness_vi();
                 ThreeSequence(false);
                 FourSequence(false);
             }
@@ -1872,9 +1877,9 @@ namespace PsecstoolOut
 
             else
             {
-                if ((ch1_r.Checked | ch2_r.Checked ) != true) ch3_r.Enabled = true;
-                if ((ch1_y.Checked | ch2_y.Checked ) != true) ch3_y.Enabled = true;
-                if ((ch1_b.Checked | ch2_b.Checked ) != true) ch3_b.Enabled = true;
+                if ((ch1_r.Checked | ch2_r.Checked) != true) ch3_r.Enabled = true; tbCh4Faguangshijian.Text = "0";
+                if ((ch1_y.Checked | ch2_y.Checked) != true) ch3_y.Enabled = true;
+                if ((ch1_b.Checked | ch2_b.Checked) != true) ch3_b.Enabled = true; Init_Brintness_vi();
                 FourSequence(false);
             }
             Green_ChannelEnable(ch3_g.Checked);
@@ -1891,9 +1896,9 @@ namespace PsecstoolOut
 
             else
             {
-                if ((ch1_r.Checked | ch2_r.Checked | ch3_r.Checked) != true) ch4_r.Enabled = true;
+                if ((ch1_r.Checked | ch2_r.Checked | ch3_r.Checked) != true) ch4_r.Enabled = true; tbCh4Faguangshijian.Text = "0";
                 if ((ch1_y.Checked | ch2_y.Checked | ch3_y.Checked) != true) ch4_y.Enabled = true;
-                if ((ch1_b.Checked | ch2_b.Checked | ch3_b.Checked) != true) ch4_b.Enabled = true;
+                if ((ch1_b.Checked | ch2_b.Checked | ch3_b.Checked) != true) ch4_b.Enabled = true; Init_Brintness_vi();
             }
             Green_ChannelEnable(ch4_g.Checked);
         }
@@ -1907,8 +1912,10 @@ namespace PsecstoolOut
 
         private void Brightness_TextChanged(object sender, EventArgs e)
         {
-
+            countIV();
         }
+
+
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
@@ -1918,7 +1925,7 @@ namespace PsecstoolOut
         public void JudgeLightTime()
         {
             if ((int.Parse(tbCh1Faguangshijian.Text) > 0) &
-                (int.Parse(tbCh1Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0;brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+                (int.Parse(tbCh1Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
 
             if ((int.Parse(tbCh2Faguangshijian.Text) > 0) &
                 (int.Parse(tbCh2Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
@@ -1934,78 +1941,624 @@ namespace PsecstoolOut
 
         private void tbCh1Faguangshijian_TextChanged(object sender, EventArgs e)
         {
-            if (int.Parse(tbCh1Faguangshijian.Text) > 10000000) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh1Faguangshijian.Text = Convert.ToString(10000000); }
-           
+            if (Convert.ToInt64(tbCh1Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh1Faguangshijian.Text = Convert.ToString(10000000); }
+
             JudgeLightTime();
             lightnessChR = int.Parse(tbCh1Faguangshijian.Text);
+            countIV();
         }
 
         private void tbCh2Faguangshijian_TextChanged(object sender, EventArgs e)
         {
-            if (int.Parse(tbCh2Faguangshijian.Text) > 10000000) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh2Faguangshijian.Text = Convert.ToString(10000000); }
-       
+            if (Convert.ToInt64(tbCh2Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh2Faguangshijian.Text = Convert.ToString(10000000); }
+
             JudgeLightTime();
-            lightnessChY=int.Parse(tbCh2Faguangshijian.Text);
+            lightnessChY = int.Parse(tbCh2Faguangshijian.Text);
+            countIV();
         }
 
         private void tbCh3Faguangshijian_TextChanged(object sender, EventArgs e)
         {
-            if (int.Parse(tbCh3Faguangshijian.Text) > 10000000) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh3Faguangshijian.Text = Convert.ToString(10000000); }
-        
+            if (Convert.ToInt64(tbCh3Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh3Faguangshijian.Text = Convert.ToString(10000000); }
+
             JudgeLightTime();
             lightnessChB = int.Parse(tbCh3Faguangshijian.Text);
+            countIV();
         }
 
         private void tbCh4Faguangshijian_TextChanged(object sender, EventArgs e)
         {
-            if (int.Parse(tbCh4Faguangshijian.Text) > 10000000) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh4Faguangshijian.Text = Convert.ToString(10000000); }
-          
+            if (Convert.ToInt64(tbCh4Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh4Faguangshijian.Text = Convert.ToString(10000000); }
+
             JudgeLightTime();
             lightnessChG = int.Parse(tbCh4Faguangshijian.Text);
+            countIV();
         }
+
+     
 
         //lightnessChR, lightnessChY, lightnessChB, lightnessChG
         public void countIV()//计算电压电流值   p13电流  p14电压
         {
-            int Temp=0;
+            int Temp = 0;
+
+            if (checkBox1.Checked==true | checkBox2.Checked==true |checkBox3.Checked==true |checkBox4.Checked==true )
+            {
+                switch (trackBar_brightness.Value)
+                {
+                    case 0:
+                        p13.Text = Convert.ToString(0);
+                        break;
+
+                    case 1:
+                        p13.Text = Convert.ToString(12);
+                        break;
+
+                    case 2:
+                        p13.Text = Convert.ToString(12);
+                        break;
+
+                    case 3:
+                        p13.Text = Convert.ToString(13);
+                        break;
+
+                    case 4:
+                        p13.Text = Convert.ToString(14);
+                        break;
+
+                    case 5:
+                        p13.Text = Convert.ToString(15);
+                        break;
+                }
+                return;
+            }
+
+
 
             if (lightnessChR > 0) Temp = lightnessChR;
-            if (lightnessChY > 0) { if (Temp > lightnessChY ) Temp=lightnessChY;}
+            if (lightnessChY > 0) { if (Temp > lightnessChY) Temp = lightnessChY; }
+            if (lightnessChB > 0) { if (Temp > lightnessChB)Temp = lightnessChB; }
+            if (lightnessChG > 0) { if (Temp > lightnessChG)Temp = lightnessChG; }
+
+            if (lightnessChY > 0) Temp = lightnessChY;
+            if (lightnessChR > 0) { if (Temp > lightnessChR) Temp = lightnessChR; }
             if (lightnessChB > 0) { if (Temp > lightnessChB)Temp = lightnessChB; }
             if (lightnessChG > 0) { if (Temp > lightnessChG)Temp = lightnessChG; }
 
 
+            if (lightnessChB > 0) Temp = lightnessChB;
+            if (lightnessChY > 0) { if (Temp > lightnessChY) Temp = lightnessChY; }
+            if (lightnessChR > 0) { if (Temp > lightnessChR)Temp = lightnessChR; }
+            if (lightnessChG > 0) { if (Temp > lightnessChG)Temp = lightnessChG; }
+
+            if (lightnessChG > 0) Temp = lightnessChG;
+            if (lightnessChY > 0) { if (Temp > lightnessChY) Temp = lightnessChY; }
+            if (lightnessChB > 0) { if (Temp > lightnessChB)Temp = lightnessChB; }
+            if (lightnessChR > 0) { if (Temp > lightnessChR)Temp = lightnessChR; }
 
             if (Temp == 5) { p13.Text = Convert.ToString(10); p14.Text = Convert.ToString(45); return; }
 
-            if (Temp  5) { p13.Text = Convert.ToString(10); p14.Text = Convert.ToString(45); return; }
-          
+            if ((Temp > 5) & (Temp <= 30000)) { p13.Text = Convert.ToString(10); p14.Text = Convert.ToString(10); return; }
+
+            if ((Temp > 30000) & (Temp <= 50000))
+            {
+                p14.Text = Convert.ToString(10);
+                switch (trackBar_brightness.Value)
+                {
+                    case 0:
+                        p13.Text = Convert.ToString(0);
+                        break;
+
+                    case 1:
+                        p13.Text = Convert.ToString(11);
+                        break;
+
+                    case 2:
+                        p13.Text = Convert.ToString(13);
+                        break;
+
+                    case 3:
+                        p13.Text = Convert.ToString(15);
+                        break;
+
+                    case 4:
+                        p13.Text = Convert.ToString(17);
+                        break;
+
+                    case 5:
+                        p13.Text = Convert.ToString(20);
+                        break;
+                }
+            }
+
+
+
+                if ((Temp > 50000) & (Temp <= 100000))
+                {
+                    p14.Text = Convert.ToString(35);
+                    switch (trackBar_brightness.Value)
+                    {
+                        case 0:
+                            p13.Text = Convert.ToString(0);
+                            break;
+
+                        case 1:
+                            p13.Text = Convert.ToString(12);
+                            break;
+
+                        case 2:
+                            p13.Text = Convert.ToString(14);
+                            break;
+
+                        case 3:
+                            p13.Text = Convert.ToString(16);
+                            break;
+
+                        case 4:
+                            p13.Text = Convert.ToString(18);
+                            break;
+
+                        case 5:
+                            p13.Text = Convert.ToString(20);
+                            break;
+                    }
+
+                }
+
+                    if ((Temp > 100000) & (Temp <= 500000))
+                    {
+                        p14.Text = Convert.ToString(30);
+                        switch (trackBar_brightness.Value)
+                        {
+                            case 0:
+                                p13.Text = Convert.ToString(0);
+                                break;
+
+                            case 1:
+                                p13.Text = Convert.ToString(12);
+                                break;
+
+                            case 2:
+                                p13.Text = Convert.ToString(14);
+                                break;
+
+                            case 3:
+                                p13.Text = Convert.ToString(16);
+                                break;
+
+                            case 4:
+                                p13.Text = Convert.ToString(18);
+                                break;
+
+                            case 5:
+                                p13.Text = Convert.ToString(20);
+                                break;
+                        }
+
+                    }
+
+                        if ((Temp > 500000) & (Temp <= 10000000))
+                        {
+                            p14.Text = Convert.ToString(25);
+                            switch (trackBar_brightness.Value)
+                            {
+                                case 0:
+                                    p13.Text = Convert.ToString(0);
+                                    break;
+
+                                case 1:
+                                    p13.Text = Convert.ToString(15);
+                                    break;
+
+                                case 2:
+                                    p13.Text = Convert.ToString(16);
+                                    break;
+
+                                case 3:
+                                    p13.Text = Convert.ToString(17);
+                                    break;
+
+                                case 4:
+                                    p13.Text = Convert.ToString(18);
+                                    break;
+
+                                case 5:
+                                    p13.Text = Convert.ToString(20);
+                                    break;
+                            }
+
+                        }
+
+            }
+
+        private void tbCh1Faguangshijian_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) )
+            {
+                e.Handled = true; DialogBox.Message("请输入数字", DialogBox.DialogType.Error);
+            }
+           
+        }
+
+        private void tbCh2Faguangshijian_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)))
+            {
+               DialogBox.Message("请输入数字", DialogBox.DialogType.Error);
+            }
+           
+        }
+
+        private void tbCh3Faguangshijian_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)))
+            {
+               DialogBox.Message("请输入数字", DialogBox.DialogType.Error);
+            }
+           
+        }
+
+        private void tbCh4Faguangshijian_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsNumber(e.KeyChar)) )
+            {
+                DialogBox.Message("请输入数字", DialogBox.DialogType.Error); 
+            }
+            
+        }
+
+
+
+        public void Init_Brintness_vi()
+        {
+            trackBar_brightness.Value = 0;
+            brightnessValue.Text = "0";
+            p13.Text = "0"; p14.Text = "0";
 
         }
 
-     
+        public void Init_All_OFF()
+        {
+            ch1_r.Enabled = false;
+            ch1_y.Enabled = false;
+            ch1_b.Enabled = false;
+            ch1_g.Enabled = false;
+
+            ch2_r.Enabled = false;
+            ch2_y.Enabled = false;
+            ch2_b.Enabled = false;
+            ch2_g.Enabled = false;
+
+            ch3_r.Enabled = false;
+            ch3_y.Enabled = false;
+            ch3_b.Enabled = false;
+            ch3_g.Enabled = false;
+
+            ch4_r.Enabled = false;
+            ch4_y.Enabled = false;
+            ch4_b.Enabled = false;
+            ch4_g.Enabled = false;
+
+
+            
+            
+            Init_Brintness_vi();
+            ChanneInit();
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)//红光常亮按钮
+        {
+            if (checkBox1.Checked == true)
+            {
+                
+                trackBar_brightness.Enabled = true;
+                tbChufaPinci.Enabled = false;
+                frequency.Enabled = false;
+                ch1_r.Checked = true;
+                ch1_y.Checked = false;
+                ch1_b.Checked = false;
+                ch1_g.Checked = false;
+
+                ch2_r.Checked = false;
+                ch2_y.Checked = false;
+                ch2_b.Checked = false;
+                ch2_g.Checked = false;
+
+                ch3_r.Checked = false;
+                ch3_y.Checked = false;
+                ch3_b.Checked = false;
+                ch3_g.Checked = false;
+
+                ch4_r.Checked = false;
+                ch4_y.Checked = false;
+                ch4_b.Checked = false;
+                ch4_g.Checked = false;
+                tbCh1Faguangshijian.Text = "10000000";
+                Init_All_OFF();
+                checkBox2.Enabled = false;
+                checkBox3.Enabled = false;
+                checkBox4.Enabled = false;
+
+                tbCh1Shuchuyanshi.Text = "0";
+                tbCh2Shuchuyanshi.Text = "0";
+                tbCh3Shuchuyanshi.Text = "0";
+                tbCh4Shuchuyanshi.Text = "0";
+
+                tbCh2Faguangshijian.Text = "0";
+                tbCh3Faguangshijian.Text = "0";
+                tbCh4Faguangshijian.Text = "0";
+
+                tbCh1Xjchufashichang.Text = "0";
+                tbCh2Xjchufashichang.Text = "0";
+                tbCh3Xjchufashichang.Text = "0";
+                tbCh4Xjchufashichang.Text = "0";
+                
+
+                frequency.Text = "65535";//循环次数
+                tbChufaPinci.Text = "1";//次数（秒）
+
+                p14.Text = "20";
+               
+               
+
+            }
+            else
+            {
+                tbChufaPinci.Enabled = true;
+                frequency.Enabled = true;
+                checkBox2.Enabled = true; 
+                checkBox3.Enabled = true;
+                checkBox4.Enabled = true;
+               
+                ch1_r.Enabled = true;
+                ch1_y.Enabled = true;
+                ch1_b.Enabled = true;
+                ch1_g.Enabled = true;
+
+                frequency.Text = "0";//循环次数
+                tbChufaPinci.Text = "0";//次数（秒）
+
+                ch1_r.Checked = false;
+                tbCh1Faguangshijian.Text = "0";
+                trackBar_brightness.Enabled = false;
+             
+
+            }
+            
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                tbChufaPinci.Enabled = false;
+                frequency.Enabled = false;
+                trackBar_brightness.Enabled = true;
+                ch1_r.Checked = false;
+                ch1_y.Checked = true;
+                ch1_b.Checked = false;
+                ch1_g.Checked = false;
+
+                ch2_r.Checked = false;
+                ch2_y.Checked = false;
+                ch2_b.Checked = false;
+                ch2_g.Checked = false;
+
+                ch3_r.Checked = false;
+                ch3_y.Checked = false;
+                ch3_b.Checked = false;
+                ch3_g.Checked = false;
+
+                ch4_r.Checked = false;
+                ch4_y.Checked = false;
+                ch4_b.Checked = false;
+                ch4_g.Checked = false;
+                tbCh2Faguangshijian.Text = "10000000";
+
+                checkBox1.Enabled = false;
+                checkBox3.Enabled = false;
+                checkBox4.Enabled = false;
+
+                tbCh1Shuchuyanshi.Text = "0";
+                tbCh2Shuchuyanshi.Text = "0";
+                tbCh3Shuchuyanshi.Text = "0";
+                tbCh4Shuchuyanshi.Text = "0";
+
+                tbCh1Faguangshijian.Text = "0";
+                tbCh3Faguangshijian.Text = "0";
+                tbCh4Faguangshijian.Text = "0";
+
+                tbCh1Xjchufashichang.Text = "0";
+                tbCh2Xjchufashichang.Text = "0";
+                tbCh3Xjchufashichang.Text = "0";
+                tbCh4Xjchufashichang.Text = "0";
+                Init_All_OFF();
+
+                frequency.Text = "65535";//循环次数
+                tbChufaPinci.Text = "1";//次数（秒）
+                p14.Text = "20";
+               
+
+            }
+            else
+            {
+                tbChufaPinci.Enabled = true;
+                frequency.Enabled = true;
+                checkBox1.Enabled = true;
+                checkBox3.Enabled = true;
+                checkBox4.Enabled = true;
+                frequency.Text = "0";//循环次数
+                tbChufaPinci.Text = "0";//次数（秒）
+                ch1_r.Enabled = true;
+                ch1_y.Enabled = true;
+                ch1_b.Enabled = true;
+                ch1_g.Enabled = true;
+
+             
+
+                ch1_y.Checked = false;
+                tbCh2Faguangshijian.Text = "0";
+                trackBar_brightness.Enabled = false;
+            }
+            
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+
+                trackBar_brightness.Enabled = true;
+                tbChufaPinci.Enabled = false;
+                frequency.Enabled = false;
+                ch1_r.Checked = false;
+                ch1_y.Checked = false;
+                ch1_b.Checked = true;
+                ch1_g.Checked = false;
+
+                ch2_r.Checked = false;
+                ch2_y.Checked = false;
+                ch2_b.Checked = false;
+                ch2_g.Checked = false;
+
+                ch3_r.Checked = false;
+                ch3_y.Checked = false;
+                ch3_b.Checked = false;
+                ch3_g.Checked = false;
+
+                ch4_r.Checked = false;
+                ch4_y.Checked = false;
+                ch4_b.Checked = false;
+                ch4_g.Checked = false;
+                tbCh3Faguangshijian.Text = "10000000";
+
+                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
+                checkBox4.Enabled = false;
+
+                tbCh1Shuchuyanshi.Text = "0";
+                tbCh2Shuchuyanshi.Text = "0";
+                tbCh3Shuchuyanshi.Text = "0";
+                tbCh4Shuchuyanshi.Text = "0";
+
+                tbCh1Faguangshijian.Text = "0";
+                tbCh2Faguangshijian.Text = "0";
+                tbCh4Faguangshijian.Text = "0";
+
+                tbCh1Xjchufashichang.Text = "0";
+                tbCh2Xjchufashichang.Text = "0";
+                tbCh3Xjchufashichang.Text = "0";
+                tbCh4Xjchufashichang.Text = "0";
+                Init_All_OFF();
+
+                frequency.Text = "65535";//循环次数
+                tbChufaPinci.Text = "1";//次数（秒）
+                p14.Text = "25";
+              
+
+            }
+            else
+            {
+                tbChufaPinci.Enabled = true;
+                frequency.Enabled = true;
+             
+                checkBox1.Enabled = true;
+                checkBox2.Enabled = true;
+                checkBox4.Enabled = true;
+                frequency.Text = "0";//循环次数
+                tbChufaPinci.Text = "0";//次数（秒）
+                ch1_r.Enabled = true;
+                ch1_y.Enabled = true;
+                ch1_b.Enabled = true;
+                ch1_g.Enabled = true;
+               
+                ch1_b.Checked = false;
+                tbCh3Faguangshijian.Text = "0";
+                trackBar_brightness.Enabled = false;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+            {
+
+                trackBar_brightness.Enabled = true;
+                tbChufaPinci.Enabled = false;
+                frequency.Enabled = false;
+                ch1_r.Checked = false;
+                ch1_y.Checked = false;
+                ch1_b.Checked = false;
+                ch1_g.Checked = true;
+
+                ch2_r.Checked = false;
+                ch2_y.Checked = false;
+                ch2_b.Checked = false;
+                ch2_g.Checked = false;
+
+                ch3_r.Checked = false;
+                ch3_y.Checked = false;
+                ch3_b.Checked = false;
+                ch3_g.Checked = false;
+
+                ch4_r.Checked = false;
+                ch4_y.Checked = false;
+                ch4_b.Checked = false;
+                ch4_g.Checked = false;
+                tbCh4Faguangshijian.Text = "10000000";
+
+                checkBox1.Enabled = false;
+                checkBox2.Enabled = false;
+                checkBox3.Enabled = false;
+
+                tbCh1Shuchuyanshi.Text = "0";
+                tbCh2Shuchuyanshi.Text = "0";
+                tbCh3Shuchuyanshi.Text = "0";
+                tbCh4Shuchuyanshi.Text = "0";
+
+                tbCh1Faguangshijian.Text = "0";
+                tbCh2Faguangshijian.Text = "0";
+                tbCh3Faguangshijian.Text = "0";
+
+                tbCh1Xjchufashichang.Text = "0";
+                tbCh2Xjchufashichang.Text = "0";
+                tbCh3Xjchufashichang.Text = "0";
+                tbCh4Xjchufashichang.Text = "0";
+                Init_All_OFF();
+
+                frequency.Text = "65535";//循环次数
+                tbChufaPinci.Text = "1";//次数（秒）
+                p14.Text = "25";
+
+
+            }
+            else
+            {
+                tbChufaPinci.Enabled = true;
+                frequency.Enabled = true;
+                checkBox1.Enabled = true; 
+                checkBox2.Enabled = true;
+                checkBox3.Enabled = true;
+                frequency.Text = "0";//循环次数
+                tbChufaPinci.Text = "0";//次数（秒）
+                ch1_r.Enabled = true;
+                ch1_y.Enabled = true;
+                ch1_b.Enabled = true;
+                ch1_g.Enabled = true;
+                
+            
+                ch1_g.Checked = false;
+                tbCh4Faguangshijian.Text = "0";
+                trackBar_brightness.Enabled = false;
+            }
+        }
+
+
+
+
+        }
+
       
-
-       
-
-     
-
-   
-
-     
-
-  
-
-      
-
-
-
-
-
-  
-
-     
-
-
     }
-}
+
