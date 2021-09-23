@@ -1925,23 +1925,23 @@ namespace PsecstoolOut
         public void JudgeLightTime()
         {
             if ((int.Parse(tbCh1Faguangshijian.Text) > 0) &
-                (int.Parse(tbCh1Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+                (int.Parse(tbCh1Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 1; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
 
             if ((int.Parse(tbCh2Faguangshijian.Text) > 0) &
-                (int.Parse(tbCh2Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+                (int.Parse(tbCh2Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 1; trackBar_brightness.Value = 1; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
 
             if ((int.Parse(tbCh3Faguangshijian.Text) > 0) &
-                (int.Parse(tbCh3Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+                (int.Parse(tbCh3Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 1; trackBar_brightness.Value = 1; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
 
             if ((int.Parse(tbCh4Faguangshijian.Text) > 0) &
-                (int.Parse(tbCh4Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 0; trackBar_brightness.Value = 0; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
+                (int.Parse(tbCh4Faguangshijian.Text) < (int)30000)) { trackBar_brightness.Enabled = false; trackBar_brightness.Value = 1; trackBar_brightness.Value = 1; brightnessValue.Text = Convert.ToString(trackBar_brightness.Value); return; }
 
             trackBar_brightness.Enabled = true;
         }
 
         private void tbCh1Faguangshijian_TextChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt64(tbCh1Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh1Faguangshijian.Text = Convert.ToString(10000000); }
+         //  if (Convert.ToInt64(tbCh1Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh1Faguangshijian.Text = Convert.ToString(10000000); }
 
             JudgeLightTime();
             lightnessChR = int.Parse(tbCh1Faguangshijian.Text);
@@ -1950,7 +1950,7 @@ namespace PsecstoolOut
 
         private void tbCh2Faguangshijian_TextChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt64(tbCh2Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh2Faguangshijian.Text = Convert.ToString(10000000); }
+         //   if (Convert.ToInt64(tbCh2Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh2Faguangshijian.Text = Convert.ToString(10000000); }
 
             JudgeLightTime();
             lightnessChY = int.Parse(tbCh2Faguangshijian.Text);
@@ -1959,7 +1959,7 @@ namespace PsecstoolOut
 
         private void tbCh3Faguangshijian_TextChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt64(tbCh3Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh3Faguangshijian.Text = Convert.ToString(10000000); }
+         //   if (Convert.ToInt64(tbCh3Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh3Faguangshijian.Text = Convert.ToString(10000000); }
 
             JudgeLightTime();
             lightnessChB = int.Parse(tbCh3Faguangshijian.Text);
@@ -1968,7 +1968,7 @@ namespace PsecstoolOut
 
         private void tbCh4Faguangshijian_TextChanged(object sender, EventArgs e)
         {
-            if (Convert.ToInt64(tbCh4Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh4Faguangshijian.Text = Convert.ToString(10000000); }
+      //      if (Convert.ToInt64(tbCh4Faguangshijian.Text) > Convert.ToInt64("10000000")) { DialogBox.Message("亮度最大值为：10000000", DialogBox.DialogType.Error); tbCh4Faguangshijian.Text = Convert.ToString(10000000); }
 
             JudgeLightTime();
             lightnessChG = int.Parse(tbCh4Faguangshijian.Text);
@@ -2043,6 +2043,7 @@ namespace PsecstoolOut
             if ((Temp > 30000) & (Temp <= 50000))
             {
                 p14.Text = Convert.ToString(10);
+                p13.Text = Convert.ToString(10);
                 switch (trackBar_brightness.Value)
                 {
                     case 0:
@@ -2108,6 +2109,7 @@ namespace PsecstoolOut
                     if ((Temp > 100000) & (Temp <= 500000))
                     {
                         p14.Text = Convert.ToString(30);
+               
                         switch (trackBar_brightness.Value)
                         {
                             case 0:
@@ -2173,10 +2175,23 @@ namespace PsecstoolOut
 
         private void tbCh1Faguangshijian_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsNumber(e.KeyChar)) )
+            if (e.KeyChar == 0x20) { e.KeyChar = (char)0; e.Handled = true; DialogBox.Message("请输入正整数", DialogBox.DialogType.Error); }
+            if ((e.KeyChar == 0x2D) && (((TextBox)sender).Text.Length == 0)) { DialogBox.Message("请输入正整数", DialogBox.DialogType.Error); return; }  //处理负数
+            if (e.KeyChar > 0x20)
             {
-                e.Handled = true; DialogBox.Message("请输入数字", DialogBox.DialogType.Error);
+                try
+                {
+                    double.Parse(((TextBox)sender).Text + e.KeyChar.ToString());
+                }
+                catch
+                {
+                    e.KeyChar = (char)0;   //处理非法字符
+                    DialogBox.Message("请输入正整数", DialogBox.DialogType.Error); 
+                }
+
             }
+
+         
            
         }
 
@@ -2211,8 +2226,8 @@ namespace PsecstoolOut
 
         public void Init_Brintness_vi()
         {
-            trackBar_brightness.Value = 0;
-            brightnessValue.Text = "0";
+            trackBar_brightness.Value = 1;
+            brightnessValue.Text = "1";
             p13.Text = "0"; p14.Text = "0";
 
         }
@@ -2299,7 +2314,7 @@ namespace PsecstoolOut
                 tbChufaPinci.Text = "1";//次数（秒）
 
                 p14.Text = "20";
-               
+                p13.Text = "12";
                
 
             }
@@ -2332,6 +2347,7 @@ namespace PsecstoolOut
         {
             if (checkBox2.Checked == true)
             {
+                
                 tbChufaPinci.Enabled = false;
                 frequency.Enabled = false;
                 trackBar_brightness.Enabled = true;
@@ -2378,7 +2394,7 @@ namespace PsecstoolOut
                 frequency.Text = "65535";//循环次数
                 tbChufaPinci.Text = "1";//次数（秒）
                 p14.Text = "20";
-               
+                p13.Text = "12";
 
             }
             else
@@ -2408,7 +2424,7 @@ namespace PsecstoolOut
         {
             if (checkBox3.Checked == true)
             {
-
+               
                 trackBar_brightness.Enabled = true;
                 tbChufaPinci.Enabled = false;
                 frequency.Enabled = false;
@@ -2455,7 +2471,7 @@ namespace PsecstoolOut
                 frequency.Text = "65535";//循环次数
                 tbChufaPinci.Text = "1";//次数（秒）
                 p14.Text = "25";
-              
+                p13.Text = "12";
 
             }
             else
@@ -2483,7 +2499,7 @@ namespace PsecstoolOut
         {
             if (checkBox4.Checked == true)
             {
-
+                
                 trackBar_brightness.Enabled = true;
                 tbChufaPinci.Enabled = false;
                 frequency.Enabled = false;
@@ -2530,7 +2546,7 @@ namespace PsecstoolOut
                 frequency.Text = "65535";//循环次数
                 tbChufaPinci.Text = "1";//次数（秒）
                 p14.Text = "25";
-
+                p13.Text = "12";
 
             }
             else

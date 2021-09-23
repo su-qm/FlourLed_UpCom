@@ -69,13 +69,13 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbDeviceGatway = new System.Windows.Forms.TextBox();
             this.gpbAlarm = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.brightnessValue = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.trackBar_brightness = new System.Windows.Forms.TrackBar();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.p14 = new System.Windows.Forms.TextBox();
-            this.p13 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.frequency = new System.Windows.Forms.TextBox();
@@ -169,15 +169,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.lbOpraResult = new System.Windows.Forms.Label();
+            this.p13 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.p14 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.lstLog = new System.Windows.Forms.ListBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnClearLstLog = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -720,6 +720,53 @@
             this.gpbAlarm.TabStop = false;
             this.gpbAlarm.Text = "报警设置";
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.ForeColor = System.Drawing.Color.Lime;
+            this.checkBox4.Location = new System.Drawing.Point(440, 287);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(76, 16);
+            this.checkBox4.TabIndex = 50;
+            this.checkBox4.Text = "绿光常亮";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(358, 287);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(76, 16);
+            this.checkBox3.TabIndex = 49;
+            this.checkBox3.Text = "蓝光常亮";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.ForeColor = System.Drawing.Color.Gold;
+            this.checkBox2.Location = new System.Drawing.Point(275, 287);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(76, 16);
+            this.checkBox2.TabIndex = 48;
+            this.checkBox2.Text = "黄光常亮";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.Red;
+            this.checkBox1.Location = new System.Drawing.Point(192, 287);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(76, 16);
+            this.checkBox1.TabIndex = 47;
+            this.checkBox1.Text = "红光常亮";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // brightnessValue
             // 
             this.brightnessValue.AutoSize = true;
@@ -728,7 +775,7 @@
             this.brightnessValue.Name = "brightnessValue";
             this.brightnessValue.Size = new System.Drawing.Size(17, 16);
             this.brightnessValue.TabIndex = 46;
-            this.brightnessValue.Text = "0";
+            this.brightnessValue.Text = "1";
             // 
             // label23
             // 
@@ -746,51 +793,13 @@
             this.trackBar_brightness.Enabled = false;
             this.trackBar_brightness.Location = new System.Drawing.Point(77, 287);
             this.trackBar_brightness.Maximum = 5;
+            this.trackBar_brightness.Minimum = 1;
             this.trackBar_brightness.Name = "trackBar_brightness";
             this.trackBar_brightness.Size = new System.Drawing.Size(79, 45);
             this.trackBar_brightness.TabIndex = 45;
+            this.trackBar_brightness.Value = 1;
             this.trackBar_brightness.Scroll += new System.EventHandler(this.trackBar1_Scroll);
             this.trackBar_brightness.ValueChanged += new System.EventHandler(this.Brightness_TextChanged);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(330, 9);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(71, 12);
-            this.label24.TabIndex = 44;
-            this.label24.Text = "p14（电压）";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(131, 12);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 12);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "p13（电流）";
-            // 
-            // p14
-            // 
-            this.p14.Enabled = false;
-            this.p14.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.p14.Location = new System.Drawing.Point(402, 3);
-            this.p14.Name = "p14";
-            this.p14.Size = new System.Drawing.Size(68, 21);
-            this.p14.TabIndex = 43;
-            this.p14.Text = "0";
-            // 
-            // p13
-            // 
-            this.p13.Enabled = false;
-            this.p13.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.p13.Location = new System.Drawing.Point(208, 6);
-            this.p13.Name = "p13";
-            this.p13.Size = new System.Drawing.Size(68, 21);
-            this.p13.TabIndex = 42;
-            this.p13.Text = "0";
             // 
             // label13
             // 
@@ -1829,6 +1838,46 @@
             this.lbOpraResult.TabIndex = 0;
             this.lbOpraResult.Text = "操作结果";
             // 
+            // p13
+            // 
+            this.p13.Enabled = false;
+            this.p13.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.p13.Location = new System.Drawing.Point(208, 6);
+            this.p13.Name = "p13";
+            this.p13.Size = new System.Drawing.Size(68, 21);
+            this.p13.TabIndex = 42;
+            this.p13.Text = "0";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(131, 12);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 12);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "p13（电流）";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(330, 9);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(71, 12);
+            this.label24.TabIndex = 44;
+            this.label24.Text = "p14（电压）";
+            // 
+            // p14
+            // 
+            this.p14.Enabled = false;
+            this.p14.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.p14.Location = new System.Drawing.Point(402, 3);
+            this.p14.Name = "p14";
+            this.p14.Size = new System.Drawing.Size(68, 21);
+            this.p14.TabIndex = 43;
+            this.p14.Text = "0";
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.panel10);
@@ -1881,53 +1930,6 @@
             this.btnClearLstLog.Text = "清除日志";
             this.btnClearLstLog.UseVisualStyleBackColor = true;
             this.btnClearLstLog.Click += new System.EventHandler(this.btnClearLstLog_Click);
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.Red;
-            this.checkBox1.Location = new System.Drawing.Point(192, 287);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(76, 16);
-            this.checkBox1.TabIndex = 47;
-            this.checkBox1.Text = "红光常亮";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.ForeColor = System.Drawing.Color.Gold;
-            this.checkBox2.Location = new System.Drawing.Point(275, 287);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(76, 16);
-            this.checkBox2.TabIndex = 48;
-            this.checkBox2.Text = "黄光常亮";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(358, 287);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(76, 16);
-            this.checkBox3.TabIndex = 49;
-            this.checkBox3.Text = "蓝光常亮";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.ForeColor = System.Drawing.Color.Lime;
-            this.checkBox4.Location = new System.Drawing.Point(440, 287);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(76, 16);
-            this.checkBox4.TabIndex = 50;
-            this.checkBox4.Text = "绿光常亮";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // FrmMain
             // 
