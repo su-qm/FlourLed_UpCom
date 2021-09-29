@@ -2313,7 +2313,7 @@ namespace PsecstoolOut
                 frequency.Text = "65535";//循环次数
                 tbChufaPinci.Text = "1";//次数（秒）
 
-                p14.Text = "20";
+                p14.Text = "25";
                 p13.Text = "12";
                
 
@@ -2393,7 +2393,7 @@ namespace PsecstoolOut
 
                 frequency.Text = "65535";//循环次数
                 tbChufaPinci.Text = "1";//次数（秒）
-                p14.Text = "20";
+                p14.Text = "25";
                 p13.Text = "12";
 
             }
@@ -2470,7 +2470,7 @@ namespace PsecstoolOut
 
                 frequency.Text = "65535";//循环次数
                 tbChufaPinci.Text = "1";//次数（秒）
-                p14.Text = "25";
+                p14.Text = "30";
                 p13.Text = "12";
 
             }
@@ -2545,7 +2545,7 @@ namespace PsecstoolOut
 
                 frequency.Text = "65535";//循环次数
                 tbChufaPinci.Text = "1";//次数（秒）
-                p14.Text = "25";
+                p14.Text = "30";
                 p13.Text = "12";
 
             }
