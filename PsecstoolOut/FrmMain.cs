@@ -1226,7 +1226,7 @@ namespace PsecstoolOut
             int Ch43 = int.Parse(p13.Text);
             int Ch44 = int.Parse(p14.Text);
             int Ch45 = 0x00;
-            if ((Ch13 > 50000) || (Ch21 > 50000) || (Ch32 > 50000)) Ch45 = 0xff;
+            if ((Ch13 > 50000) || (Ch21 > 50000) || (Ch24 > 50000) || (Ch32 > 50000)) Ch45 = 0xff;
             else Ch45 = 0x00;
 
             int temp = 0;
@@ -1995,19 +1995,19 @@ namespace PsecstoolOut
                         break;
 
                     case 2:
-                        p13.Text = Convert.ToString(12);
+                        p13.Text = Convert.ToString(15);
                         break;
 
                     case 3:
-                        p13.Text = Convert.ToString(13);
+                        p13.Text = Convert.ToString(18);
                         break;
 
                     case 4:
-                        p13.Text = Convert.ToString(14);
+                        p13.Text = Convert.ToString(21);
                         break;
 
                     case 5:
-                        p13.Text = Convert.ToString(15);
+                        p13.Text = Convert.ToString(25);
                         break;
                 }
                 return;
